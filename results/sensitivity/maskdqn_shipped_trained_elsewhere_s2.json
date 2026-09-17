@@ -1,0 +1,12 @@
+{
+ "config": "maskdqn",
+ "mode": "shipped",
+ "label": "as shipped",
+ "arm": "trained_elsewhere",
+ "seed": 2,
+ "episodes": 200,
+ "success": 27.0,
+ "illegal": 0.0,
+ "detected": 72.5,
+ "steps": 29.21
+}

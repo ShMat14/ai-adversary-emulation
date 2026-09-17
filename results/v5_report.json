@@ -1,0 +1,6481 @@
+{
+ "main": {
+  "masked": {
+   "n": 10,
+   "episodes": 400,
+   "topology": "enterprise",
+   "success_mean": 69.65,
+   "success_sd": 2.197157254271983,
+   "illegal_mean": 0.0,
+   "illegal_sd": 0.0,
+   "detection_mean": 30.525,
+   "ep_len_mean": 32.890750000000004,
+   "redundant_mean": 0.0,
+   "advanced_mean": 82.90225501814845,
+   "apd_mean": 3.7935000000000003,
+   "win_len_mean": 41.909289155569326,
+   "by_requirement": {
+    "c2": {
+     "mean": 68.96551724137932,
+     "sd": 4.361762289887417,
+     "seeds": 10
+    },
+    "collection": {
+     "mean": 72.35294117647058,
+     "sd": 4.956558690103742,
+     "seeds": 10
+    },
+    "collection,c2": {
+     "mean": 74.61538461538461,
+     "sd": 6.249260311258431,
+     "seeds": 10
+    },
+    "host_privilege": {
+     "mean": 71.42857142857144,
+     "sd": 7.824607964359512,
+     "seeds": 10
+    },
+    "host_privilege,c2": {
+     "mean": 77.72727272727272,
+     "sd": 6.248966856757963,
+     "seeds": 10
+    },
+    "host_privilege,collection": {
+     "mean": 65.51724137931035,
+     "sd": 8.013068992153276,
+     "seeds": 10
+    },
+    "host_privilege,collection,c2": {
+     "mean": 70.85714285714286,
+     "sd": 8.741176309016204,
+     "seeds": 10
+    },
+    "none": {
+     "mean": 77.64705882352942,
+     "sd": 8.645257915705335,
+     "seeds": 10
+    },
+    "persistence": {
+     "mean": 69.99999999999999,
+     "sd": 7.453559924999298,
+     "seeds": 10
+    },
+    "persistence,c2": {
+     "mean": 67.61904761904762,
+     "sd": 9.712418121129113,
+     "seeds": 10
+    },
+    "persistence,collection": {
+     "mean": 76.66666666666667,
+     "sd": 6.497862896539309,
+     "seeds": 10
+    },
+    "persistence,collection,c2": {
+     "mean": 57.3076923076923,
+     "sd": 8.149853884775803,
+     "seeds": 10
+    },
+    "persistence,host_privilege": {
+     "mean": 66.42857142857144,
+     "sd": 4.57366016959489,
+     "seeds": 10
+    },
+    "persistence,host_privilege,c2": {
+     "mean": 72.5,
+     "sd": 6.422616289332565,
+     "seeds": 10
+    },
+    "persistence,host_privilege,collection": {
+     "mean": 63.51351351351352,
+     "sd": 7.27724973937095,
+     "seeds": 10
+    },
+    "persistence,host_privilege,collection,c2": {
+     "mean": 66.47058823529412,
+     "sd": 9.860620361317773,
+     "seeds": 10
+    }
+   },
+   "per_seed": [
+    {
+     "seed": 0,
+     "success": 69.5,
+     "illegal": 0.0,
+     "detection": 30.5,
+     "ep_len": 32.51,
+     "redundant": 0.0,
+     "advanced": 83.10519840049216,
+     "apd": 3.7975,
+     "win_len": 41.70503597122302,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 18,
+       "success": 64.28571428571429
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 18,
+       "success": 62.06896551724138
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 13,
+       "success": 61.904761904761905
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 24,
+       "success": 70.58823529411765
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 25,
+       "success": 83.33333333333333
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 15,
+       "success": 57.69230769230769
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 13,
+       "success": 76.47058823529412
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 21,
+       "success": 80.76923076923077
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 21,
+       "success": 72.41379310344827
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 11,
+       "success": 78.57142857142857
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 28,
+       "success": 80.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 20,
+       "success": 54.054054054054056
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 14,
+       "success": 70.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 17,
+       "success": 77.27272727272727
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 10,
+       "success": 58.8235294117647
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 10,
+       "success": 66.66666666666667
+      }
+     }
+    },
+    {
+     "seed": 1,
+     "success": 68.25,
+     "illegal": 0.0,
+     "detection": 31.75,
+     "ep_len": 31.0025,
+     "redundant": 0.0,
+     "advanced": 83.50133053785984,
+     "apd": 3.7275,
+     "win_len": 38.69597069597069,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 19,
+       "success": 67.85714285714286
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 24,
+       "success": 82.75862068965517
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 11,
+       "success": 52.38095238095238
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 23,
+       "success": 67.6470588235294
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 23,
+       "success": 76.66666666666667
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 18,
+       "success": 69.23076923076923
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 12,
+       "success": 70.58823529411765
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 16,
+       "success": 61.53846153846154
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 20,
+       "success": 68.96551724137932
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 11,
+       "success": 78.57142857142857
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 19,
+       "success": 54.285714285714285
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 21,
+       "success": 56.75675675675676
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 15,
+       "success": 75.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 19,
+       "success": 86.36363636363636
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 13,
+       "success": 76.47058823529412
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 9,
+       "success": 60.0
+      }
+     }
+    },
+    {
+     "seed": 2,
+     "success": 67.0,
+     "illegal": 0.0,
+     "detection": 33.0,
+     "ep_len": 29.585,
+     "redundant": 0.0,
+     "advanced": 83.31924961973974,
+     "apd": 3.6775,
+     "win_len": 36.82089552238806,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 20,
+       "success": 71.42857142857143
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 17,
+       "success": 58.62068965517241
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 12,
+       "success": 57.142857142857146
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 22,
+       "success": 64.70588235294117
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 19,
+       "success": 63.333333333333336
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 15,
+       "success": 57.69230769230769
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 16,
+       "success": 94.11764705882354
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 20,
+       "success": 76.92307692307692
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 22,
+       "success": 75.86206896551724
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 9,
+       "success": 64.28571428571429
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 22,
+       "success": 62.857142857142854
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 25,
+       "success": 67.56756756756756
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 13,
+       "success": 65.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 17,
+       "success": 77.27272727272727
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 9,
+       "success": 52.94117647058823
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 10,
+       "success": 66.66666666666667
+      }
+     }
+    },
+    {
+     "seed": 3,
+     "success": 72.5,
+     "illegal": 0.0,
+     "detection": 27.5,
+     "ep_len": 31.88,
+     "redundant": 0.0,
+     "advanced": 83.37515683814304,
+     "apd": 3.91,
+     "win_len": 39.689655172413794,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 16,
+       "success": 57.142857142857146
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 22,
+       "success": 75.86206896551724
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 16,
+       "success": 76.19047619047619
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 25,
+       "success": 73.52941176470588
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 24,
+       "success": 80.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 16,
+       "success": 61.53846153846154
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 12,
+       "success": 70.58823529411765
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 22,
+       "success": 84.61538461538461
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 20,
+       "success": 68.96551724137932
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 10,
+       "success": 71.42857142857143
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 28,
+       "success": 80.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 24,
+       "success": 64.86486486486487
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 14,
+       "success": 70.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 17,
+       "success": 77.27272727272727
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 14,
+       "success": 82.3529411764706
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 10,
+       "success": 66.66666666666667
+      }
+     }
+    },
+    {
+     "seed": 4,
+     "success": 68.5,
+     "illegal": 0.0,
+     "detection": 31.75,
+     "ep_len": 32.9425,
+     "redundant": 0.0,
+     "advanced": 82.8185474690749,
+     "apd": 3.7525,
+     "win_len": 42.68248175182482,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 18,
+       "success": 64.28571428571429
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 17,
+       "success": 58.62068965517241
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 16,
+       "success": 76.19047619047619
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 26,
+       "success": 76.47058823529412
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 22,
+       "success": 73.33333333333333
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 14,
+       "success": 53.84615384615385
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 11,
+       "success": 64.70588235294117
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 21,
+       "success": 80.76923076923077
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 19,
+       "success": 65.51724137931035
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 11,
+       "success": 78.57142857142857
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 26,
+       "success": 74.28571428571429
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 21,
+       "success": 56.75675675675676
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 16,
+       "success": 80.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 17,
+       "success": 77.27272727272727
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 10,
+       "success": 58.8235294117647
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 9,
+       "success": 60.0
+      }
+     }
+    },
+    {
+     "seed": 5,
+     "success": 69.25,
+     "illegal": 0.0,
+     "detection": 31.25,
+     "ep_len": 30.665,
+     "redundant": 0.0,
+     "advanced": 82.7572150660362,
+     "apd": 3.7775,
+     "win_len": 39.63537906137184,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 19,
+       "success": 67.85714285714286
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 18,
+       "success": 62.06896551724138
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 14,
+       "success": 66.66666666666667
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 24,
+       "success": 70.58823529411765
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 26,
+       "success": 86.66666666666667
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 13,
+       "success": 50.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 13,
+       "success": 76.47058823529412
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 19,
+       "success": 73.07692307692308
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 18,
+       "success": 62.06896551724138
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 9,
+       "success": 64.28571428571429
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 24,
+       "success": 68.57142857142857
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 25,
+       "success": 67.56756756756756
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 15,
+       "success": 75.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 16,
+       "success": 72.72727272727273
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 12,
+       "success": 70.58823529411765
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 12,
+       "success": 80.0
+      }
+     }
+    },
+    {
+     "seed": 6,
+     "success": 72.75,
+     "illegal": 0.0,
+     "detection": 27.75,
+     "ep_len": 39.0575,
+     "redundant": 0.0,
+     "advanced": 82.76259361198234,
+     "apd": 3.915,
+     "win_len": 51.20962199312715,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 18,
+       "success": 64.28571428571429
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 21,
+       "success": 72.41379310344827
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 17,
+       "success": 80.95238095238095
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 23,
+       "success": 67.6470588235294
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 24,
+       "success": 80.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 19,
+       "success": 73.07692307692308
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 15,
+       "success": 88.23529411764706
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 19,
+       "success": 73.07692307692308
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 21,
+       "success": 72.41379310344827
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 12,
+       "success": 85.71428571428571
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 27,
+       "success": 77.14285714285714
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 26,
+       "success": 70.27027027027027
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 12,
+       "success": 60.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 14,
+       "success": 63.63636363636363
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 12,
+       "success": 70.58823529411765
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 11,
+       "success": 73.33333333333333
+      }
+     }
+    },
+    {
+     "seed": 7,
+     "success": 73.0,
+     "illegal": 0.0,
+     "detection": 27.0,
+     "ep_len": 34.1525,
+     "redundant": 0.0,
+     "advanced": 82.67330356489276,
+     "apd": 3.9225,
+     "win_len": 42.33904109589041,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 21,
+       "success": 75.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 17,
+       "success": 58.62068965517241
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 13,
+       "success": 61.904761904761905
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 28,
+       "success": 82.3529411764706
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 22,
+       "success": 73.33333333333333
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 13,
+       "success": 50.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 14,
+       "success": 82.3529411764706
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 19,
+       "success": 73.07692307692308
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 21,
+       "success": 72.41379310344827
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 9,
+       "success": 64.28571428571429
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 28,
+       "success": 80.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 29,
+       "success": 78.37837837837837
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 16,
+       "success": 80.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 17,
+       "success": 77.27272727272727
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 13,
+       "success": 76.47058823529412
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 12,
+       "success": 80.0
+      }
+     }
+    },
+    {
+     "seed": 8,
+     "success": 69.0,
+     "illegal": 0.0,
+     "detection": 31.0,
+     "ep_len": 33.7975,
+     "redundant": 0.0,
+     "advanced": 82.25460463052,
+     "apd": 3.7775,
+     "win_len": 43.10507246376812,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 18,
+       "success": 64.28571428571429
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 18,
+       "success": 62.06896551724138
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 17,
+       "success": 80.95238095238095
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 25,
+       "success": 73.52941176470588
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 24,
+       "success": 80.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 12,
+       "success": 46.15384615384615
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 12,
+       "success": 70.58823529411765
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 19,
+       "success": 73.07692307692308
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 20,
+       "success": 68.96551724137932
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 9,
+       "success": 64.28571428571429
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 25,
+       "success": 71.42857142857143
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 21,
+       "success": 56.75675675675676
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 16,
+       "success": 80.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 19,
+       "success": 86.36363636363636
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 11,
+       "success": 64.70588235294117
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 10,
+       "success": 66.66666666666667
+      }
+     }
+    },
+    {
+     "seed": 9,
+     "success": 66.75,
+     "illegal": 0.0,
+     "detection": 33.75,
+     "ep_len": 33.315,
+     "redundant": 0.0,
+     "advanced": 82.45535044274351,
+     "apd": 3.6775,
+     "win_len": 43.20973782771536,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 19,
+       "success": 67.85714285714286
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 18,
+       "success": 62.06896551724138
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 13,
+       "success": 61.904761904761905
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 26,
+       "success": 76.47058823529412
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 21,
+       "success": 70.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 14,
+       "success": 53.84615384615385
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 14,
+       "success": 82.3529411764706
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 18,
+       "success": 69.23076923076923
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 18,
+       "success": 62.06896551724138
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 9,
+       "success": 64.28571428571429
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 21,
+       "success": 60.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 23,
+       "success": 62.16216216216216
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 14,
+       "success": 70.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 18,
+       "success": 81.81818181818181
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 9,
+       "success": 52.94117647058823
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 12,
+       "success": 80.0
+      }
+     }
+    }
+   ]
+  },
+  "nomask": {
+   "n": 10,
+   "episodes": 400,
+   "topology": "enterprise",
+   "success_mean": 0.0,
+   "success_sd": 0.0,
+   "illegal_mean": 62.92542047223393,
+   "illegal_sd": 4.418016163150473,
+   "detection_mean": 38.475,
+   "ep_len_mean": 43.46725,
+   "redundant_mean": 0.08763704861593427,
+   "advanced_mean": 30.684409974995837,
+   "apd_mean": 3.72175,
+   "win_len_mean": NaN,
+   "by_requirement": {
+    "c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "collection": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "collection,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "host_privilege": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "host_privilege,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "host_privilege,collection": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "host_privilege,collection,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "none": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,collection": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,collection,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,host_privilege": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,host_privilege,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,host_privilege,collection": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,host_privilege,collection,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    }
+   },
+   "per_seed": [
+    {
+     "seed": 0,
+     "success": 0.0,
+     "illegal": 63.02929045058215,
+     "detection": 28.5,
+     "ep_len": 47.8825,
+     "redundant": 0.0,
+     "advanced": 30.512191301623766,
+     "apd": 4.03,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 1,
+     "success": 0.0,
+     "illegal": 62.651043573782495,
+     "detection": 45.75,
+     "ep_len": 40.965,
+     "redundant": 0.0,
+     "advanced": 31.026486024655192,
+     "apd": 3.5775,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 2,
+     "success": 0.0,
+     "illegal": 55.41089756836812,
+     "detection": 58.0,
+     "ep_len": 36.2925,
+     "redundant": 0.0,
+     "advanced": 36.54336295377833,
+     "apd": 3.6075,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 3,
+     "success": 0.0,
+     "illegal": 66.24430365677448,
+     "detection": 33.75,
+     "ep_len": 44.985,
+     "redundant": 0.0,
+     "advanced": 28.270534622651994,
+     "apd": 3.6525,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 4,
+     "success": 0.0,
+     "illegal": 69.88915321151997,
+     "detection": 25.5,
+     "ep_len": 49.3925,
+     "redundant": 0.86045452244774,
+     "advanced": 24.669737308295794,
+     "apd": 3.3175,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 5,
+     "success": 0.0,
+     "illegal": 65.76039798692659,
+     "detection": 36.5,
+     "ep_len": 43.2175,
+     "redundant": 0.0,
+     "advanced": 28.420200150402035,
+     "apd": 3.5275,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 6,
+     "success": 0.0,
+     "illegal": 66.87357419491751,
+     "detection": 29.5,
+     "ep_len": 47.1225,
+     "redundant": 0.015915963711602737,
+     "advanced": 27.529311899835534,
+     "apd": 3.505,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 7,
+     "success": 0.0,
+     "illegal": 55.717241379310344,
+     "detection": 55.0,
+     "ep_len": 36.25,
+     "redundant": 0.0,
+     "advanced": 36.682758620689654,
+     "apd": 3.86,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 8,
+     "success": 0.0,
+     "illegal": 61.07000883392226,
+     "detection": 33.5,
+     "ep_len": 45.28,
+     "redundant": 0.0,
+     "advanced": 32.00088339222615,
+     "apd": 4.435,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 9,
+     "success": 0.0,
+     "illegal": 62.608293866235414,
+     "detection": 38.75,
+     "ep_len": 43.285,
+     "redundant": 0.0,
+     "advanced": 31.188633475799932,
+     "apd": 3.705,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "dqn": {
+   "n": 10,
+   "episodes": 400,
+   "topology": "enterprise",
+   "success_mean": 0.0,
+   "success_sd": 0.0,
+   "illegal_mean": 96.3532503826136,
+   "illegal_sd": 4.97238282888521,
+   "detection_mean": 3.9,
+   "ep_len_mean": 58.09125,
+   "redundant_mean": 0.0,
+   "advanced_mean": 3.116883326639571,
+   "apd_mean": 0.737,
+   "win_len_mean": NaN,
+   "by_requirement": {
+    "c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "collection": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "collection,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "host_privilege": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "host_privilege,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "host_privilege,collection": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "host_privilege,collection,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "none": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,collection": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,collection,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,host_privilege": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,host_privilege,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,host_privilege,collection": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,host_privilege,collection,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    }
+   },
+   "per_seed": [
+    {
+     "seed": 0,
+     "success": 0.0,
+     "illegal": 96.25988369660712,
+     "detection": 0.75,
+     "ep_len": 59.7575,
+     "redundant": 0.0,
+     "advanced": 3.2924737480650963,
+     "apd": 1.3525,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 1,
+     "success": 0.0,
+     "illegal": 98.58372326203208,
+     "detection": 0.5,
+     "ep_len": 59.84,
+     "redundant": 0.0,
+     "advanced": 1.1948529411764706,
+     "apd": 0.1975,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 2,
+     "success": 0.0,
+     "illegal": 90.44676133415106,
+     "detection": 14.0,
+     "ep_len": 52.9925,
+     "redundant": 0.0,
+     "advanced": 8.142661697410011,
+     "apd": 1.7175,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 3,
+     "success": 0.0,
+     "illegal": 97.37624182729049,
+     "detection": 3.0,
+     "ep_len": 58.885,
+     "redundant": 0.0,
+     "advanced": 2.2671308482635646,
+     "apd": 0.92,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 4,
+     "success": 0.0,
+     "illegal": 100.0,
+     "detection": 0.0,
+     "ep_len": 60.0,
+     "redundant": 0.0,
+     "advanced": 0.0,
+     "apd": 0.0,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 5,
+     "success": 0.0,
+     "illegal": 100.0,
+     "detection": 0.0,
+     "ep_len": 60.0,
+     "redundant": 0.0,
+     "advanced": 0.0,
+     "apd": 0.0,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 6,
+     "success": 0.0,
+     "illegal": 100.0,
+     "detection": 0.0,
+     "ep_len": 60.0,
+     "redundant": 0.0,
+     "advanced": 0.0,
+     "apd": 0.0,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 7,
+     "success": 0.0,
+     "illegal": 83.9757820383451,
+     "detection": 20.5,
+     "ep_len": 49.55,
+     "redundant": 0.0,
+     "advanced": 13.516649848637739,
+     "apd": 1.9525,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 8,
+     "success": 0.0,
+     "illegal": 99.94166666666666,
+     "detection": 0.0,
+     "ep_len": 60.0,
+     "redundant": 0.0,
+     "advanced": 0.05416666666666667,
+     "apd": 0.03,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 9,
+     "success": 0.0,
+     "illegal": 96.94844500104362,
+     "detection": 0.25,
+     "ep_len": 59.8875,
+     "redundant": 0.0,
+     "advanced": 2.7008975161761635,
+     "apd": 1.2,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "a2c": {
+   "n": 10,
+   "episodes": 400,
+   "topology": "enterprise",
+   "success_mean": 0.0,
+   "success_sd": 0.0,
+   "illegal_mean": 59.592931811878124,
+   "illegal_sd": 30.976168164333846,
+   "detection_mean": 54.05,
+   "ep_len_mean": 35.5315,
+   "redundant_mean": 13.121538918431543,
+   "advanced_mean": 21.933825763982163,
+   "apd_mean": 2.5597499999999997,
+   "win_len_mean": NaN,
+   "by_requirement": {
+    "c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "collection": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "collection,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "host_privilege": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "host_privilege,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "host_privilege,collection": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "host_privilege,collection,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "none": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,collection": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,collection,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,host_privilege": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,host_privilege,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,host_privilege,collection": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,host_privilege,collection,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    }
+   },
+   "per_seed": [
+    {
+     "seed": 0,
+     "success": 0.0,
+     "illegal": 76.31916996047431,
+     "detection": 21.5,
+     "ep_len": 50.6,
+     "redundant": 0.009881422924901186,
+     "advanced": 19.446640316205535,
+     "apd": 3.335,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 1,
+     "success": 0.0,
+     "illegal": 81.6625469193445,
+     "detection": 12.25,
+     "ep_len": 54.615,
+     "redundant": 0.1510574018126888,
+     "advanced": 15.146937654490525,
+     "apd": 3.2,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 2,
+     "success": 0.0,
+     "illegal": 44.764364105874755,
+     "detection": 86.5,
+     "ep_len": 19.3625,
+     "redundant": 0.0,
+     "advanced": 43.666881859264045,
+     "apd": 3.0975,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 3,
+     "success": 0.0,
+     "illegal": 68.20600858369099,
+     "detection": 63.25,
+     "ep_len": 29.125,
+     "redundant": 0.0,
+     "advanced": 25.93991416309013,
+     "apd": 3.3775,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 4,
+     "success": 0.0,
+     "illegal": 97.10980244747942,
+     "detection": 0.25,
+     "ep_len": 59.8575,
+     "redundant": 0.0,
+     "advanced": 2.6855448356513385,
+     "apd": 1.0,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 5,
+     "success": 0.0,
+     "illegal": 64.80781865965834,
+     "detection": 74.0,
+     "ep_len": 30.44,
+     "redundant": 0.0,
+     "advanced": 29.196780551905388,
+     "apd": 3.88,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 6,
+     "success": 0.0,
+     "illegal": 96.92460746572084,
+     "detection": 4.0,
+     "ep_len": 57.7975,
+     "redundant": 0.0,
+     "advanced": 2.0805398157359747,
+     "apd": 0.9825,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 7,
+     "success": 0.0,
+     "illegal": 6.100438153016515,
+     "detection": 100.0,
+     "ep_len": 14.835,
+     "redundant": 59.184361307718234,
+     "advanced": 26.929558476575664,
+     "apd": 1.0,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 8,
+     "success": 0.0,
+     "illegal": 6.6177754496245855,
+     "detection": 100.0,
+     "ep_len": 14.3175,
+     "redundant": 71.87008905185961,
+     "advanced": 15.470577964030033,
+     "apd": 1.0,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 9,
+     "success": 0.0,
+     "illegal": 53.41678637389698,
+     "detection": 78.75,
+     "ep_len": 24.365,
+     "redundant": 0.0,
+     "advanced": 38.77488200287297,
+     "apd": 4.725,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    }
+   ]
+  },
+  "nomask_shaped": {
+   "n": 10,
+   "episodes": 400,
+   "topology": "enterprise",
+   "success_mean": 0.0,
+   "success_sd": 0.0,
+   "illegal_mean": 10.271348291544216,
+   "illegal_sd": 2.01703392206337,
+   "detection_mean": 99.975,
+   "ep_len_mean": 10.895500000000002,
+   "redundant_mean": 11.97719098443888,
+   "advanced_mean": 62.55656205408157,
+   "apd_mean": 1.9615000000000002,
+   "win_len_mean": NaN,
+   "by_requirement": {
+    "c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "collection": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "collection,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "host_privilege": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "host_privilege,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "host_privilege,collection": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "host_privilege,collection,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "none": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,collection": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,collection,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,host_privilege": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,host_privilege,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,host_privilege,collection": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    },
+    "persistence,host_privilege,collection,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 10
+    }
+   },
+   "per_seed": [
+    {
+     "seed": 0,
+     "success": 0.0,
+     "illegal": 8.91645214135268,
+     "detection": 100.0,
+     "ep_len": 10.6825,
+     "redundant": 12.731102270067868,
+     "advanced": 63.304469927451436,
+     "apd": 1.9925,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 1,
+     "success": 0.0,
+     "illegal": 15.141104294478527,
+     "detection": 100.0,
+     "ep_len": 10.1875,
+     "redundant": 6.355828220858895,
+     "advanced": 63.11656441717791,
+     "apd": 1.925,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 2,
+     "success": 0.0,
+     "illegal": 10.694503621644653,
+     "detection": 100.0,
+     "ep_len": 11.735,
+     "redundant": 8.52151682999574,
+     "advanced": 66.4039198977418,
+     "apd": 1.9975,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 3,
+     "success": 0.0,
+     "illegal": 9.51818611242324,
+     "detection": 100.0,
+     "ep_len": 10.585,
+     "redundant": 15.895134624468588,
+     "advanced": 57.67595654227681,
+     "apd": 1.98,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 4,
+     "success": 0.0,
+     "illegal": 10.182828049062717,
+     "detection": 99.75,
+     "ep_len": 10.8025,
+     "redundant": 17.40337884748901,
+     "advanced": 57.81069196945152,
+     "apd": 1.9875,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 5,
+     "success": 0.0,
+     "illegal": 11.178486686000527,
+     "detection": 100.0,
+     "ep_len": 9.4825,
+     "redundant": 4.851041392037964,
+     "advanced": 65.9108884787767,
+     "apd": 1.8375,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 6,
+     "success": 0.0,
+     "illegal": 8.725602755453501,
+     "detection": 100.0,
+     "ep_len": 10.8875,
+     "redundant": 6.567164179104478,
+     "advanced": 69.6211251435132,
+     "apd": 1.9925,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 7,
+     "success": 0.0,
+     "illegal": 11.873479318734793,
+     "detection": 100.0,
+     "ep_len": 10.275,
+     "redundant": 11.289537712895378,
+     "advanced": 59.75669099756691,
+     "apd": 1.9275,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 8,
+     "success": 0.0,
+     "illegal": 8.665430954587581,
+     "detection": 100.0,
+     "ep_len": 10.79,
+     "redundant": 10.727525486561632,
+     "advanced": 65.89434661723818,
+     "apd": 1.9925,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 9,
+     "success": 0.0,
+     "illegal": 7.817408981703936,
+     "detection": 100.0,
+     "ep_len": 13.5275,
+     "redundant": 25.42968028090926,
+     "advanced": 56.07096654962114,
+     "apd": 1.9825,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    }
+   ]
+  }
+ },
+ "budget_500": {
+  "nomask": {
+   "n": 2,
+   "episodes": 400,
+   "topology": "enterprise",
+   "success_mean": 36.0,
+   "success_sd": 3.0,
+   "illegal_mean": 94.78248940778363,
+   "illegal_sd": 0.867626961494885,
+   "detection_mean": 13.25,
+   "ep_len_mean": 326.65125,
+   "redundant_mean": 0.0,
+   "advanced_mean": 4.474972729762984,
+   "apd_mean": 4.220000000000001,
+   "win_len_mean": 154.2817599067599,
+   "by_requirement": {
+    "c2": {
+     "mean": 22.413793103448278,
+     "sd": 5.172413793103447,
+     "seeds": 2
+    },
+    "collection": {
+     "mean": 30.88235294117647,
+     "sd": 13.235294117647058,
+     "seeds": 2
+    },
+    "collection,c2": {
+     "mean": 21.153846153846153,
+     "sd": 1.9230769230769234,
+     "seeds": 2
+    },
+    "host_privilege": {
+     "mean": 42.85714285714286,
+     "sd": 7.142857142857142,
+     "seeds": 2
+    },
+    "host_privilege,c2": {
+     "mean": 25.0,
+     "sd": 11.363636363636365,
+     "seeds": 2
+    },
+    "host_privilege,collection": {
+     "mean": 32.758620689655174,
+     "sd": 1.724137931034484,
+     "seeds": 2
+    },
+    "host_privilege,collection,c2": {
+     "mean": 28.57142857142857,
+     "sd": 5.7142857142857135,
+     "seeds": 2
+    },
+    "none": {
+     "mean": 47.05882352941176,
+     "sd": 17.647058823529413,
+     "seeds": 2
+    },
+    "persistence": {
+     "mean": 53.333333333333336,
+     "sd": 13.333333333333336,
+     "seeds": 2
+    },
+    "persistence,c2": {
+     "mean": 28.571428571428573,
+     "sd": 4.761904761904763,
+     "seeds": 2
+    },
+    "persistence,collection": {
+     "mean": 48.333333333333336,
+     "sd": 18.333333333333336,
+     "seeds": 2
+    },
+    "persistence,collection,c2": {
+     "mean": 23.076923076923077,
+     "sd": 15.384615384615383,
+     "seeds": 2
+    },
+    "persistence,host_privilege": {
+     "mean": 57.14285714285714,
+     "sd": 3.571428571428573,
+     "seeds": 2
+    },
+    "persistence,host_privilege,c2": {
+     "mean": 42.5,
+     "sd": 2.5,
+     "seeds": 2
+    },
+    "persistence,host_privilege,collection": {
+     "mean": 39.18918918918919,
+     "sd": 1.3513513513513509,
+     "seeds": 2
+    },
+    "persistence,host_privilege,collection,c2": {
+     "mean": 52.94117647058823,
+     "sd": 5.8823529411764675,
+     "seeds": 2
+    }
+   },
+   "per_seed": [
+    {
+     "seed": 0,
+     "success": 39.0,
+     "illegal": 95.6501163692785,
+     "detection": 10.75,
+     "ep_len": 322.25,
+     "redundant": 0.0,
+     "advanced": 3.7377812257564003,
+     "apd": 4.25,
+     "win_len": 140.94230769230768,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 17,
+       "success": 60.714285714285715
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 10,
+       "success": 34.48275862068966
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 5,
+       "success": 23.80952380952381
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 15,
+       "success": 44.11764705882353
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 20,
+       "success": 66.66666666666667
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 10,
+       "success": 38.46153846153846
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 11,
+       "success": 64.70588235294117
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 6,
+       "success": 23.076923076923077
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 5,
+       "success": 17.24137931034483
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 5,
+       "success": 35.714285714285715
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 8,
+       "success": 22.857142857142858
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 15,
+       "success": 40.54054054054054
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 8,
+       "success": 40.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 3,
+       "success": 13.636363636363637
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 8,
+       "success": 47.05882352941177
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 10,
+       "success": 66.66666666666667
+      }
+     }
+    },
+    {
+     "seed": 1,
+     "success": 33.0,
+     "illegal": 93.91486244628874,
+     "detection": 15.75,
+     "ep_len": 331.0525,
+     "redundant": 0.0,
+     "advanced": 5.212164233769569,
+     "apd": 4.19,
+     "win_len": 167.62121212121212,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 15,
+       "success": 53.57142857142857
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 9,
+       "success": 31.03448275862069
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 7,
+       "success": 33.333333333333336
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 6,
+       "success": 17.647058823529413
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 9,
+       "success": 30.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 2,
+       "success": 7.6923076923076925
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 5,
+       "success": 29.41176470588235
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 5,
+       "success": 19.23076923076923
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 8,
+       "success": 27.586206896551722
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 7,
+       "success": 50.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 12,
+       "success": 34.285714285714285
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 14,
+       "success": 37.83783783783784
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 9,
+       "success": 45.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 8,
+       "success": 36.36363636363637
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 10,
+       "success": 58.8235294117647
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 6,
+       "success": 40.0
+      }
+     }
+    }
+   ]
+  }
+ },
+ "budget_2000": {
+  "nomask": {
+   "n": 2,
+   "episodes": 400,
+   "topology": "enterprise",
+   "success_mean": 0.375,
+   "success_sd": 0.375,
+   "illegal_mean": 99.5168303941947,
+   "illegal_sd": 0.016642123663551445,
+   "detection_mean": 7.375,
+   "ep_len_mean": 1853.1925,
+   "redundant_mean": 0.0,
+   "advanced_mean": 0.4165190993759976,
+   "apd_mean": 2.2625,
+   "win_len_mean": 2000.0,
+   "by_requirement": {
+    "c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 2
+    },
+    "collection": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 2
+    },
+    "collection,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 2
+    },
+    "host_privilege": {
+     "mean": 3.5714285714285716,
+     "sd": 3.5714285714285716,
+     "seeds": 2
+    },
+    "host_privilege,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 2
+    },
+    "host_privilege,collection": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 2
+    },
+    "host_privilege,collection,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 2
+    },
+    "none": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 2
+    },
+    "persistence": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 2
+    },
+    "persistence,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 2
+    },
+    "persistence,collection": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 2
+    },
+    "persistence,collection,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 2
+    },
+    "persistence,host_privilege": {
+     "mean": 1.7857142857142858,
+     "sd": 1.7857142857142858,
+     "seeds": 2
+    },
+    "persistence,host_privilege,c2": {
+     "mean": 2.5,
+     "sd": 2.5,
+     "seeds": 2
+    },
+    "persistence,host_privilege,collection": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 2
+    },
+    "persistence,host_privilege,collection,c2": {
+     "mean": 0.0,
+     "sd": 0.0,
+     "seeds": 2
+    }
+   },
+   "per_seed": [
+    {
+     "seed": 0,
+     "success": 0.75,
+     "illegal": 99.50018827053115,
+     "detection": 12.75,
+     "ep_len": 1746.1575,
+     "redundant": 0.0,
+     "advanced": 0.42249911591594685,
+     "apd": 2.575,
+     "win_len": 2000.0,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 1,
+       "success": 3.5714285714285716
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 1,
+       "success": 7.142857142857143
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 1,
+       "success": 5.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 1,
+     "success": 0.0,
+     "illegal": 99.53347251785826,
+     "detection": 2.0,
+     "ep_len": 1960.2275,
+     "redundant": 0.0,
+     "advanced": 0.41053908283604834,
+     "apd": 1.95,
+     "win_len": NaN,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 21,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "none": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "collection,c2": {
+       "episodes": 26,
+       "wins": 0,
+       "success": 0.0
+      },
+      "c2": {
+       "episodes": 29,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege": {
+       "episodes": 14,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 35,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 37,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 20,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,c2": {
+       "episodes": 22,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 17,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence": {
+       "episodes": 15,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    }
+   ]
+  }
+ },
+ "v4compat": {
+  "masked": {
+   "n": 3,
+   "episodes": 400,
+   "topology": "v4compat",
+   "success_mean": 92.0,
+   "success_sd": 1.4719601443879744,
+   "illegal_mean": 0.0,
+   "illegal_sd": 0.0,
+   "detection_mean": 10.666666666666666,
+   "ep_len_mean": 18.844166666666666,
+   "redundant_mean": 0.0,
+   "advanced_mean": 87.04896979788668,
+   "apd_mean": 2.8658333333333332,
+   "win_len_mean": 19.818989176342118,
+   "by_requirement": {
+    "c2": {
+     "mean": 95.95959595959596,
+     "sd": 1.4284985478516117,
+     "seeds": 3
+    },
+    "collection": {
+     "mean": 88.0,
+     "sd": 0.0,
+     "seeds": 3
+    },
+    "collection,c2": {
+     "mean": 96.55172413793103,
+     "sd": 2.8155054514749196,
+     "seeds": 3
+    },
+    "host_privilege": {
+     "mean": 86.27450980392156,
+     "sd": 2.7729677693590067,
+     "seeds": 3
+    },
+    "host_privilege,c2": {
+     "mean": 91.22807017543859,
+     "sd": 8.945648269461028,
+     "seeds": 3
+    },
+    "host_privilege,collection": {
+     "mean": 98.76543209876543,
+     "sd": 1.7459426695964164,
+     "seeds": 3
+    },
+    "host_privilege,collection,c2": {
+     "mean": 90.19607843137254,
+     "sd": 1.3864838846795033,
+     "seeds": 3
+    },
+    "none": {
+     "mean": 90.47619047619048,
+     "sd": 0.0,
+     "seeds": 3
+    },
+    "persistence": {
+     "mean": 96.07843137254902,
+     "sd": 5.5459355387180205,
+     "seeds": 3
+    },
+    "persistence,c2": {
+     "mean": 88.40579710144927,
+     "sd": 4.099169746008973,
+     "seeds": 3
+    },
+    "persistence,collection": {
+     "mean": 92.22222222222223,
+     "sd": 4.157397096415489,
+     "seeds": 3
+    },
+    "persistence,collection,c2": {
+     "mean": 88.40579710144927,
+     "sd": 2.0495848730044828,
+     "seeds": 3
+    },
+    "persistence,host_privilege": {
+     "mean": 88.17204301075269,
+     "sd": 1.5206597444872028,
+     "seeds": 3
+    },
+    "persistence,host_privilege,c2": {
+     "mean": 87.71929824561403,
+     "sd": 2.481076425215953,
+     "seeds": 3
+    },
+    "persistence,host_privilege,collection": {
+     "mean": 98.80952380952381,
+     "sd": 1.6835875742536837,
+     "seeds": 3
+    },
+    "persistence,host_privilege,collection,c2": {
+     "mean": 90.27777777777779,
+     "sd": 1.9641855032959676,
+     "seeds": 3
+    }
+   },
+   "per_seed": [
+    {
+     "seed": 0,
+     "success": 90.0,
+     "illegal": 0.0,
+     "detection": 10.75,
+     "ep_len": 18.0825,
+     "redundant": 0.0,
+     "advanced": 87.57085579980644,
+     "apd": 2.8225,
+     "win_len": 19.108333333333334,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 31,
+       "wins": 28,
+       "success": 90.3225806451613
+      },
+      "host_privilege,collection": {
+       "episodes": 27,
+       "wins": 26,
+       "success": 96.29629629629629
+      },
+      "persistence,c2": {
+       "episodes": 23,
+       "wins": 19,
+       "success": 82.6086956521739
+      },
+      "collection": {
+       "episodes": 25,
+       "wins": 22,
+       "success": 88.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 26,
+       "success": 86.66666666666667
+      },
+      "host_privilege,c2": {
+       "episodes": 19,
+       "wins": 15,
+       "success": 78.94736842105263
+      },
+      "none": {
+       "episodes": 21,
+       "wins": 19,
+       "success": 90.47619047619048
+      },
+      "collection,c2": {
+       "episodes": 29,
+       "wins": 27,
+       "success": 93.10344827586206
+      },
+      "c2": {
+       "episodes": 33,
+       "wins": 31,
+       "success": 93.93939393939394
+      },
+      "host_privilege": {
+       "episodes": 17,
+       "wins": 15,
+       "success": 88.23529411764706
+      },
+      "persistence": {
+       "episodes": 17,
+       "wins": 15,
+       "success": 88.23529411764706
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 19,
+       "wins": 17,
+       "success": 89.47368421052632
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 34,
+       "wins": 31,
+       "success": 91.17647058823529
+      },
+      "persistence,collection,c2": {
+       "episodes": 23,
+       "wins": 20,
+       "success": 86.95652173913044
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 24,
+       "wins": 21,
+       "success": 87.5
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 28,
+       "wins": 28,
+       "success": 100.0
+      }
+     }
+    },
+    {
+     "seed": 1,
+     "success": 93.5,
+     "illegal": 0.0,
+     "detection": 10.75,
+     "ep_len": 18.8775,
+     "redundant": 0.0,
+     "advanced": 86.06807045424448,
+     "apd": 2.895,
+     "win_len": 19.75133689839572,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 31,
+       "wins": 27,
+       "success": 87.09677419354838
+      },
+      "host_privilege,collection": {
+       "episodes": 27,
+       "wins": 27,
+       "success": 100.0
+      },
+      "persistence,c2": {
+       "episodes": 23,
+       "wins": 21,
+       "success": 91.30434782608695
+      },
+      "collection": {
+       "episodes": 25,
+       "wins": 22,
+       "success": 88.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 29,
+       "success": 96.66666666666667
+      },
+      "host_privilege,c2": {
+       "episodes": 19,
+       "wins": 19,
+       "success": 100.0
+      },
+      "none": {
+       "episodes": 21,
+       "wins": 19,
+       "success": 90.47619047619048
+      },
+      "collection,c2": {
+       "episodes": 29,
+       "wins": 29,
+       "success": 100.0
+      },
+      "c2": {
+       "episodes": 33,
+       "wins": 32,
+       "success": 96.96969696969697
+      },
+      "host_privilege": {
+       "episodes": 17,
+       "wins": 15,
+       "success": 88.23529411764706
+      },
+      "persistence": {
+       "episodes": 17,
+       "wins": 17,
+       "success": 100.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 19,
+       "wins": 16,
+       "success": 84.21052631578948
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 34,
+       "wins": 31,
+       "success": 91.17647058823529
+      },
+      "persistence,collection,c2": {
+       "episodes": 23,
+       "wins": 21,
+       "success": 91.30434782608695
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 24,
+       "wins": 22,
+       "success": 91.66666666666667
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 28,
+       "wins": 27,
+       "success": 96.42857142857143
+      }
+     }
+    },
+    {
+     "seed": 2,
+     "success": 92.5,
+     "illegal": 0.0,
+     "detection": 10.5,
+     "ep_len": 19.5725,
+     "redundant": 0.0,
+     "advanced": 87.50798313960915,
+     "apd": 2.88,
+     "win_len": 20.5972972972973,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 31,
+       "wins": 27,
+       "success": 87.09677419354838
+      },
+      "host_privilege,collection": {
+       "episodes": 27,
+       "wins": 27,
+       "success": 100.0
+      },
+      "persistence,c2": {
+       "episodes": 23,
+       "wins": 21,
+       "success": 91.30434782608695
+      },
+      "collection": {
+       "episodes": 25,
+       "wins": 22,
+       "success": 88.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 28,
+       "success": 93.33333333333333
+      },
+      "host_privilege,c2": {
+       "episodes": 19,
+       "wins": 18,
+       "success": 94.73684210526316
+      },
+      "none": {
+       "episodes": 21,
+       "wins": 19,
+       "success": 90.47619047619048
+      },
+      "collection,c2": {
+       "episodes": 29,
+       "wins": 28,
+       "success": 96.55172413793103
+      },
+      "c2": {
+       "episodes": 33,
+       "wins": 32,
+       "success": 96.96969696969697
+      },
+      "host_privilege": {
+       "episodes": 17,
+       "wins": 14,
+       "success": 82.3529411764706
+      },
+      "persistence": {
+       "episodes": 17,
+       "wins": 17,
+       "success": 100.0
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 19,
+       "wins": 17,
+       "success": 89.47368421052632
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 34,
+       "wins": 30,
+       "success": 88.23529411764706
+      },
+      "persistence,collection,c2": {
+       "episodes": 23,
+       "wins": 20,
+       "success": 86.95652173913044
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 24,
+       "wins": 22,
+       "success": 91.66666666666667
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 28,
+       "wins": 28,
+       "success": 100.0
+      }
+     }
+    }
+   ]
+  },
+  "nomask": {
+   "n": 3,
+   "episodes": 400,
+   "topology": "v4compat",
+   "success_mean": 49.166666666666664,
+   "success_sd": 28.256513506721873,
+   "illegal_mean": 80.8773164674824,
+   "illegal_sd": 4.101399599971333,
+   "detection_mean": 4.583333333333333,
+   "ep_len_mean": 55.969166666666666,
+   "redundant_mean": 2.9740671536153105,
+   "advanced_mean": 13.893027204536637,
+   "apd_mean": 2.8425,
+   "win_len_mean": 55.359998042801344,
+   "by_requirement": {
+    "c2": {
+     "mean": 51.51515151515151,
+     "sd": 33.287387986432485,
+     "seeds": 3
+    },
+    "collection": {
+     "mean": 44.0,
+     "sd": 11.775681155103795,
+     "seeds": 3
+    },
+    "collection,c2": {
+     "mean": 50.57471264367816,
+     "sd": 28.758611501601845,
+     "seeds": 3
+    },
+    "host_privilege": {
+     "mean": 43.13725490196078,
+     "sd": 28.95063345143804,
+     "seeds": 3
+    },
+    "host_privilege,c2": {
+     "mean": 42.10526315789474,
+     "sd": 30.081452981547802,
+     "seeds": 3
+    },
+    "host_privilege,collection": {
+     "mean": 40.74074074074074,
+     "sd": 36.66479606152468,
+     "seeds": 3
+    },
+    "host_privilege,collection,c2": {
+     "mean": 45.09803921568627,
+     "sd": 33.30448578718241,
+     "seeds": 3
+    },
+    "none": {
+     "mean": 57.14285714285714,
+     "sd": 19.440394783993472,
+     "seeds": 3
+    },
+    "persistence": {
+     "mean": 62.74509803921569,
+     "sd": 31.979424373137434,
+     "seeds": 3
+    },
+    "persistence,c2": {
+     "mean": 56.52173913043478,
+     "sd": 39.53096144053871,
+     "seeds": 3
+    },
+    "persistence,collection": {
+     "mean": 44.44444444444445,
+     "sd": 17.708197167232477,
+     "seeds": 3
+    },
+    "persistence,collection,c2": {
+     "mean": 56.52173913043478,
+     "sd": 28.17713347133852,
+     "seeds": 3
+    },
+    "persistence,host_privilege": {
+     "mean": 52.68817204301075,
+     "sd": 38.37971676897795,
+     "seeds": 3
+    },
+    "persistence,host_privilege,c2": {
+     "mean": 54.385964912280706,
+     "sd": 41.29334138926252,
+     "seeds": 3
+    },
+    "persistence,host_privilege,collection": {
+     "mean": 41.666666666666664,
+     "sd": 36.692940493862956,
+     "seeds": 3
+    },
+    "persistence,host_privilege,collection,c2": {
+     "mean": 50.0,
+     "sd": 36.00411499115478,
+     "seeds": 3
+    }
+   },
+   "per_seed": [
+    {
+     "seed": 0,
+     "success": 70.75,
+     "illegal": 78.8162586165914,
+     "detection": 3.75,
+     "ep_len": 52.5875,
+     "redundant": 0.0,
+     "advanced": 18.545281673401472,
+     "apd": 2.93,
+     "win_len": 51.41342756183746,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 31,
+       "wins": 28,
+       "success": 90.3225806451613
+      },
+      "host_privilege,collection": {
+       "episodes": 27,
+       "wins": 24,
+       "success": 88.88888888888889
+      },
+      "persistence,c2": {
+       "episodes": 23,
+       "wins": 15,
+       "success": 65.21739130434783
+      },
+      "collection": {
+       "episodes": 25,
+       "wins": 15,
+       "success": 60.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 20,
+       "success": 66.66666666666667
+      },
+      "host_privilege,c2": {
+       "episodes": 19,
+       "wins": 8,
+       "success": 42.10526315789474
+      },
+      "none": {
+       "episodes": 21,
+       "wins": 17,
+       "success": 80.95238095238095
+      },
+      "collection,c2": {
+       "episodes": 29,
+       "wins": 19,
+       "success": 65.51724137931035
+      },
+      "c2": {
+       "episodes": 33,
+       "wins": 21,
+       "success": 63.63636363636363
+      },
+      "host_privilege": {
+       "episodes": 17,
+       "wins": 13,
+       "success": 76.47058823529412
+      },
+      "persistence": {
+       "episodes": 17,
+       "wins": 15,
+       "success": 88.23529411764706
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 19,
+       "wins": 12,
+       "success": 63.1578947368421
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 34,
+       "wins": 19,
+       "success": 55.88235294117647
+      },
+      "persistence,collection,c2": {
+       "episodes": 23,
+       "wins": 16,
+       "success": 69.56521739130434
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 24,
+       "wins": 16,
+       "success": 66.66666666666667
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 28,
+       "wins": 25,
+       "success": 89.28571428571429
+      }
+     }
+    },
+    {
+     "seed": 1,
+     "success": 9.25,
+     "illegal": 77.21250212332258,
+     "detection": 4.0,
+     "ep_len": 58.87,
+     "redundant": 8.922201460845931,
+     "advanced": 11.610327841005606,
+     "apd": 2.825,
+     "win_len": 56.270270270270274,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 31,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection": {
+       "episodes": 27,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,c2": {
+       "episodes": 23,
+       "wins": 1,
+       "success": 4.3478260869565215
+      },
+      "collection": {
+       "episodes": 25,
+       "wins": 8,
+       "success": 32.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 7,
+       "success": 23.333333333333332
+      },
+      "host_privilege,c2": {
+       "episodes": 19,
+       "wins": 1,
+       "success": 5.2631578947368425
+      },
+      "none": {
+       "episodes": 21,
+       "wins": 7,
+       "success": 33.333333333333336
+      },
+      "collection,c2": {
+       "episodes": 29,
+       "wins": 3,
+       "success": 10.344827586206897
+      },
+      "c2": {
+       "episodes": 33,
+       "wins": 2,
+       "success": 6.0606060606060606
+      },
+      "host_privilege": {
+       "episodes": 17,
+       "wins": 1,
+       "success": 5.882352941176471
+      },
+      "persistence": {
+       "episodes": 17,
+       "wins": 3,
+       "success": 17.647058823529413
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 19,
+       "wins": 0,
+       "success": 0.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 34,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,collection,c2": {
+       "episodes": 23,
+       "wins": 4,
+       "success": 17.391304347826086
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 24,
+       "wins": 0,
+       "success": 0.0
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 28,
+       "wins": 0,
+       "success": 0.0
+      }
+     }
+    },
+    {
+     "seed": 2,
+     "success": 67.5,
+     "illegal": 86.60318866253321,
+     "detection": 6.0,
+     "ep_len": 56.45,
+     "redundant": 0.0,
+     "advanced": 11.523472099202834,
+     "apd": 2.7725,
+     "win_len": 58.3962962962963,
+     "by_requirement": {
+      "persistence,host_privilege": {
+       "episodes": 31,
+       "wins": 21,
+       "success": 67.74193548387096
+      },
+      "host_privilege,collection": {
+       "episodes": 27,
+       "wins": 9,
+       "success": 33.333333333333336
+      },
+      "persistence,c2": {
+       "episodes": 23,
+       "wins": 23,
+       "success": 100.0
+      },
+      "collection": {
+       "episodes": 25,
+       "wins": 10,
+       "success": 40.0
+      },
+      "persistence,collection": {
+       "episodes": 30,
+       "wins": 13,
+       "success": 43.333333333333336
+      },
+      "host_privilege,c2": {
+       "episodes": 19,
+       "wins": 15,
+       "success": 78.94736842105263
+      },
+      "none": {
+       "episodes": 21,
+       "wins": 12,
+       "success": 57.142857142857146
+      },
+      "collection,c2": {
+       "episodes": 29,
+       "wins": 22,
+       "success": 75.86206896551724
+      },
+      "c2": {
+       "episodes": 33,
+       "wins": 28,
+       "success": 84.84848484848484
+      },
+      "host_privilege": {
+       "episodes": 17,
+       "wins": 8,
+       "success": 47.05882352941177
+      },
+      "persistence": {
+       "episodes": 17,
+       "wins": 14,
+       "success": 82.3529411764706
+      },
+      "persistence,host_privilege,c2": {
+       "episodes": 19,
+       "wins": 19,
+       "success": 100.0
+      },
+      "host_privilege,collection,c2": {
+       "episodes": 34,
+       "wins": 27,
+       "success": 79.41176470588235
+      },
+      "persistence,collection,c2": {
+       "episodes": 23,
+       "wins": 19,
+       "success": 82.6086956521739
+      },
+      "persistence,host_privilege,collection,c2": {
+       "episodes": 24,
+       "wins": 20,
+       "success": 83.33333333333333
+      },
+      "persistence,host_privilege,collection": {
+       "episodes": 28,
+       "wins": 10,
+       "success": 35.714285714285715
+      }
+     }
+    }
+   ]
+  }
+ }
+}

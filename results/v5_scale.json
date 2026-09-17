@@ -1,0 +1,210 @@
+{
+ "small8": {
+  "hosts": 8,
+  "n_policies": 5,
+  "success_mean": 27.2,
+  "success_sd": 21.322497247951258,
+  "illegal_mean": 0.0,
+  "detection_mean": 42.0,
+  "ep_len_mean": 64.58399999999999,
+  "random_legal": 16.333333333333332,
+  "per_seed": [
+   {
+    "seed": 0,
+    "success": 0.0,
+    "illegal": 0.0,
+    "detection": 27.333333333333332,
+    "ep_len": 95.02,
+    "apd": 3.3866666666666667
+   },
+   {
+    "seed": 1,
+    "success": 49.333333333333336,
+    "illegal": 0.0,
+    "detection": 50.666666666666664,
+    "ep_len": 45.8,
+    "apd": 3.22
+   },
+   {
+    "seed": 2,
+    "success": 40.666666666666664,
+    "illegal": 0.0,
+    "detection": 59.333333333333336,
+    "ep_len": 47.166666666666664,
+    "apd": 3.046666666666667
+   },
+   {
+    "seed": 3,
+    "success": 2.6666666666666665,
+    "illegal": 0.0,
+    "detection": 34.666666666666664,
+    "ep_len": 84.11333333333333,
+    "apd": 2.4466666666666668
+   },
+   {
+    "seed": 4,
+    "success": 43.333333333333336,
+    "illegal": 0.0,
+    "detection": 38.0,
+    "ep_len": 50.82,
+    "apd": 2.973333333333333
+   }
+  ]
+ },
+ "enterprise": {
+  "hosts": 12,
+  "n_policies": 5,
+  "success_mean": 71.20000000000002,
+  "success_sd": 4.182503237695498,
+  "illegal_mean": 0.0,
+  "detection_mean": 28.93333333333333,
+  "ep_len_mean": 37.64266666666667,
+  "random_legal": 8.666666666666666,
+  "per_seed": [
+   {
+    "seed": 0,
+    "success": 78.0,
+    "illegal": 0.0,
+    "detection": 22.0,
+    "ep_len": 49.586666666666666,
+    "apd": 4.1466666666666665
+   },
+   {
+    "seed": 1,
+    "success": 74.0,
+    "illegal": 0.0,
+    "detection": 26.0,
+    "ep_len": 32.473333333333336,
+    "apd": 3.966666666666667
+   },
+   {
+    "seed": 2,
+    "success": 68.66666666666667,
+    "illegal": 0.0,
+    "detection": 32.0,
+    "ep_len": 43.85333333333333,
+    "apd": 3.7533333333333334
+   },
+   {
+    "seed": 3,
+    "success": 68.66666666666667,
+    "illegal": 0.0,
+    "detection": 31.333333333333332,
+    "ep_len": 33.43333333333333,
+    "apd": 3.76
+   },
+   {
+    "seed": 4,
+    "success": 66.66666666666667,
+    "illegal": 0.0,
+    "detection": 33.333333333333336,
+    "ep_len": 28.866666666666667,
+    "apd": 3.6733333333333333
+   }
+  ]
+ },
+ "mid16": {
+  "hosts": 16,
+  "n_policies": 5,
+  "success_mean": 3.8666666666666663,
+  "success_sd": 7.7333333333333325,
+  "illegal_mean": 0.0,
+  "detection_mean": 54.4,
+  "ep_len_mean": 72.384,
+  "random_legal": 4.333333333333333,
+  "per_seed": [
+   {
+    "seed": 0,
+    "success": 0.0,
+    "illegal": 0.0,
+    "detection": 32.666666666666664,
+    "ep_len": 90.89333333333333,
+    "apd": 3.26
+   },
+   {
+    "seed": 1,
+    "success": 19.333333333333332,
+    "illegal": 0.0,
+    "detection": 61.333333333333336,
+    "ep_len": 63.24,
+    "apd": 2.933333333333333
+   },
+   {
+    "seed": 2,
+    "success": 0.0,
+    "illegal": 0.0,
+    "detection": 69.33333333333333,
+    "ep_len": 62.58,
+    "apd": 2.6333333333333333
+   },
+   {
+    "seed": 3,
+    "success": 0.0,
+    "illegal": 0.0,
+    "detection": 63.333333333333336,
+    "ep_len": 68.28,
+    "apd": 2.9133333333333336
+   },
+   {
+    "seed": 4,
+    "success": 0.0,
+    "illegal": 0.0,
+    "detection": 45.333333333333336,
+    "ep_len": 76.92666666666666,
+    "apd": 2.94
+   }
+  ]
+ },
+ "large20": {
+  "hosts": 20,
+  "n_policies": 5,
+  "success_mean": 0.0,
+  "success_sd": 0.0,
+  "illegal_mean": 0.0,
+  "detection_mean": 52.8,
+  "ep_len_mean": 75.11066666666667,
+  "random_legal": 2.3333333333333335,
+  "per_seed": [
+   {
+    "seed": 0,
+    "success": 0.0,
+    "illegal": 0.0,
+    "detection": 34.0,
+    "ep_len": 89.15333333333334,
+    "apd": 2.486666666666667
+   },
+   {
+    "seed": 1,
+    "success": 0.0,
+    "illegal": 0.0,
+    "detection": 57.333333333333336,
+    "ep_len": 72.59333333333333,
+    "apd": 2.6933333333333334
+   },
+   {
+    "seed": 2,
+    "success": 0.0,
+    "illegal": 0.0,
+    "detection": 67.33333333333333,
+    "ep_len": 65.24666666666667,
+    "apd": 2.12
+   },
+   {
+    "seed": 3,
+    "success": 0.0,
+    "illegal": 0.0,
+    "detection": 60.666666666666664,
+    "ep_len": 70.57333333333334,
+    "apd": 2.3066666666666666
+   },
+   {
+    "seed": 4,
+    "success": 0.0,
+    "illegal": 0.0,
+    "detection": 44.666666666666664,
+    "ep_len": 77.98666666666666,
+    "apd": 2.3333333333333335
+   }
+  ]
+ }
+}

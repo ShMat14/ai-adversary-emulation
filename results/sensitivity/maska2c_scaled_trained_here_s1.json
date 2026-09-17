@@ -1,0 +1,12 @@
+{
+ "config": "maska2c",
+ "mode": "scaled",
+ "label": "all 45 scaled by 0.732",
+ "arm": "trained_here",
+ "seed": 1,
+ "episodes": 200,
+ "success": 19.0,
+ "illegal": 0.0,
+ "detected": 92.5,
+ "steps": 20.165
+}

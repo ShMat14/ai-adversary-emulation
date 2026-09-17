@@ -1,0 +1,146 @@
+{
+ "config": "maska2c",
+ "episodes": 400,
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "rows": [
+  {
+   "seed": 0,
+   "success": 77.75,
+   "illegal": 0.0,
+   "detection": 34.5,
+   "ep_len": 44.6275,
+   "redundant": 0.19606744720183744,
+   "advanced": 83.0877821970758,
+   "apd": 4.3425,
+   "win_len": 53.758842443729904
+  },
+  {
+   "seed": 1,
+   "success": 51.0,
+   "illegal": 0.0,
+   "detection": 42.25,
+   "ep_len": 43.985,
+   "redundant": 0.0,
+   "advanced": 83.41480050017051,
+   "apd": 4.385,
+   "win_len": 56.90196078431372
+  },
+  {
+   "seed": 2,
+   "success": 63.5,
+   "illegal": 0.0,
+   "detection": 45.25,
+   "ep_len": 41.2075,
+   "redundant": 0.0,
+   "advanced": 82.80046108111388,
+   "apd": 4.2125,
+   "win_len": 54.17716535433071
+  },
+  {
+   "seed": 3,
+   "success": 73.75,
+   "illegal": 0.0,
+   "detection": 37.5,
+   "ep_len": 43.39,
+   "redundant": 0.0,
+   "advanced": 82.6169624337405,
+   "apd": 4.52,
+   "win_len": 51.820338983050846
+  },
+  {
+   "seed": 4,
+   "success": 78.0,
+   "illegal": 0.0,
+   "detection": 44.75,
+   "ep_len": 29.38,
+   "redundant": 0.0,
+   "advanced": 83.1007488087134,
+   "apd": 4.545,
+   "win_len": 33.79807692307692
+  },
+  {
+   "seed": 5,
+   "success": 69.75,
+   "illegal": 0.0,
+   "detection": 46.5,
+   "ep_len": 24.8825,
+   "redundant": 0.0,
+   "advanced": 84.83874208781272,
+   "apd": 4.7,
+   "win_len": 29.340501792114697
+  },
+  {
+   "seed": 6,
+   "success": 65.0,
+   "illegal": 0.0,
+   "detection": 53.0,
+   "ep_len": 27.5475,
+   "redundant": 1.9965514111988383,
+   "advanced": 80.94200925673836,
+   "apd": 4.4225,
+   "win_len": 33.96153846153846
+  },
+  {
+   "seed": 7,
+   "success": 53.75,
+   "illegal": 0.0,
+   "detection": 55.0,
+   "ep_len": 32.76,
+   "redundant": 8.028083028083028,
+   "advanced": 75.57997557997558,
+   "apd": 4.5575,
+   "win_len": 44.0046511627907
+  },
+  {
+   "seed": 8,
+   "success": 50.25,
+   "illegal": 0.0,
+   "detection": 61.75,
+   "ep_len": 28.79,
+   "redundant": 0.0,
+   "advanced": 84.20458492532129,
+   "apd": 4.1625,
+   "win_len": 38.223880597014926
+  },
+  {
+   "seed": 9,
+   "success": 67.5,
+   "illegal": 0.0,
+   "detection": 60.5,
+   "ep_len": 30.2825,
+   "redundant": 14.637166680425988,
+   "advanced": 69.2726822422191,
+   "apd": 4.6025,
+   "win_len": 37.95925925925926
+  }
+ ],
+ "mean": {
+  "success": 65.025,
+  "illegal": 0.0,
+  "detection": 48.1,
+  "ep_len": 34.685249999999996,
+  "redundant": 2.4857868566909693,
+  "advanced": 80.98587491128811,
+  "apd": 4.445
+ },
+ "sd": {
+  "success": 10.431289735960533,
+  "illegal": 0.0,
+  "detection": 9.220448289897117,
+  "ep_len": 7.722103416851885,
+  "redundant": 4.9545721033854075,
+  "advanced": 4.857671924595763,
+  "apd": 0.17210704033633645
+ }
+}

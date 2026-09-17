@@ -1,0 +1,122 @@
+{
+ "tag": "maska2c_enterprise_s5",
+ "algo": "maska2c",
+ "topology": "enterprise",
+ "seed": 5,
+ "illegal_penalty": 0.0,
+ "max_steps": 60,
+ "points": [
+  {
+   "timesteps": 25000,
+   "success": 86.0,
+   "illegal": 0.0,
+   "detection": 61.0,
+   "ep_len": 28.59
+  },
+  {
+   "timesteps": 50000,
+   "success": 49.0,
+   "illegal": 0.0,
+   "detection": 81.0,
+   "ep_len": 26.28
+  },
+  {
+   "timesteps": 75000,
+   "success": 66.0,
+   "illegal": 0.0,
+   "detection": 67.0,
+   "ep_len": 25.62
+  },
+  {
+   "timesteps": 100000,
+   "success": 83.0,
+   "illegal": 0.0,
+   "detection": 63.0,
+   "ep_len": 28.15
+  },
+  {
+   "timesteps": 125000,
+   "success": 87.0,
+   "illegal": 0.0,
+   "detection": 55.0,
+   "ep_len": 24.35
+  },
+  {
+   "timesteps": 150000,
+   "success": 87.0,
+   "illegal": 0.0,
+   "detection": 44.0,
+   "ep_len": 26.89
+  },
+  {
+   "timesteps": 175000,
+   "success": 68.0,
+   "illegal": 0.0,
+   "detection": 50.0,
+   "ep_len": 23.56
+  },
+  {
+   "timesteps": 200000,
+   "success": 77.0,
+   "illegal": 0.0,
+   "detection": 44.0,
+   "ep_len": 26.89
+  },
+  {
+   "timesteps": 225000,
+   "success": 81.0,
+   "illegal": 0.0,
+   "detection": 39.0,
+   "ep_len": 28.54
+  },
+  {
+   "timesteps": 250000,
+   "success": 84.0,
+   "illegal": 0.0,
+   "detection": 43.0,
+   "ep_len": 30.11
+  },
+  {
+   "timesteps": 275000,
+   "success": 83.0,
+   "illegal": 0.0,
+   "detection": 45.0,
+   "ep_len": 29.89
+  },
+  {
+   "timesteps": 300000,
+   "success": 85.0,
+   "illegal": 0.0,
+   "detection": 43.0,
+   "ep_len": 29.17
+  },
+  {
+   "timesteps": 325000,
+   "success": 81.0,
+   "illegal": 0.0,
+   "detection": 45.0,
+   "ep_len": 28.55
+  },
+  {
+   "timesteps": 350000,
+   "success": 83.0,
+   "illegal": 0.0,
+   "detection": 50.0,
+   "ep_len": 25.15
+  },
+  {
+   "timesteps": 375000,
+   "success": 84.0,
+   "illegal": 0.0,
+   "detection": 47.0,
+   "ep_len": 27.18
+  },
+  {
+   "timesteps": 400000,
+   "success": 79.0,
+   "illegal": 0.0,
+   "detection": 47.0,
+   "ep_len": 25.59
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+{
+  "description": "v4 sim-to-real transfer: sim-trained MaskablePPO agents (3 seeds) evaluated in simulation vs against the live multi-service HTTP server (Target/mock_server.py), which shares env/kill_chain.py. Success = DC rooted; detection = a named blue-team rule escalated to incident response.",
+  "sim":  {"success_mean": 96.1, "success_sd": 0.5, "detection_mean": 7.0, "detection_sd": 1.4, "episodes_per_seed": 400, "seeds": 3},
+  "live": {"success_mean": 94.7, "success_sd": 2.2, "detection_mean": 7.7, "detection_sd": 1.2, "episodes_per_seed": 200, "seeds": 3,
+           "per_seed": [{"seed":0,"success":94.5,"detection":6.0},{"seed":1,"success":92.0,"detection":9.0},{"seed":2,"success":97.5,"detection":8.0}]},
+  "gap": {"success_pts": 1.4, "detection_pts": 0.7, "note": "Both within seed noise; detection nearly identical because both modes run the same detection engine. v3 sim-to-real success gap was 0.5pt but was measured against a DIFFERENT hand-written server model; v4's gap is transport-only because sim and server share one model."}
+}

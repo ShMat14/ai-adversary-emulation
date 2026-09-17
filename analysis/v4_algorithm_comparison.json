@@ -1,0 +1,14 @@
+{
+  "description": "v4 masking result across algorithm families AND step budgets (the professor's 'different algorithm' angle + Sherif's budget check, on the v4 environment). 3 seeds each, eval 300 eps. SB3 has no masked DQN, so DQN is necessarily unmasked. This is the full PPO/DQN x 40/150-step matrix.",
+  "reference_masked": {"algo": "MaskablePPO", "masked": true, "budget": 40, "success_mean": 96.1, "success_sd": 0.5, "illegal_mean": 0.0, "detection_mean": 7.0},
+  "matrix": [
+    {"algo": "PPO", "masked": false, "train_budget": 40,  "train_steps": 2000000, "eval_budget": 40, "success_mean": 47.9, "success_sd": 3.6, "illegal_mean": 87.5},
+    {"algo": "PPO", "masked": false, "train_budget": 150, "train_steps": 4000000, "eval_budget": 150, "success_mean": 50.8, "success_sd": 0.3, "illegal_mean": 95.3},
+    {"algo": "PPO", "masked": false, "train_budget": 150, "train_steps": 4000000, "eval_budget": 40, "success_mean": 50.8, "success_sd": 0.3, "illegal_mean": 83.7},
+    {"algo": "DQN", "masked": false, "train_budget": 40,  "train_steps": 2000000, "eval_budget": 40, "success_mean": 52.2, "success_sd": 7.5, "illegal_mean": 82.4, "detection_mean": 7.7},
+    {"algo": "DQN", "masked": false, "train_budget": 150, "train_steps": 4000000, "eval_budget": 150, "success_mean": 49.0, "success_sd": 5.2, "illegal_mean": 95.3},
+    {"algo": "DQN", "masked": false, "train_budget": 150, "train_steps": 4000000, "eval_budget": 40, "success_mean": 49.0, "success_sd": 5.2, "illegal_mean": 83.7}
+  ],
+  "also_tested": {"PPO_unmasked_with_v3style_illegal_penalty": {"success_mean": 54.7, "illegal_mean": 82.2}},
+  "conclusion": "The masking gap is robust across the whole matrix. Masked reaches 96.1%; every unmasked configuration -- PPO or DQN, trained at a 40- or 150-step budget for 2M-4M steps, evaluated at either budget, with or without a v3-style illegal-action penalty -- lands at 48-55% success with 82-95% illegal actions. Neither the algorithm family, nor the step budget, nor reward-teaching closes the gap. The determinant is the action mask: it supplies the episode-varying legal set that an unmasked agent cannot reliably learn."
+}

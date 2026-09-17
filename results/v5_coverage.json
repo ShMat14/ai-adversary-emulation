@@ -1,0 +1,510 @@
+{
+ "corpus": "results/telemetry/v5",
+ "campaigns": 347,
+ "per_tactic": [
+  {
+   "tactic": "Initial Access",
+   "median_step": 1,
+   "rules": 3
+  },
+  {
+   "tactic": "Defense Evasion",
+   "median_step": 11,
+   "rules": 5
+  },
+  {
+   "tactic": "Collection",
+   "median_step": 14.5,
+   "rules": 2
+  },
+  {
+   "tactic": "Command and Control",
+   "median_step": 15,
+   "rules": 1
+  },
+  {
+   "tactic": "Persistence",
+   "median_step": 17.75,
+   "rules": 4
+  },
+  {
+   "tactic": "Discovery",
+   "median_step": 28.0,
+   "rules": 6
+  },
+  {
+   "tactic": "Execution",
+   "median_step": 31.5,
+   "rules": 2
+  },
+  {
+   "tactic": "Lateral Movement",
+   "median_step": 32.75,
+   "rules": 4
+  },
+  {
+   "tactic": "Credential Access",
+   "median_step": 35.0,
+   "rules": 9
+  },
+  {
+   "tactic": "Exfiltration",
+   "median_step": 43,
+   "rules": 1
+  },
+  {
+   "tactic": "Privilege Escalation",
+   "median_step": 48.5,
+   "rules": 5
+  },
+  {
+   "tactic": "Impact",
+   "median_step": 49.0,
+   "rules": 3
+  }
+ ],
+ "rules": 45,
+ "full_deployment": {
+  "median_step": 1,
+  "mean_step": 1,
+  "pct_campaign_elapsed": 2.2830478266123952,
+  "median_zone_reached": 1,
+  "never_covered": 0.0
+ },
+ "per_rule": [
+  {
+   "rule": "Suspicious child process of a mail client (T1566)",
+   "median_step": 1.0,
+   "mean_step": 1.019047619047619,
+   "pct_campaign_elapsed": 2.2684976921579767,
+   "median_zone_reached": 1,
+   "never_covered": 39.481268011527376
+  },
+  {
+   "rule": "Multiple 4625 failed logons then a 4624 success within a window (T1110)",
+   "median_step": 1.0,
+   "mean_step": 1.6,
+   "pct_campaign_elapsed": 3.4305391248090698,
+   "median_zone_reached": 1,
+   "never_covered": 91.35446685878962
+  },
+  {
+   "rule": "WAF signature match on a union/boolean injection pattern (T1190)",
+   "median_step": 1,
+   "mean_step": 2.62111801242236,
+   "pct_campaign_elapsed": 6.061981782391232,
+   "median_zone_reached": 1,
+   "never_covered": 53.60230547550432
+  },
+  {
+   "rule": "Many 4625 failures across distinct accounts from one source (T1110.003)",
+   "median_step": 1.0,
+   "mean_step": 2.95,
+   "pct_campaign_elapsed": 6.596882739276881,
+   "median_zone_reached": 1,
+   "never_covered": 88.47262247838617
+  },
+  {
+   "rule": "Base64 or otherwise encoded command line executed (T1027)",
+   "median_step": 2.0,
+   "mean_step": 3.044776119402985,
+   "pct_campaign_elapsed": 6.949475964235556,
+   "median_zone_reached": 1,
+   "never_covered": 22.76657060518732
+  },
+  {
+   "rule": "Web server process spawning a command shell (T1505.003)",
+   "median_step": 3,
+   "mean_step": 3.7554585152838427,
+   "pct_campaign_elapsed": 8.433682250134531,
+   "median_zone_reached": 1,
+   "never_covered": 34.00576368876081
+  },
+  {
+   "rule": "Host fingerprinting; individually benign, notable in sequence (T1082)",
+   "median_step": 6,
+   "mean_step": 6.45821325648415,
+   "pct_campaign_elapsed": 14.820875431463353,
+   "median_zone_reached": 1,
+   "never_covered": 0.0
+  },
+  {
+   "rule": "Event ID 1102 audit-log-cleared is itself the alarm (T1070)",
+   "median_step": 6,
+   "mean_step": 7.038338658146965,
+   "pct_campaign_elapsed": 15.928194539987508,
+   "median_zone_reached": 1,
+   "never_covered": 9.798270893371757
+  },
+  {
+   "rule": "RDP/VPN logon from an external address outside business hours (T1133)",
+   "median_step": 7.0,
+   "mean_step": 8.034883720930232,
+   "pct_campaign_elapsed": 17.236699335575185,
+   "median_zone_reached": 1,
+   "never_covered": 50.43227665706052
+  },
+  {
+   "rule": "Exploitation-driven privilege escalation process (T1068)",
+   "median_step": 8,
+   "mean_step": 8.844380403458214,
+   "pct_campaign_elapsed": 20.245186567278964,
+   "median_zone_reached": 1,
+   "never_covered": 0.0
+  },
+  {
+   "rule": "Access to files matching credential patterns (unattend.xml, .kdbx) (T1552.001)",
+   "median_step": 10,
+   "mean_step": 12.670553935860058,
+   "pct_campaign_elapsed": 29.257818020443832,
+   "median_zone_reached": 1,
+   "never_covered": 1.1527377521613833
+  },
+  {
+   "rule": "New service / persistence mechanism installed (T1543)",
+   "median_step": 10.5,
+   "mean_step": 11.936170212765957,
+   "pct_campaign_elapsed": 24.76280396168395,
+   "median_zone_reached": 1,
+   "never_covered": 72.91066282420749
+  },
+  {
+   "rule": "Security service stopped or audit policy altered; loud by design (T1562.001)",
+   "median_step": 11,
+   "mean_step": 11.587896253602306,
+   "pct_campaign_elapsed": 26.321765555644426,
+   "median_zone_reached": 1,
+   "never_covered": 0.0
+  },
+  {
+   "rule": "Bulk read of document stores by a single process (T1005)",
+   "median_step": 13,
+   "mean_step": 13.538904899135447,
+   "pct_campaign_elapsed": 30.176241372717925,
+   "median_zone_reached": 1,
+   "never_covered": 0.0
+  },
+  {
+   "rule": "Beaconing: periodic outbound HTTPS to a low-reputation destination (T1071.001)",
+   "median_step": 15,
+   "mean_step": 15.792507204610951,
+   "pct_campaign_elapsed": 35.75800543256676,
+   "median_zone_reached": 1,
+   "never_covered": 0.0
+  },
+  {
+   "rule": "Archive created in a staging directory before egress (T1560.001)",
+   "median_step": 16.0,
+   "mean_step": 18.91616766467066,
+   "pct_campaign_elapsed": 41.6872175840734,
+   "median_zone_reached": 1,
+   "never_covered": 3.7463976945244957
+  },
+  {
+   "rule": "Business-critical service stopped by an interactive process (T1489)",
+   "median_step": 20,
+   "mean_step": 22.174311926605505,
+   "pct_campaign_elapsed": 49.301781343689264,
+   "median_zone_reached": 1,
+   "never_covered": 5.763688760806916
+  },
+  {
+   "rule": "Valid-account logon looks legitimate; only anomalous hours flag (T1078)",
+   "median_step": 22,
+   "mean_step": 26.54385964912281,
+   "pct_campaign_elapsed": 49.54923201034821,
+   "median_zone_reached": 2,
+   "never_covered": 83.57348703170028
+  },
+  {
+   "rule": "High rate of distinct connection attempts from one host (T1046)",
+   "median_step": 23,
+   "mean_step": 22.544668587896254,
+   "pct_campaign_elapsed": 51.44638295372723,
+   "median_zone_reached": 1,
+   "never_covered": 0.0
+  },
+  {
+   "rule": "Autorun registry key written by a non-installer process (T1547.001)",
+   "median_step": 25.0,
+   "mean_step": 28.615384615384617,
+   "pct_campaign_elapsed": 53.753872156065384,
+   "median_zone_reached": 2,
+   "never_covered": 85.01440922190201
+  },
+  {
+   "rule": "Admin-share access with a network logon between workstations (T1021)",
+   "median_step": 25,
+   "mean_step": 24.746397694524497,
+   "pct_campaign_elapsed": 56.03770444026552,
+   "median_zone_reached": 2,
+   "never_covered": 0.0
+  },
+  {
+   "rule": "Process spawned by WmiPrvSE on a remote host (T1047)",
+   "median_step": 25.0,
+   "mean_step": 26.5,
+   "pct_campaign_elapsed": 58.5029277500291,
+   "median_zone_reached": 2,
+   "never_covered": 64.8414985590778
+  },
+  {
+   "rule": "Domain group enumeration from a non-administrative workstation (T1069.002)",
+   "median_step": 28.0,
+   "mean_step": 27.80952380952381,
+   "pct_campaign_elapsed": 63.17254638758891,
+   "median_zone_reached": 2,
+   "never_covered": 63.68876080691643
+  },
+  {
+   "rule": "LDAP/directory enumeration of domain accounts, low-signal (T1087.002)",
+   "median_step": 28,
+   "mean_step": 28.738317757009344,
+   "pct_campaign_elapsed": 63.71645079814473,
+   "median_zone_reached": 2,
+   "never_covered": 69.164265129683
+  },
+  {
+   "rule": "BloodHound/PowerView-style enumeration of domain trusts, low-signal (T1482)",
+   "median_step": 29.0,
+   "mean_step": 28.75,
+   "pct_campaign_elapsed": 66.27116522567079,
+   "median_zone_reached": 2,
+   "never_covered": 66.57060518731988
+  },
+  {
+   "rule": "NTLM authentication relayed between hosts; mismatched source workstation (T1557.001)",
+   "median_step": 31,
+   "mean_step": 33.43089430894309,
+   "pct_campaign_elapsed": 64.001057465723,
+   "median_zone_reached": 4,
+   "never_covered": 64.55331412103746
+  },
+  {
+   "rule": "Internal RDP between hosts with no prior session history (T1021.001)",
+   "median_step": 31.0,
+   "mean_step": 30.714285714285715,
+   "pct_campaign_elapsed": 69.44680483395788,
+   "median_zone_reached": 4,
+   "never_covered": 7.204610951008646
+  },
+  {
+   "rule": "Host enumeration utilities executed from a user context (T1018)",
+   "median_step": 34,
+   "mean_step": 34.91228070175438,
+   "pct_campaign_elapsed": 62.31636886968928,
+   "median_zone_reached": 4,
+   "never_covered": 83.57348703170028
+  },
+  {
+   "rule": "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)",
+   "median_step": 34.5,
+   "mean_step": 35.542857142857144,
+   "pct_campaign_elapsed": 70.20308118467356,
+   "median_zone_reached": 5,
+   "never_covered": 79.82708933717579
+  },
+  {
+   "rule": "Anomalous 4769 TGS requests with RC4 encryption (T1558.003)",
+   "median_step": 35.0,
+   "mean_step": 35.7421875,
+   "pct_campaign_elapsed": 73.74350800885219,
+   "median_zone_reached": 4,
+   "never_covered": 63.112391930835734
+  },
+  {
+   "rule": "AS-REQ for a pre-auth-disabled account, returning a crackable hash (T1558.004)",
+   "median_step": 36.0,
+   "mean_step": 36.39506172839506,
+   "pct_campaign_elapsed": 76.94512247504755,
+   "median_zone_reached": 4,
+   "never_covered": 53.31412103746398
+  },
+  {
+   "rule": "Ticket reuse / anomalous TGS presentation, consistent with pass-the-ticket (T1550.003)",
+   "median_step": 36,
+   "mean_step": 36.18343195266272,
+   "pct_campaign_elapsed": 77.08011663803468,
+   "median_zone_reached": 5,
+   "never_covered": 51.29682997118156
+  },
+  {
+   "rule": "Account added to a privileged group (e.g. Backup Operators, Admins) (T1098)",
+   "median_step": 36,
+   "mean_step": 36.67536231884058,
+   "pct_campaign_elapsed": 82.84311389861658,
+   "median_zone_reached": 5,
+   "never_covered": 0.5763688760806917
+  },
+  {
+   "rule": "Suspicious PowerShell script block / remote execution (T1059.001)",
+   "median_step": 38,
+   "mean_step": 40.49152542372882,
+   "pct_campaign_elapsed": 77.17441746321302,
+   "median_zone_reached": 5,
+   "never_covered": 82.9971181556196
+  },
+  {
+   "rule": "Scheduled task registered outside a change window (T1053.005)",
+   "median_step": 41,
+   "mean_step": 41,
+   "pct_campaign_elapsed": 83.6734693877551,
+   "median_zone_reached": 5,
+   "never_covered": 99.71181556195965
+  },
+  {
+   "rule": "Non-browser process reading browser credential stores (T1555.003)",
+   "median_step": 42,
+   "mean_step": 40.61904761904762,
+   "pct_campaign_elapsed": 70.05235391732633,
+   "median_zone_reached": 5,
+   "never_covered": 93.94812680115274
+  },
+  {
+   "rule": "Registry modification affecting logging or execution policy (T1112)",
+   "median_step": 42,
+   "mean_step": 42.76923076923077,
+   "pct_campaign_elapsed": 80.31149947280673,
+   "median_zone_reached": 5,
+   "never_covered": 96.25360230547551
+  },
+  {
+   "rule": "Anomalous outbound data volume to an external host (T1041)",
+   "median_step": 43,
+   "mean_step": 43.32996632996633,
+   "pct_campaign_elapsed": 100.0,
+   "median_zone_reached": 5,
+   "never_covered": 14.409221902017292
+  },
+  {
+   "rule": "Replication request from a non-DC host, consistent with DCSync (T1003.006)",
+   "median_step": 47.0,
+   "mean_step": 44.95454545454545,
+   "pct_campaign_elapsed": 80.31288358776733,
+   "median_zone_reached": 5,
+   "never_covered": 93.65994236311239
+  },
+  {
+   "rule": "Remote thread creation into another process address space (T1055)",
+   "median_step": 48.5,
+   "mean_step": 46.125,
+   "pct_campaign_elapsed": 81.90380893736805,
+   "median_zone_reached": 5,
+   "never_covered": 97.69452449567723
+  },
+  {
+   "rule": "Suspicious process opening a handle to LSASS memory (T1003.001)",
+   "median_step": 49.0,
+   "mean_step": 46.5,
+   "pct_campaign_elapsed": 79.51099126861838,
+   "median_zone_reached": 5,
+   "never_covered": 97.11815561959654
+  },
+  {
+   "rule": "Shadow copy or backup deletion; near-certain ransomware precursor (T1490)",
+   "median_step": 49.0,
+   "mean_step": 47.25,
+   "pct_campaign_elapsed": 84.5528476681756,
+   "median_zone_reached": 5,
+   "never_covered": 97.69452449567723
+  },
+  {
+   "rule": "Group Policy Object modified to gain SYSTEM or disable controls (T1484.001)",
+   "median_step": 51,
+   "mean_step": 48.285714285714285,
+   "pct_campaign_elapsed": 85.43070269550459,
+   "median_zone_reached": 5,
+   "never_covered": 97.98270893371757
+  },
+  {
+   "rule": "Forged TGT (Golden Ticket): anomalous ticket lifetime and encryption (T1558.001)",
+   "median_step": 52,
+   "mean_step": 46,
+   "pct_campaign_elapsed": 84.09896033885252,
+   "median_zone_reached": 5,
+   "never_covered": 99.13544668587896
+  },
+  {
+   "rule": "High-rate file modification consistent with encryption (T1486)",
+   "median_step": 54.0,
+   "mean_step": 53.5,
+   "pct_campaign_elapsed": 99.74489795918367,
+   "median_zone_reached": 5,
+   "never_covered": 97.69452449567723
+  }
+ ],
+ "greedy": [
+  {
+   "k": 1,
+   "rule": "Suspicious child process of a mail client (T1566)",
+   "median_step": 1.0,
+   "mean_step": 1.019047619047619,
+   "pct_campaign_elapsed": 2.2684976921579767,
+   "median_zone_reached": 1,
+   "never_covered": 39.481268011527376
+  },
+  {
+   "k": 2,
+   "rule": "WAF signature match on a union/boolean injection pattern (T1190)",
+   "median_step": 1.0,
+   "mean_step": 1.0034482758620689,
+   "pct_campaign_elapsed": 2.2626427257309123,
+   "median_zone_reached": 1,
+   "never_covered": 16.42651296829971
+  },
+  {
+   "k": 3,
+   "rule": "Forged TGT (Golden Ticket): anomalous ticket lifetime and encryption (T1558.001)",
+   "median_step": 1.0,
+   "mean_step": 1.0034482758620689,
+   "pct_campaign_elapsed": 2.2626427257309123,
+   "median_zone_reached": 1,
+   "never_covered": 16.42651296829971
+  },
+  {
+   "k": 4,
+   "rule": "Scheduled task registered outside a change window (T1053.005)",
+   "median_step": 1.0,
+   "mean_step": 1.0034482758620689,
+   "pct_campaign_elapsed": 2.2626427257309123,
+   "median_zone_reached": 1,
+   "never_covered": 16.42651296829971
+  },
+  {
+   "k": 5,
+   "rule": "Multiple 4625 failed logons then a 4624 success within a window (T1110)",
+   "median_step": 1.0,
+   "mean_step": 1.009433962264151,
+   "pct_campaign_elapsed": 2.2927124660573477,
+   "median_zone_reached": 1,
+   "never_covered": 8.357348703170029
+  },
+  {
+   "k": 6,
+   "rule": "Many 4625 failures across distinct accounts from one source (T1110.003)",
+   "median_step": 1,
+   "mean_step": 1,
+   "pct_campaign_elapsed": 2.2830478266123952,
+   "median_zone_reached": 1,
+   "never_covered": 0.0
+  },
+  {
+   "k": 7,
+   "rule": "AS-REQ for a pre-auth-disabled account, returning a crackable hash (T1558.004)",
+   "median_step": 1,
+   "mean_step": 1,
+   "pct_campaign_elapsed": 2.2830478266123952,
+   "median_zone_reached": 1,
+   "never_covered": 0.0
+  },
+  {
+   "k": 8,
+   "rule": "Access to files matching credential patterns (unattend.xml, .kdbx) (T1552.001)",
+   "median_step": 1,
+   "mean_step": 1,
+   "pct_campaign_elapsed": 2.2830478266123952,
+   "median_zone_reached": 1,
+   "never_covered": 0.0
+  }
+ ]
+}

@@ -1,0 +1,53 @@
+# A small Linux range, so that techniques a single web application cannot host
+# can be executed for real instead of assumed.
+#
+# SAFETY, and none of this is optional:
+#   * the network is `internal: true`, so no container can reach the internet
+#   * only the web target publishes a port, and only on 127.0.0.1
+#   * no privileged containers, no host mounts, no capabilities added
+#   * every credential here is fictional and lives only in this compose file
+#
+# This range is for calibrating our own success probabilities against real
+# execution. It must never be pointed at anything outside itself.
+#
+#   docker compose -f lab/docker-compose.yml up -d --build
+#   python analysis/v5_calibration_lab.py --trials 300
+#   docker compose -f lab/docker-compose.yml down -v
+
+services:
+  # Foothold: the attacker starts with a shell here, as after initial access.
+  foothold:
+    build: ./host
+    container_name: v5lab_foothold
+    hostname: foothold
+    networks:
+      lab:
+        ipv4_address: 172.31.0.10
+    environment:
+      LAB_ROLE: foothold
+      # a weak account, so password spraying and brute force are real
+      LAB_USERS: "alice:Summer2024!,bob:Password1,svc_backup:backup"
+      # a sudo rule that permits a shell escape, so privilege escalation is real
+      LAB_SUDO_MISCONFIG: "1"
+
+  # A second host, so lateral movement crosses a real network boundary.
+  target:
+    build: ./host
+    container_name: v5lab_target
+    hostname: target
+    networks:
+      lab:
+        ipv4_address: 172.31.0.20
+    environment:
+      LAB_ROLE: target
+      # credentials reused from the foothold, so credential reuse is real
+      LAB_USERS: "alice:Summer2024!,root_svc:Adm1n!2024"
+      LAB_SUDO_MISCONFIG: "0"
+
+networks:
+  lab:
+    driver: bridge
+    internal: true          # no route off the range
+    ipam:
+      config:
+        - subnet: 172.31.0.0/24

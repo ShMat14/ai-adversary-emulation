@@ -1,0 +1,134 @@
+{
+ "trials": 300,
+ "rows": [
+  {
+   "technique": "VALID_ACCOUNTS_LOGIN",
+   "variant": "reuse a stolen credential",
+   "assumed": 0.95,
+   "observed": 0.6366666666666667,
+   "gap": -0.31333333333333324,
+   "trials": 300
+  },
+  {
+   "technique": "CREDENTIALS_FROM_BROWSER",
+   "variant": "read a browser store",
+   "assumed": 0.7,
+   "observed": 0.6366666666666667,
+   "gap": -0.06333333333333324,
+   "trials": 300
+  },
+  {
+   "technique": "EXTERNAL_REMOTE_SERVICES",
+   "variant": "VPN with stolen creds",
+   "assumed": 0.7,
+   "observed": 0.6066666666666667,
+   "gap": -0.09333333333333327,
+   "trials": 300
+  },
+  {
+   "technique": "DATA_FROM_LOCAL_SYSTEM",
+   "variant": "stage the document store",
+   "assumed": 0.9,
+   "observed": 0.58,
+   "gap": -0.32000000000000006,
+   "trials": 300
+  },
+  {
+   "technique": "ARCHIVE_COLLECTED_DATA",
+   "variant": "package what was staged",
+   "assumed": 0.92,
+   "observed": 0.73,
+   "gap": -0.19000000000000006,
+   "trials": 300
+  },
+  {
+   "technique": "EXFILTRATE_DATA",
+   "variant": "send the archive out",
+   "assumed": 1.0,
+   "observed": 0.6066666666666667,
+   "gap": -0.3933333333333333,
+   "trials": 300
+  },
+  {
+   "technique": "CLEAR_LOGS",
+   "variant": "clear the audit log",
+   "assumed": 0.9,
+   "observed": 0.69,
+   "gap": -0.21000000000000008,
+   "trials": 300
+  },
+  {
+   "technique": "SYSTEM_INFO_DISCOVERY",
+   "variant": "fingerprint the host",
+   "assumed": 0.98,
+   "observed": 0.6933333333333334,
+   "gap": -0.2866666666666666,
+   "trials": 300
+  },
+  {
+   "technique": "ACCOUNT_MANIPULATION",
+   "variant": "create a privileged account",
+   "assumed": 0.75,
+   "observed": 0.5,
+   "gap": -0.25,
+   "trials": 300
+  },
+  {
+   "technique": "SQL_INJECTION",
+   "variant": "authentication bypass",
+   "assumed": 0.85,
+   "observed": 0.51,
+   "gap": -0.33999999999999997,
+   "trials": 300
+  },
+  {
+   "technique": "SQL_INJECTION",
+   "variant": "UNION extraction",
+   "assumed": 0.85,
+   "observed": 0.6,
+   "gap": -0.25,
+   "trials": 300
+  },
+  {
+   "technique": "PASSWORD_SPRAYING",
+   "variant": "one password, many accounts",
+   "assumed": 0.55,
+   "observed": 0.5233333333333333,
+   "gap": -0.026666666666666727,
+   "trials": 300
+  },
+  {
+   "technique": "BRUTE_FORCE_SSH",
+   "variant": "many passwords, one account",
+   "assumed": 0.6,
+   "observed": 0.48333333333333334,
+   "gap": -0.11666666666666664,
+   "trials": 300
+  },
+  {
+   "technique": "CREDS_IN_FILES",
+   "variant": "read a config file",
+   "assumed": 0.75,
+   "observed": 0.44333333333333336,
+   "gap": -0.30666666666666664,
+   "trials": 300
+  },
+  {
+   "technique": "WEB_SHELL_UPLOAD",
+   "variant": "upload an executable",
+   "assumed": 0.8,
+   "observed": 0.59,
+   "gap": -0.21000000000000008,
+   "trials": 300
+  },
+  {
+   "technique": "NETWORK_SCAN",
+   "variant": "enumerate inventory",
+   "assumed": 0.95,
+   "observed": 0.6466666666666666,
+   "gap": -0.30333333333333334,
+   "trials": 300
+  }
+ ],
+ "mean_abs_gap": 0.22958333333333333
+}

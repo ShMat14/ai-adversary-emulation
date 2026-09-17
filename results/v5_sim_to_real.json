@@ -1,0 +1,1372 @@
+{
+ "masked": {
+  "topology": "webhost",
+  "objective": "archived",
+  "episodes": 60,
+  "max_steps": 30,
+  "withdrawn": 30,
+  "rows": [
+   {
+    "seed": 0,
+    "simulated": {
+     "success": 78.33333333333333,
+     "illegal": 0.0,
+     "detected": 23.333333333333332,
+     "steps": 26.883333333333333
+    },
+    "real": {
+     "success": 51.666666666666664,
+     "illegal": 0.0,
+     "detected": 88.33333333333333,
+     "steps": 14.116666666666667
+    },
+    "live_calls": 847,
+    "per_technique": {
+     "SQL_INJECTION": {
+      "real": 67,
+      "simulated": 0,
+      "hits": 37
+     },
+     "WEB_SHELL_UPLOAD": {
+      "real": 37,
+      "simulated": 0,
+      "hits": 21
+     },
+     "DATA_FROM_LOCAL_SYSTEM": {
+      "real": 82,
+      "simulated": 0,
+      "hits": 49
+     },
+     "CLEAR_LOGS": {
+      "real": 270,
+      "simulated": 0,
+      "hits": 166
+     },
+     "SYSTEM_INFO_DISCOVERY": {
+      "real": 66,
+      "simulated": 0,
+      "hits": 48
+     },
+     "PASSWORD_SPRAYING": {
+      "real": 25,
+      "simulated": 0,
+      "hits": 16
+     },
+     "BRUTE_FORCE_SSH": {
+      "real": 15,
+      "simulated": 0,
+      "hits": 6
+     },
+     "CREDS_IN_FILES": {
+      "real": 14,
+      "simulated": 0,
+      "hits": 3
+     },
+     "ARCHIVE_COLLECTED_DATA": {
+      "real": 51,
+      "simulated": 0,
+      "hits": 31
+     },
+     "NETWORK_SCAN": {
+      "real": 220,
+      "simulated": 0,
+      "hits": 133
+     }
+    }
+   },
+   {
+    "seed": 1,
+    "simulated": {
+     "success": 88.33333333333333,
+     "illegal": 0.0,
+     "detected": 31.666666666666668,
+     "steps": 25.016666666666666
+    },
+    "real": {
+     "success": 60.0,
+     "illegal": 0.0,
+     "detected": 86.66666666666667,
+     "steps": 16.016666666666666
+    },
+    "live_calls": 961,
+    "per_technique": {
+     "SQL_INJECTION": {
+      "real": 69,
+      "simulated": 0,
+      "hits": 36
+     },
+     "SYSTEM_INFO_DISCOVERY": {
+      "real": 79,
+      "simulated": 0,
+      "hits": 50
+     },
+     "DATA_FROM_LOCAL_SYSTEM": {
+      "real": 63,
+      "simulated": 0,
+      "hits": 42
+     },
+     "CLEAR_LOGS": {
+      "real": 312,
+      "simulated": 0,
+      "hits": 207
+     },
+     "ARCHIVE_COLLECTED_DATA": {
+      "real": 51,
+      "simulated": 0,
+      "hits": 36
+     },
+     "PASSWORD_SPRAYING": {
+      "real": 42,
+      "simulated": 0,
+      "hits": 17
+     },
+     "WEB_SHELL_UPLOAD": {
+      "real": 43,
+      "simulated": 0,
+      "hits": 25
+     },
+     "BRUTE_FORCE_SSH": {
+      "real": 9,
+      "simulated": 0,
+      "hits": 6
+     },
+     "CREDS_IN_FILES": {
+      "real": 13,
+      "simulated": 0,
+      "hits": 5
+     },
+     "NETWORK_SCAN": {
+      "real": 280,
+      "simulated": 0,
+      "hits": 177
+     }
+    }
+   },
+   {
+    "seed": 2,
+    "simulated": {
+     "success": 93.33333333333333,
+     "illegal": 0.0,
+     "detected": 28.333333333333332,
+     "steps": 25.866666666666667
+    },
+    "real": {
+     "success": 78.33333333333333,
+     "illegal": 0.0,
+     "detected": 81.66666666666667,
+     "steps": 16.166666666666668
+    },
+    "live_calls": 970,
+    "per_technique": {
+     "SQL_INJECTION": {
+      "real": 71,
+      "simulated": 0,
+      "hits": 38
+     },
+     "SYSTEM_INFO_DISCOVERY": {
+      "real": 65,
+      "simulated": 0,
+      "hits": 45
+     },
+     "WEB_SHELL_UPLOAD": {
+      "real": 41,
+      "simulated": 0,
+      "hits": 27
+     },
+     "CLEAR_LOGS": {
+      "real": 294,
+      "simulated": 0,
+      "hits": 212
+     },
+     "PASSWORD_SPRAYING": {
+      "real": 32,
+      "simulated": 0,
+      "hits": 15
+     },
+     "DATA_FROM_LOCAL_SYSTEM": {
+      "real": 85,
+      "simulated": 0,
+      "hits": 51
+     },
+     "ARCHIVE_COLLECTED_DATA": {
+      "real": 63,
+      "simulated": 0,
+      "hits": 47
+     },
+     "BRUTE_FORCE_SSH": {
+      "real": 13,
+      "simulated": 0,
+      "hits": 6
+     },
+     "NETWORK_SCAN": {
+      "real": 297,
+      "simulated": 0,
+      "hits": 196
+     },
+     "CREDS_IN_FILES": {
+      "real": 9,
+      "simulated": 0,
+      "hits": 4
+     }
+    }
+   },
+   {
+    "seed": 3,
+    "simulated": {
+     "success": 90.0,
+     "illegal": 0.0,
+     "detected": 30.0,
+     "steps": 25.733333333333334
+    },
+    "real": {
+     "success": 56.666666666666664,
+     "illegal": 0.0,
+     "detected": 88.33333333333333,
+     "steps": 15.366666666666667
+    },
+    "live_calls": 922,
+    "per_technique": {
+     "SQL_INJECTION": {
+      "real": 61,
+      "simulated": 0,
+      "hits": 33
+     },
+     "DATA_FROM_LOCAL_SYSTEM": {
+      "real": 85,
+      "simulated": 0,
+      "hits": 46
+     },
+     "WEB_SHELL_UPLOAD": {
+      "real": 30,
+      "simulated": 0,
+      "hits": 19
+     },
+     "CLEAR_LOGS": {
+      "real": 317,
+      "simulated": 0,
+      "hits": 207
+     },
+     "ARCHIVE_COLLECTED_DATA": {
+      "real": 44,
+      "simulated": 0,
+      "hits": 34
+     },
+     "PASSWORD_SPRAYING": {
+      "real": 33,
+      "simulated": 0,
+      "hits": 15
+     },
+     "SYSTEM_INFO_DISCOVERY": {
+      "real": 78,
+      "simulated": 0,
+      "hits": 47
+     },
+     "NETWORK_SCAN": {
+      "real": 239,
+      "simulated": 0,
+      "hits": 154
+     },
+     "BRUTE_FORCE_SSH": {
+      "real": 14,
+      "simulated": 0,
+      "hits": 9
+     },
+     "CREDS_IN_FILES": {
+      "real": 21,
+      "simulated": 0,
+      "hits": 7
+     }
+    }
+   },
+   {
+    "seed": 4,
+    "simulated": {
+     "success": 66.66666666666667,
+     "illegal": 0.0,
+     "detected": 30.0,
+     "steps": 25.616666666666667
+    },
+    "real": {
+     "success": 56.666666666666664,
+     "illegal": 0.0,
+     "detected": 88.33333333333333,
+     "steps": 16.516666666666666
+    },
+    "live_calls": 991,
+    "per_technique": {
+     "SQL_INJECTION": {
+      "real": 62,
+      "simulated": 0,
+      "hits": 38
+     },
+     "SYSTEM_INFO_DISCOVERY": {
+      "real": 96,
+      "simulated": 0,
+      "hits": 57
+     },
+     "DATA_FROM_LOCAL_SYSTEM": {
+      "real": 74,
+      "simulated": 0,
+      "hits": 47
+     },
+     "WEB_SHELL_UPLOAD": {
+      "real": 39,
+      "simulated": 0,
+      "hits": 26
+     },
+     "CLEAR_LOGS": {
+      "real": 322,
+      "simulated": 0,
+      "hits": 202
+     },
+     "ARCHIVE_COLLECTED_DATA": {
+      "real": 40,
+      "simulated": 0,
+      "hits": 34
+     },
+     "NETWORK_SCAN": {
+      "real": 321,
+      "simulated": 0,
+      "hits": 214
+     },
+     "PASSWORD_SPRAYING": {
+      "real": 27,
+      "simulated": 0,
+      "hits": 18
+     },
+     "BRUTE_FORCE_SSH": {
+      "real": 6,
+      "simulated": 0,
+      "hits": 3
+     },
+     "CREDS_IN_FILES": {
+      "real": 4,
+      "simulated": 0,
+      "hits": 3
+     }
+    }
+   },
+   {
+    "seed": 5,
+    "simulated": {
+     "success": 83.33333333333333,
+     "illegal": 0.0,
+     "detected": 35.0,
+     "steps": 24.666666666666668
+    },
+    "real": {
+     "success": 70.0,
+     "illegal": 0.0,
+     "detected": 85.0,
+     "steps": 15.166666666666666
+    },
+    "live_calls": 910,
+    "per_technique": {
+     "SQL_INJECTION": {
+      "real": 79,
+      "simulated": 0,
+      "hits": 37
+     },
+     "WEB_SHELL_UPLOAD": {
+      "real": 52,
+      "simulated": 0,
+      "hits": 27
+     },
+     "DATA_FROM_LOCAL_SYSTEM": {
+      "real": 73,
+      "simulated": 0,
+      "hits": 45
+     },
+     "PASSWORD_SPRAYING": {
+      "real": 32,
+      "simulated": 0,
+      "hits": 11
+     },
+     "ARCHIVE_COLLECTED_DATA": {
+      "real": 57,
+      "simulated": 0,
+      "hits": 42
+     },
+     "SYSTEM_INFO_DISCOVERY": {
+      "real": 62,
+      "simulated": 0,
+      "hits": 42
+     },
+     "CLEAR_LOGS": {
+      "real": 256,
+      "simulated": 0,
+      "hits": 174
+     },
+     "NETWORK_SCAN": {
+      "real": 267,
+      "simulated": 0,
+      "hits": 165
+     },
+     "BRUTE_FORCE_SSH": {
+      "real": 13,
+      "simulated": 0,
+      "hits": 7
+     },
+     "CREDS_IN_FILES": {
+      "real": 19,
+      "simulated": 0,
+      "hits": 5
+     }
+    }
+   }
+  ],
+  "n_seeds": 6,
+  "min_base_rate": 20.0,
+  "retention_seeds_used": 6,
+  "retention_mean": 74.9622515836553,
+  "retention_mean_all_seeds": 74.9622515836553,
+  "summary": {
+   "simulated": {
+    "success": {
+     "mean": 83.33333333333333,
+     "sd": 9.718253158075498
+    },
+    "illegal": {
+     "mean": 0.0,
+     "sd": 0.0
+    },
+    "detected": {
+     "mean": 29.72222222222222,
+     "sd": 3.861011189754235
+    },
+    "steps": {
+     "mean": 25.630555555555556,
+     "sd": 0.7670590783177195
+    }
+   },
+   "real": {
+    "success": {
+     "mean": 62.22222222222222,
+     "sd": 9.981464302878091
+    },
+    "illegal": {
+     "mean": 0.0,
+     "sd": 0.0
+    },
+    "detected": {
+     "mean": 86.38888888888889,
+     "sd": 2.6701366312662
+    },
+    "steps": {
+     "mean": 15.558333333333334,
+     "sd": 0.8679957757193673
+    }
+   }
+  }
+ },
+ "maska2c": {
+  "topology": "webhost",
+  "objective": "archived",
+  "episodes": 60,
+  "max_steps": 30,
+  "withdrawn": 30,
+  "rows": [
+   {
+    "seed": 0,
+    "simulated": {
+     "success": 88.33333333333333,
+     "illegal": 0.0,
+     "detected": 43.333333333333336,
+     "steps": 21.983333333333334
+    },
+    "real": {
+     "success": 81.66666666666667,
+     "illegal": 0.0,
+     "detected": 90.0,
+     "steps": 13.483333333333333
+    },
+    "live_calls": 809,
+    "per_technique": {
+     "SQL_INJECTION": {
+      "real": 38,
+      "simulated": 0,
+      "hits": 17
+     },
+     "SYSTEM_INFO_DISCOVERY": {
+      "real": 84,
+      "simulated": 0,
+      "hits": 55
+     },
+     "WEB_SHELL_UPLOAD": {
+      "real": 43,
+      "simulated": 0,
+      "hits": 31
+     },
+     "DATA_FROM_LOCAL_SYSTEM": {
+      "real": 85,
+      "simulated": 0,
+      "hits": 50
+     },
+     "ARCHIVE_COLLECTED_DATA": {
+      "real": 72,
+      "simulated": 0,
+      "hits": 49
+     },
+     "CLEAR_LOGS": {
+      "real": 198,
+      "simulated": 0,
+      "hits": 119
+     },
+     "PASSWORD_SPRAYING": {
+      "real": 17,
+      "simulated": 0,
+      "hits": 11
+     },
+     "BRUTE_FORCE_SSH": {
+      "real": 60,
+      "simulated": 0,
+      "hits": 29
+     },
+     "CREDS_IN_FILES": {
+      "real": 51,
+      "simulated": 0,
+      "hits": 25
+     },
+     "NETWORK_SCAN": {
+      "real": 161,
+      "simulated": 0,
+      "hits": 102
+     }
+    }
+   },
+   {
+    "seed": 1,
+    "simulated": {
+     "success": 96.66666666666667,
+     "illegal": 0.0,
+     "detected": 35.0,
+     "steps": 23.916666666666668
+    },
+    "real": {
+     "success": 86.66666666666667,
+     "illegal": 0.0,
+     "detected": 91.66666666666667,
+     "steps": 14.283333333333333
+    },
+    "live_calls": 857,
+    "per_technique": {
+     "SQL_INJECTION": {
+      "real": 64,
+      "simulated": 0,
+      "hits": 35
+     },
+     "WEB_SHELL_UPLOAD": {
+      "real": 47,
+      "simulated": 0,
+      "hits": 31
+     },
+     "SYSTEM_INFO_DISCOVERY": {
+      "real": 76,
+      "simulated": 0,
+      "hits": 55
+     },
+     "DATA_FROM_LOCAL_SYSTEM": {
+      "real": 95,
+      "simulated": 0,
+      "hits": 53
+     },
+     "ARCHIVE_COLLECTED_DATA": {
+      "real": 76,
+      "simulated": 0,
+      "hits": 52
+     },
+     "CLEAR_LOGS": {
+      "real": 221,
+      "simulated": 0,
+      "hits": 147
+     },
+     "PASSWORD_SPRAYING": {
+      "real": 29,
+      "simulated": 0,
+      "hits": 10
+     },
+     "NETWORK_SCAN": {
+      "real": 212,
+      "simulated": 0,
+      "hits": 137
+     },
+     "BRUTE_FORCE_SSH": {
+      "real": 17,
+      "simulated": 0,
+      "hits": 10
+     },
+     "CREDS_IN_FILES": {
+      "real": 20,
+      "simulated": 0,
+      "hits": 10
+     }
+    }
+   },
+   {
+    "seed": 2,
+    "simulated": {
+     "success": 95.0,
+     "illegal": 0.0,
+     "detected": 50.0,
+     "steps": 20.15
+    },
+    "real": {
+     "success": 83.33333333333333,
+     "illegal": 0.0,
+     "detected": 90.0,
+     "steps": 12.883333333333333
+    },
+    "live_calls": 773,
+    "per_technique": {
+     "SQL_INJECTION": {
+      "real": 30,
+      "simulated": 0,
+      "hits": 18
+     },
+     "SYSTEM_INFO_DISCOVERY": {
+      "real": 68,
+      "simulated": 0,
+      "hits": 53
+     },
+     "DATA_FROM_LOCAL_SYSTEM": {
+      "real": 96,
+      "simulated": 0,
+      "hits": 51
+     },
+     "ARCHIVE_COLLECTED_DATA": {
+      "real": 66,
+      "simulated": 0,
+      "hits": 50
+     },
+     "WEB_SHELL_UPLOAD": {
+      "real": 39,
+      "simulated": 0,
+      "hits": 23
+     },
+     "CLEAR_LOGS": {
+      "real": 163,
+      "simulated": 0,
+      "hits": 108
+     },
+     "PASSWORD_SPRAYING": {
+      "real": 19,
+      "simulated": 0,
+      "hits": 11
+     },
+     "BRUTE_FORCE_SSH": {
+      "real": 54,
+      "simulated": 0,
+      "hits": 30
+     },
+     "CREDS_IN_FILES": {
+      "real": 61,
+      "simulated": 0,
+      "hits": 25
+     },
+     "NETWORK_SCAN": {
+      "real": 177,
+      "simulated": 0,
+      "hits": 122
+     }
+    }
+   },
+   {
+    "seed": 3,
+    "simulated": {
+     "success": 88.33333333333333,
+     "illegal": 0.0,
+     "detected": 100.0,
+     "steps": 13.883333333333333
+    },
+    "real": {
+     "success": 75.0,
+     "illegal": 0.0,
+     "detected": 100.0,
+     "steps": 10.666666666666666
+    },
+    "live_calls": 640,
+    "per_technique": {
+     "SQL_INJECTION": {
+      "real": 30,
+      "simulated": 0,
+      "hits": 17
+     },
+     "WEB_SHELL_UPLOAD": {
+      "real": 50,
+      "simulated": 0,
+      "hits": 30
+     },
+     "PASSWORD_SPRAYING": {
+      "real": 24,
+      "simulated": 0,
+      "hits": 11
+     },
+     "DATA_FROM_LOCAL_SYSTEM": {
+      "real": 81,
+      "simulated": 0,
+      "hits": 47
+     },
+     "ARCHIVE_COLLECTED_DATA": {
+      "real": 68,
+      "simulated": 0,
+      "hits": 45
+     },
+     "SYSTEM_INFO_DISCOVERY": {
+      "real": 55,
+      "simulated": 0,
+      "hits": 40
+     },
+     "NETWORK_SCAN": {
+      "real": 225,
+      "simulated": 0,
+      "hits": 146
+     },
+     "BRUTE_FORCE_SSH": {
+      "real": 50,
+      "simulated": 0,
+      "hits": 29
+     },
+     "CREDS_IN_FILES": {
+      "real": 57,
+      "simulated": 0,
+      "hits": 23
+     }
+    }
+   },
+   {
+    "seed": 4,
+    "simulated": {
+     "success": 93.33333333333333,
+     "illegal": 0.0,
+     "detected": 100.0,
+     "steps": 13.816666666666666
+    },
+    "real": {
+     "success": 71.66666666666667,
+     "illegal": 0.0,
+     "detected": 100.0,
+     "steps": 10.75
+    },
+    "live_calls": 645,
+    "per_technique": {
+     "SQL_INJECTION": {
+      "real": 36,
+      "simulated": 0,
+      "hits": 18
+     },
+     "DATA_FROM_LOCAL_SYSTEM": {
+      "real": 86,
+      "simulated": 0,
+      "hits": 46
+     },
+     "SYSTEM_INFO_DISCOVERY": {
+      "real": 62,
+      "simulated": 0,
+      "hits": 44
+     },
+     "ARCHIVE_COLLECTED_DATA": {
+      "real": 58,
+      "simulated": 0,
+      "hits": 43
+     },
+     "WEB_SHELL_UPLOAD": {
+      "real": 40,
+      "simulated": 0,
+      "hits": 22
+     },
+     "NETWORK_SCAN": {
+      "real": 229,
+      "simulated": 0,
+      "hits": 146
+     },
+     "PASSWORD_SPRAYING": {
+      "real": 15,
+      "simulated": 0,
+      "hits": 11
+     },
+     "BRUTE_FORCE_SSH": {
+      "real": 54,
+      "simulated": 0,
+      "hits": 30
+     },
+     "CREDS_IN_FILES": {
+      "real": 65,
+      "simulated": 0,
+      "hits": 21
+     }
+    }
+   },
+   {
+    "seed": 5,
+    "simulated": {
+     "success": 93.33333333333333,
+     "illegal": 0.0,
+     "detected": 50.0,
+     "steps": 19.9
+    },
+    "real": {
+     "success": 75.0,
+     "illegal": 0.0,
+     "detected": 85.0,
+     "steps": 15.25
+    },
+    "live_calls": 915,
+    "per_technique": {
+     "SQL_INJECTION": {
+      "real": 32,
+      "simulated": 0,
+      "hits": 17
+     },
+     "DATA_FROM_LOCAL_SYSTEM": {
+      "real": 77,
+      "simulated": 0,
+      "hits": 47
+     },
+     "ARCHIVE_COLLECTED_DATA": {
+      "real": 59,
+      "simulated": 0,
+      "hits": 45
+     },
+     "WEB_SHELL_UPLOAD": {
+      "real": 33,
+      "simulated": 0,
+      "hits": 26
+     },
+     "SYSTEM_INFO_DISCOVERY": {
+      "real": 68,
+      "simulated": 0,
+      "hits": 39
+     },
+     "CLEAR_LOGS": {
+      "real": 239,
+      "simulated": 0,
+      "hits": 166
+     },
+     "PASSWORD_SPRAYING": {
+      "real": 17,
+      "simulated": 0,
+      "hits": 11
+     },
+     "BRUTE_FORCE_SSH": {
+      "real": 61,
+      "simulated": 0,
+      "hits": 26
+     },
+     "CREDS_IN_FILES": {
+      "real": 56,
+      "simulated": 0,
+      "hits": 22
+     },
+     "NETWORK_SCAN": {
+      "real": 273,
+      "simulated": 0,
+      "hits": 180
+     }
+    }
+   }
+  ],
+  "n_seeds": 6,
+  "min_base_rate": 20.0,
+  "retention_seeds_used": 6,
+  "retention_mean": 85.312636394717,
+  "retention_mean_all_seeds": 85.312636394717,
+  "summary": {
+   "simulated": {
+    "success": {
+     "mean": 92.5,
+     "sd": 3.4560735588879563
+    },
+    "illegal": {
+     "mean": 0.0,
+     "sd": 0.0
+    },
+    "detected": {
+     "mean": 63.05555555555556,
+     "sd": 29.14364170538493
+    },
+    "steps": {
+     "mean": 18.941666666666666,
+     "sd": 4.200790269567013
+    }
+   },
+   "real": {
+    "success": {
+     "mean": 78.88888888888889,
+     "sd": 5.837300238472754
+    },
+    "illegal": {
+     "mean": 0.0,
+     "sd": 0.0
+    },
+    "detected": {
+     "mean": 92.77777777777777,
+     "sd": 6.024640760767093
+    },
+    "steps": {
+     "mean": 12.886111111111111,
+     "sd": 1.8647137601807435
+    }
+   }
+  }
+ },
+ "maskdqn": {
+  "topology": "webhost",
+  "objective": "archived",
+  "episodes": 60,
+  "max_steps": 30,
+  "withdrawn": 30,
+  "rows": [
+   {
+    "seed": 0,
+    "simulated": {
+     "success": 18.333333333333332,
+     "illegal": 0.0,
+     "detected": 41.666666666666664,
+     "steps": 23.283333333333335
+    },
+    "real": {
+     "success": 13.333333333333334,
+     "illegal": 0.0,
+     "detected": 100.0,
+     "steps": 11.4
+    },
+    "live_calls": 684,
+    "per_technique": {
+     "SQL_INJECTION": {
+      "real": 36,
+      "simulated": 0,
+      "hits": 24
+     },
+     "NETWORK_SCAN": {
+      "real": 281,
+      "simulated": 0,
+      "hits": 183
+     },
+     "CLEAR_LOGS": {
+      "real": 191,
+      "simulated": 0,
+      "hits": 118
+     },
+     "WEB_SHELL_UPLOAD": {
+      "real": 23,
+      "simulated": 0,
+      "hits": 16
+     },
+     "SYSTEM_INFO_DISCOVERY": {
+      "real": 25,
+      "simulated": 0,
+      "hits": 19
+     },
+     "PASSWORD_SPRAYING": {
+      "real": 36,
+      "simulated": 0,
+      "hits": 11
+     },
+     "DATA_FROM_LOCAL_SYSTEM": {
+      "real": 40,
+      "simulated": 0,
+      "hits": 24
+     },
+     "BRUTE_FORCE_SSH": {
+      "real": 38,
+      "simulated": 0,
+      "hits": 22
+     },
+     "ARCHIVE_COLLECTED_DATA": {
+      "real": 8,
+      "simulated": 0,
+      "hits": 8
+     },
+     "CREDS_IN_FILES": {
+      "real": 6,
+      "simulated": 0,
+      "hits": 2
+     }
+    }
+   },
+   {
+    "seed": 1,
+    "simulated": {
+     "success": 48.333333333333336,
+     "illegal": 0.0,
+     "detected": 28.333333333333332,
+     "steps": 25.216666666666665
+    },
+    "real": {
+     "success": 28.333333333333332,
+     "illegal": 0.0,
+     "detected": 93.33333333333333,
+     "steps": 15.133333333333333
+    },
+    "live_calls": 908,
+    "per_technique": {
+     "SQL_INJECTION": {
+      "real": 43,
+      "simulated": 0,
+      "hits": 21
+     },
+     "WEB_SHELL_UPLOAD": {
+      "real": 37,
+      "simulated": 0,
+      "hits": 19
+     },
+     "SYSTEM_INFO_DISCOVERY": {
+      "real": 71,
+      "simulated": 0,
+      "hits": 47
+     },
+     "NETWORK_SCAN": {
+      "real": 306,
+      "simulated": 0,
+      "hits": 202
+     },
+     "CLEAR_LOGS": {
+      "real": 282,
+      "simulated": 0,
+      "hits": 187
+     },
+     "PASSWORD_SPRAYING": {
+      "real": 24,
+      "simulated": 0,
+      "hits": 15
+     },
+     "BRUTE_FORCE_SSH": {
+      "real": 38,
+      "simulated": 0,
+      "hits": 22
+     },
+     "DATA_FROM_LOCAL_SYSTEM": {
+      "real": 46,
+      "simulated": 0,
+      "hits": 26
+     },
+     "CREDS_IN_FILES": {
+      "real": 34,
+      "simulated": 0,
+      "hits": 11
+     },
+     "ARCHIVE_COLLECTED_DATA": {
+      "real": 27,
+      "simulated": 0,
+      "hits": 17
+     }
+    }
+   },
+   {
+    "seed": 2,
+    "simulated": {
+     "success": 5.0,
+     "illegal": 0.0,
+     "detected": 35.0,
+     "steps": 24.6
+    },
+    "real": {
+     "success": 1.6666666666666667,
+     "illegal": 0.0,
+     "detected": 88.33333333333333,
+     "steps": 14.183333333333334
+    },
+    "live_calls": 851,
+    "per_technique": {
+     "SQL_INJECTION": {
+      "real": 42,
+      "simulated": 0,
+      "hits": 19
+     },
+     "WEB_SHELL_UPLOAD": {
+      "real": 32,
+      "simulated": 0,
+      "hits": 15
+     },
+     "CLEAR_LOGS": {
+      "real": 262,
+      "simulated": 0,
+      "hits": 177
+     },
+     "DATA_FROM_LOCAL_SYSTEM": {
+      "real": 27,
+      "simulated": 0,
+      "hits": 15
+     },
+     "ARCHIVE_COLLECTED_DATA": {
+      "real": 1,
+      "simulated": 0,
+      "hits": 1
+     },
+     "PASSWORD_SPRAYING": {
+      "real": 28,
+      "simulated": 0,
+      "hits": 19
+     },
+     "BRUTE_FORCE_SSH": {
+      "real": 37,
+      "simulated": 0,
+      "hits": 21
+     },
+     "SYSTEM_INFO_DISCOVERY": {
+      "real": 29,
+      "simulated": 0,
+      "hits": 21
+     },
+     "NETWORK_SCAN": {
+      "real": 388,
+      "simulated": 0,
+      "hits": 276
+     },
+     "CREDS_IN_FILES": {
+      "real": 5,
+      "simulated": 0,
+      "hits": 2
+     }
+    }
+   },
+   {
+    "seed": 3,
+    "simulated": {
+     "success": 3.3333333333333335,
+     "illegal": 0.0,
+     "detected": 48.333333333333336,
+     "steps": 22.733333333333334
+    },
+    "real": {
+     "success": 3.3333333333333335,
+     "illegal": 0.0,
+     "detected": 91.66666666666667,
+     "steps": 13.45
+    },
+    "live_calls": 807,
+    "per_technique": {
+     "SQL_INJECTION": {
+      "real": 37,
+      "simulated": 0,
+      "hits": 25
+     },
+     "NETWORK_SCAN": {
+      "real": 365,
+      "simulated": 0,
+      "hits": 252
+     },
+     "CLEAR_LOGS": {
+      "real": 251,
+      "simulated": 0,
+      "hits": 165
+     },
+     "SYSTEM_INFO_DISCOVERY": {
+      "real": 39,
+      "simulated": 0,
+      "hits": 25
+     },
+     "PASSWORD_SPRAYING": {
+      "real": 27,
+      "simulated": 0,
+      "hits": 15
+     },
+     "BRUTE_FORCE_SSH": {
+      "real": 39,
+      "simulated": 0,
+      "hits": 20
+     },
+     "DATA_FROM_LOCAL_SYSTEM": {
+      "real": 32,
+      "simulated": 0,
+      "hits": 18
+     },
+     "WEB_SHELL_UPLOAD": {
+      "real": 7,
+      "simulated": 0,
+      "hits": 7
+     },
+     "CREDS_IN_FILES": {
+      "real": 8,
+      "simulated": 0,
+      "hits": 3
+     },
+     "ARCHIVE_COLLECTED_DATA": {
+      "real": 2,
+      "simulated": 0,
+      "hits": 2
+     }
+    }
+   },
+   {
+    "seed": 4,
+    "simulated": {
+     "success": 51.666666666666664,
+     "illegal": 0.0,
+     "detected": 51.666666666666664,
+     "steps": 22.433333333333334
+    },
+    "real": {
+     "success": 45.0,
+     "illegal": 0.0,
+     "detected": 91.66666666666667,
+     "steps": 14.083333333333334
+    },
+    "live_calls": 845,
+    "per_technique": {
+     "SQL_INJECTION": {
+      "real": 45,
+      "simulated": 0,
+      "hits": 24
+     },
+     "WEB_SHELL_UPLOAD": {
+      "real": 36,
+      "simulated": 0,
+      "hits": 21
+     },
+     "CLEAR_LOGS": {
+      "real": 225,
+      "simulated": 0,
+      "hits": 149
+     },
+     "SYSTEM_INFO_DISCOVERY": {
+      "real": 69,
+      "simulated": 0,
+      "hits": 42
+     },
+     "NETWORK_SCAN": {
+      "real": 306,
+      "simulated": 0,
+      "hits": 194
+     },
+     "PASSWORD_SPRAYING": {
+      "real": 28,
+      "simulated": 0,
+      "hits": 13
+     },
+     "DATA_FROM_LOCAL_SYSTEM": {
+      "real": 55,
+      "simulated": 0,
+      "hits": 33
+     },
+     "ARCHIVE_COLLECTED_DATA": {
+      "real": 34,
+      "simulated": 0,
+      "hits": 27
+     },
+     "BRUTE_FORCE_SSH": {
+      "real": 36,
+      "simulated": 0,
+      "hits": 19
+     },
+     "CREDS_IN_FILES": {
+      "real": 11,
+      "simulated": 0,
+      "hits": 5
+     }
+    }
+   },
+   {
+    "seed": 5,
+    "simulated": {
+     "success": 75.0,
+     "illegal": 0.0,
+     "detected": 40.0,
+     "steps": 22.966666666666665
+    },
+    "real": {
+     "success": 45.0,
+     "illegal": 0.0,
+     "detected": 93.33333333333333,
+     "steps": 12.566666666666666
+    },
+    "live_calls": 754,
+    "per_technique": {
+     "SQL_INJECTION": {
+      "real": 35,
+      "simulated": 0,
+      "hits": 25
+     },
+     "NETWORK_SCAN": {
+      "real": 248,
+      "simulated": 0,
+      "hits": 165
+     },
+     "CLEAR_LOGS": {
+      "real": 213,
+      "simulated": 0,
+      "hits": 142
+     },
+     "DATA_FROM_LOCAL_SYSTEM": {
+      "real": 87,
+      "simulated": 0,
+      "hits": 49
+     },
+     "WEB_SHELL_UPLOAD": {
+      "real": 22,
+      "simulated": 0,
+      "hits": 13
+     },
+     "SYSTEM_INFO_DISCOVERY": {
+      "real": 35,
+      "simulated": 0,
+      "hits": 21
+     },
+     "PASSWORD_SPRAYING": {
+      "real": 27,
+      "simulated": 0,
+      "hits": 11
+     },
+     "BRUTE_FORCE_SSH": {
+      "real": 50,
+      "simulated": 0,
+      "hits": 22
+     },
+     "ARCHIVE_COLLECTED_DATA": {
+      "real": 34,
+      "simulated": 0,
+      "hits": 27
+     },
+     "CREDS_IN_FILES": {
+      "real": 3,
+      "simulated": 0,
+      "hits": 3
+     }
+    }
+   }
+  ],
+  "n_seeds": 6,
+  "min_base_rate": 20.0,
+  "retention_seeds_used": 3,
+  "retention_mean": 68.5724879495736,
+  "retention_mean_all_seeds": 68.62967831822114,
+  "summary": {
+   "simulated": {
+    "success": {
+     "mean": 33.611111111111114,
+     "sd": 29.06729102285604
+    },
+    "illegal": {
+     "mean": 0.0,
+     "sd": 0.0
+    },
+    "detected": {
+     "mean": 40.833333333333336,
+     "sd": 8.547254269972056
+    },
+    "steps": {
+     "mean": 23.538888888888888,
+     "sd": 1.1139851717877407
+    }
+   },
+   "real": {
+    "success": {
+     "mean": 22.77777777777778,
+     "sd": 19.654421800101275
+    },
+    "illegal": {
+     "mean": 0.0,
+     "sd": 0.0
+    },
+    "detected": {
+     "mean": 93.05555555555556,
+     "sd": 3.8610111897542345
+    },
+    "steps": {
+     "mean": 13.469444444444445,
+     "sd": 1.3231031145953256
+    }
+   }
+  }
+ }
+}

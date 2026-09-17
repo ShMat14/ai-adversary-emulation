@@ -1,0 +1,122 @@
+{
+ "tag": "masked_enterprise_s2",
+ "algo": "maskable",
+ "topology": "enterprise",
+ "seed": 2,
+ "illegal_penalty": 0.0,
+ "max_steps": 60,
+ "points": [
+  {
+   "timesteps": 25000,
+   "success": 13.0,
+   "illegal": 0.0,
+   "detection": 2.0,
+   "ep_len": 59.0
+  },
+  {
+   "timesteps": 50000,
+   "success": 0.0,
+   "illegal": 0.0,
+   "detection": 2.0,
+   "ep_len": 59.0
+  },
+  {
+   "timesteps": 75000,
+   "success": 0.0,
+   "illegal": 0.0,
+   "detection": 0.0,
+   "ep_len": 60.0
+  },
+  {
+   "timesteps": 100000,
+   "success": 0.0,
+   "illegal": 0.0,
+   "detection": 2.0,
+   "ep_len": 59.02
+  },
+  {
+   "timesteps": 125000,
+   "success": 0.0,
+   "illegal": 0.0,
+   "detection": 0.0,
+   "ep_len": 60.0
+  },
+  {
+   "timesteps": 150000,
+   "success": 0.0,
+   "illegal": 0.0,
+   "detection": 2.0,
+   "ep_len": 58.98
+  },
+  {
+   "timesteps": 175000,
+   "success": 43.0,
+   "illegal": 0.0,
+   "detection": 6.0,
+   "ep_len": 48.0
+  },
+  {
+   "timesteps": 200000,
+   "success": 0.0,
+   "illegal": 0.0,
+   "detection": 2.0,
+   "ep_len": 59.01
+  },
+  {
+   "timesteps": 225000,
+   "success": 43.0,
+   "illegal": 0.0,
+   "detection": 0.0,
+   "ep_len": 52.87
+  },
+  {
+   "timesteps": 250000,
+   "success": 43.0,
+   "illegal": 0.0,
+   "detection": 2.0,
+   "ep_len": 51.14
+  },
+  {
+   "timesteps": 275000,
+   "success": 43.0,
+   "illegal": 0.0,
+   "detection": 2.0,
+   "ep_len": 49.43
+  },
+  {
+   "timesteps": 300000,
+   "success": 0.0,
+   "illegal": 0.0,
+   "detection": 5.0,
+   "ep_len": 57.97
+  },
+  {
+   "timesteps": 325000,
+   "success": 0.0,
+   "illegal": 0.0,
+   "detection": 1.0,
+   "ep_len": 59.63
+  },
+  {
+   "timesteps": 350000,
+   "success": 43.0,
+   "illegal": 0.0,
+   "detection": 0.0,
+   "ep_len": 56.58
+  },
+  {
+   "timesteps": 375000,
+   "success": 0.0,
+   "illegal": 0.0,
+   "detection": 0.0,
+   "ep_len": 60.0
+  },
+  {
+   "timesteps": 400000,
+   "success": 0.0,
+   "illegal": 0.0,
+   "detection": 0.0,
+   "ep_len": 60.0
+  }
+ ]
+}

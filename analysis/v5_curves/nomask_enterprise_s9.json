@@ -1,0 +1,122 @@
+{
+ "tag": "nomask_enterprise_s9",
+ "algo": "ppo",
+ "topology": "enterprise",
+ "seed": 9,
+ "illegal_penalty": 0.0,
+ "max_steps": 60,
+ "points": [
+  {
+   "timesteps": 25000,
+   "success": 0.0,
+   "illegal": 21.88195991091314,
+   "detection": 98.0,
+   "ep_len": 17.96
+  },
+  {
+   "timesteps": 50000,
+   "success": 0.0,
+   "illegal": 93.14375436147941,
+   "detection": 6.0,
+   "ep_len": 57.32
+  },
+  {
+   "timesteps": 75000,
+   "success": 0.0,
+   "illegal": 90.98081405773713,
+   "detection": 10.0,
+   "ep_len": 55.77
+  },
+  {
+   "timesteps": 100000,
+   "success": 0.0,
+   "illegal": 87.47542272906017,
+   "detection": 22.0,
+   "ep_len": 50.86
+  },
+  {
+   "timesteps": 125000,
+   "success": 0.0,
+   "illegal": 80.16949152542372,
+   "detection": 39.0,
+   "ep_len": 41.3
+  },
+  {
+   "timesteps": 150000,
+   "success": 0.0,
+   "illegal": 77.13637509452987,
+   "detection": 45.0,
+   "ep_len": 39.67
+  },
+  {
+   "timesteps": 175000,
+   "success": 0.0,
+   "illegal": 76.42926356589147,
+   "detection": 39.0,
+   "ep_len": 41.28
+  },
+  {
+   "timesteps": 200000,
+   "success": 0.0,
+   "illegal": 75.54820024824163,
+   "detection": 24.0,
+   "ep_len": 48.34
+  },
+  {
+   "timesteps": 225000,
+   "success": 0.0,
+   "illegal": 72.54787026182102,
+   "detection": 19.0,
+   "ep_len": 51.18
+  },
+  {
+   "timesteps": 250000,
+   "success": 0.0,
+   "illegal": 67.31219408384763,
+   "detection": 30.0,
+   "ep_len": 46.99
+  },
+  {
+   "timesteps": 275000,
+   "success": 0.0,
+   "illegal": 69.00499583680266,
+   "detection": 26.0,
+   "ep_len": 48.04
+  },
+  {
+   "timesteps": 300000,
+   "success": 0.0,
+   "illegal": 64.84182185326453,
+   "detection": 36.0,
+   "ep_len": 44.57
+  },
+  {
+   "timesteps": 325000,
+   "success": 0.0,
+   "illegal": 69.92023509655752,
+   "detection": 26.0,
+   "ep_len": 47.64
+  },
+  {
+   "timesteps": 350000,
+   "success": 0.0,
+   "illegal": 67.82397169394073,
+   "detection": 31.0,
+   "ep_len": 45.22
+  },
+  {
+   "timesteps": 375000,
+   "success": 0.0,
+   "illegal": 65.9449232709691,
+   "detection": 27.0,
+   "ep_len": 47.57
+  },
+  {
+   "timesteps": 400000,
+   "success": 0.0,
+   "illegal": 63.867572900679676,
+   "detection": 32.0,
+   "ep_len": 45.61
+  }
+ ]
+}

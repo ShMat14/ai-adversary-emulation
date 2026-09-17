@@ -1,0 +1,35 @@
+{
+ "episodes": 300,
+ "topology": "enterprise",
+ "max_steps": 60,
+ "playbook_length": 26,
+ "rows": [
+  {
+   "mode": "fixed",
+   "success": 1.6666666666666667,
+   "detected": 30.666666666666668,
+   "illegal": 61.827646038172354,
+   "skipped_per_episode": 0.0,
+   "steps": 23.053333333333335,
+   "playbook_offered": 95.78205128205128
+  },
+  {
+   "mode": "guarded",
+   "success": 0.0,
+   "detected": 11.0,
+   "illegal": 0.0,
+   "skipped_per_episode": 19.843333333333334,
+   "steps": 5.066666666666666,
+   "playbook_offered": 95.78205128205128
+  },
+  {
+   "mode": "retry",
+   "success": 1.0,
+   "detected": 42.0,
+   "illegal": 0.0,
+   "skipped_per_episode": 13.263333333333334,
+   "steps": 8.783333333333333,
+   "playbook_offered": 95.78205128205128
+  }
+ ]
+}

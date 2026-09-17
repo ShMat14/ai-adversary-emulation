@@ -1,0 +1,122 @@
+{
+ "tag": "masked_enterprise_s2",
+ "algo": "maskable",
+ "topology": "enterprise",
+ "seed": 2,
+ "illegal_penalty": 0.0,
+ "max_steps": 60,
+ "points": [
+  {
+   "timesteps": 25000,
+   "success": 0.0,
+   "illegal": 0.0,
+   "detection": 58.0,
+   "ep_len": 42.6
+  },
+  {
+   "timesteps": 50000,
+   "success": 58.0,
+   "illegal": 0.0,
+   "detection": 57.0,
+   "ep_len": 29.97
+  },
+  {
+   "timesteps": 75000,
+   "success": 65.0,
+   "illegal": 0.0,
+   "detection": 35.0,
+   "ep_len": 28.43
+  },
+  {
+   "timesteps": 100000,
+   "success": 62.0,
+   "illegal": 0.0,
+   "detection": 38.0,
+   "ep_len": 30.18
+  },
+  {
+   "timesteps": 125000,
+   "success": 49.0,
+   "illegal": 0.0,
+   "detection": 51.0,
+   "ep_len": 26.31
+  },
+  {
+   "timesteps": 150000,
+   "success": 59.0,
+   "illegal": 0.0,
+   "detection": 41.0,
+   "ep_len": 25.66
+  },
+  {
+   "timesteps": 175000,
+   "success": 64.0,
+   "illegal": 0.0,
+   "detection": 36.0,
+   "ep_len": 26.79
+  },
+  {
+   "timesteps": 200000,
+   "success": 70.0,
+   "illegal": 0.0,
+   "detection": 30.0,
+   "ep_len": 33.23
+  },
+  {
+   "timesteps": 225000,
+   "success": 71.0,
+   "illegal": 0.0,
+   "detection": 29.0,
+   "ep_len": 32.8
+  },
+  {
+   "timesteps": 250000,
+   "success": 63.0,
+   "illegal": 0.0,
+   "detection": 37.0,
+   "ep_len": 30.29
+  },
+  {
+   "timesteps": 275000,
+   "success": 71.0,
+   "illegal": 0.0,
+   "detection": 29.0,
+   "ep_len": 29.64
+  },
+  {
+   "timesteps": 300000,
+   "success": 74.0,
+   "illegal": 0.0,
+   "detection": 26.0,
+   "ep_len": 30.34
+  },
+  {
+   "timesteps": 325000,
+   "success": 69.0,
+   "illegal": 0.0,
+   "detection": 31.0,
+   "ep_len": 29.91
+  },
+  {
+   "timesteps": 350000,
+   "success": 70.0,
+   "illegal": 0.0,
+   "detection": 30.0,
+   "ep_len": 30.8
+  },
+  {
+   "timesteps": 375000,
+   "success": 67.0,
+   "illegal": 0.0,
+   "detection": 33.0,
+   "ep_len": 32.33
+  },
+  {
+   "timesteps": 400000,
+   "success": 70.0,
+   "illegal": 0.0,
+   "detection": 30.0,
+   "ep_len": 30.37
+  }
+ ]
+}

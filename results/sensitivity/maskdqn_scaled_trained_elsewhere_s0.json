@@ -1,0 +1,12 @@
+{
+ "config": "maskdqn",
+ "mode": "scaled",
+ "label": "all 45 scaled by 0.732",
+ "arm": "trained_elsewhere",
+ "seed": 0,
+ "episodes": 200,
+ "success": 0.0,
+ "illegal": 0.0,
+ "detected": 98.5,
+ "steps": 17.2
+}

@@ -1,0 +1,46 @@
+{
+ "ablated_tactics": [
+  "Defense Evasion"
+ ],
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "episodes": 400,
+ "rows": [
+  {
+   "seed": 0,
+   "success": 17.0,
+   "illegal": 0.0,
+   "detected": 100.0,
+   "steps": 15.0625
+  },
+  {
+   "seed": 1,
+   "success": 6.5,
+   "illegal": 0.0,
+   "detected": 100.0,
+   "steps": 15.59
+  },
+  {
+   "seed": 2,
+   "success": 21.5,
+   "illegal": 0.0,
+   "detected": 100.0,
+   "steps": 15.565
+  }
+ ],
+ "mean": {
+  "success": 15.0,
+  "illegal": 0.0,
+  "detected": 100.0,
+  "steps": 15.405833333333334
+ },
+ "sd": {
+  "success": 7.697402159170326,
+  "illegal": 0.0,
+  "detected": 0.0,
+  "steps": 0.29759802306691024
+ }
+}

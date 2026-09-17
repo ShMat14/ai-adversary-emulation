@@ -1,0 +1,458 @@
+{
+  "masked": {
+    "n": 10,
+    "success_mean": 95.5,
+    "success_sd": 1.2599603168354152,
+    "detection_mean": 8.8,
+    "detection_sd": 3.165833223655346,
+    "reward_mean": 592.8635499999999,
+    "illegal_mean": 0.0,
+    "illegal_sd": 0.0,
+    "per_seed": [
+      {
+        "success_rate": 95.5,
+        "detection_rate": 8.25,
+        "avg_reward": 598.18625,
+        "illegal_pct": 0.0,
+        "top_rules": {
+          "Event ID 1102 audit-log-cleared is itself the alarm (T1070)": 454,
+          "WAF signature match on a union/boolean injection pattern (T1190)": 96,
+          "Ticket reuse / anomalous TGS presentation, consistent with pass-the-ticket (T1550.003)": 89,
+          "Anomalous outbound data volume to an external host (T1041)": 87,
+          "High-rate file modification consistent with encryption (T1486)": 72
+        },
+        "seed": 0
+      },
+      {
+        "success_rate": 96.0,
+        "detection_rate": 5.0,
+        "avg_reward": 616.72975,
+        "illegal_pct": 0.0,
+        "top_rules": {
+          "Event ID 1102 audit-log-cleared is itself the alarm (T1070)": 314,
+          "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)": 92,
+          "Anomalous outbound data volume to an external host (T1041)": 74,
+          "Web server process spawning a command shell (T1505.003)": 74,
+          "High-rate file modification consistent with encryption (T1486)": 66
+        },
+        "seed": 1
+      },
+      {
+        "success_rate": 96.75,
+        "detection_rate": 7.75,
+        "avg_reward": 590.849,
+        "illegal_pct": 0.0,
+        "top_rules": {
+          "Event ID 1102 audit-log-cleared is itself the alarm (T1070)": 397,
+          "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)": 114,
+          "WAF signature match on a union/boolean injection pattern (T1190)": 99,
+          "Anomalous outbound data volume to an external host (T1041)": 84,
+          "High-rate file modification consistent with encryption (T1486)": 71
+        },
+        "seed": 2
+      },
+      {
+        "success_rate": 96.25,
+        "detection_rate": 4.75,
+        "avg_reward": 616.9572499999999,
+        "illegal_pct": 0.0,
+        "top_rules": {
+          "Event ID 1102 audit-log-cleared is itself the alarm (T1070)": 331,
+          "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)": 88,
+          "Web server process spawning a command shell (T1505.003)": 83,
+          "Anomalous outbound data volume to an external host (T1041)": 72,
+          "High-rate file modification consistent with encryption (T1486)": 62
+        },
+        "seed": 3
+      },
+      {
+        "success_rate": 95.75,
+        "detection_rate": 9.5,
+        "avg_reward": 588.8165,
+        "illegal_pct": 0.0,
+        "top_rules": {
+          "Event ID 1102 audit-log-cleared is itself the alarm (T1070)": 431,
+          "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)": 119,
+          "WAF signature match on a union/boolean injection pattern (T1190)": 90,
+          "Anomalous outbound data volume to an external host (T1041)": 71,
+          "High-rate file modification consistent with encryption (T1486)": 61
+        },
+        "seed": 4
+      },
+      {
+        "success_rate": 94.25,
+        "detection_rate": 10.5,
+        "avg_reward": 582.4625,
+        "illegal_pct": 0.0,
+        "top_rules": {
+          "Event ID 1102 audit-log-cleared is itself the alarm (T1070)": 445,
+          "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)": 101,
+          "WAF signature match on a union/boolean injection pattern (T1190)": 94,
+          "Web server process spawning a command shell (T1505.003)": 78,
+          "Anomalous outbound data volume to an external host (T1041)": 75
+        },
+        "seed": 5
+      },
+      {
+        "success_rate": 95.0,
+        "detection_rate": 16.5,
+        "avg_reward": 553.64675,
+        "illegal_pct": 0.0,
+        "top_rules": {
+          "Event ID 1102 audit-log-cleared is itself the alarm (T1070)": 381,
+          "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)": 102,
+          "Exploitation-driven privilege escalation process (T1068)": 99,
+          "WAF signature match on a union/boolean injection pattern (T1190)": 90,
+          "Anomalous outbound data volume to an external host (T1041)": 77
+        },
+        "seed": 6
+      },
+      {
+        "success_rate": 92.75,
+        "detection_rate": 9.75,
+        "avg_reward": 588.4627499999999,
+        "illegal_pct": 0.0,
+        "top_rules": {
+          "Event ID 1102 audit-log-cleared is itself the alarm (T1070)": 389,
+          "Ticket reuse / anomalous TGS presentation, consistent with pass-the-ticket (T1550.003)": 103,
+          "New service / persistence mechanism installed (T1543)": 87,
+          "Anomalous outbound data volume to an external host (T1041)": 78,
+          "High-rate file modification consistent with encryption (T1486)": 63
+        },
+        "seed": 7
+      },
+      {
+        "success_rate": 95.25,
+        "detection_rate": 6.75,
+        "avg_reward": 605.124,
+        "illegal_pct": 0.0,
+        "top_rules": {
+          "Event ID 1102 audit-log-cleared is itself the alarm (T1070)": 374,
+          "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)": 112,
+          "Web server process spawning a command shell (T1505.003)": 107,
+          "Anomalous outbound data volume to an external host (T1041)": 81,
+          "High-rate file modification consistent with encryption (T1486)": 69
+        },
+        "seed": 8
+      },
+      {
+        "success_rate": 97.5,
+        "detection_rate": 9.25,
+        "avg_reward": 587.40075,
+        "illegal_pct": 0.0,
+        "top_rules": {
+          "Event ID 1102 audit-log-cleared is itself the alarm (T1070)": 326,
+          "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)": 103,
+          "Anomalous outbound data volume to an external host (T1041)": 86,
+          "WAF signature match on a union/boolean injection pattern (T1190)": 73,
+          "High-rate file modification consistent with encryption (T1486)": 72
+        },
+        "seed": 9
+      }
+    ]
+  },
+  "nomask": {
+    "n": 10,
+    "success_mean": 43.2,
+    "success_sd": 5.51225906502951,
+    "detection_mean": 2.55,
+    "detection_sd": 0.9733961166965891,
+    "reward_mean": 165.36257500000005,
+    "illegal_mean": 88.26689085215875,
+    "illegal_sd": 1.1206007133013218,
+    "per_seed": [
+      {
+        "success_rate": 47.0,
+        "detection_rate": 1.75,
+        "avg_reward": 181.91800000000006,
+        "illegal_pct": 87.59341100843713,
+        "top_rules": {
+          "WAF signature match on a union/boolean injection pattern (T1190)": 95,
+          "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)": 70,
+          "Anomalous outbound data volume to an external host (T1041)": 29,
+          "Ticket reuse / anomalous TGS presentation, consistent with pass-the-ticket (T1550.003)": 29,
+          "Event ID 1102 audit-log-cleared is itself the alarm (T1070)": 25
+        },
+        "seed": 0
+      },
+      {
+        "success_rate": 44.0,
+        "detection_rate": 3.5,
+        "avg_reward": 148.64675000000005,
+        "illegal_pct": 88.638937117838,
+        "top_rules": {
+          "WAF signature match on a union/boolean injection pattern (T1190)": 103,
+          "Ticket reuse / anomalous TGS presentation, consistent with pass-the-ticket (T1550.003)": 63,
+          "Event ID 1102 audit-log-cleared is itself the alarm (T1070)": 54,
+          "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)": 46,
+          "Anomalous 4769 TGS requests with RC4 encryption (T1558.003)": 31
+        },
+        "seed": 1
+      },
+      {
+        "success_rate": 52.75,
+        "detection_rate": 2.5,
+        "avg_reward": 206.39100000000005,
+        "illegal_pct": 86.17408571901373,
+        "top_rules": {
+          "WAF signature match on a union/boolean injection pattern (T1190)": 104,
+          "Ticket reuse / anomalous TGS presentation, consistent with pass-the-ticket (T1550.003)": 95,
+          "Anomalous outbound data volume to an external host (T1041)": 36,
+          "Event ID 1102 audit-log-cleared is itself the alarm (T1070)": 34,
+          "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)": 28
+        },
+        "seed": 2
+      },
+      {
+        "success_rate": 47.5,
+        "detection_rate": 2.25,
+        "avg_reward": 200.18825000000007,
+        "illegal_pct": 86.92192938836399,
+        "top_rules": {
+          "WAF signature match on a union/boolean injection pattern (T1190)": 98,
+          "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)": 84,
+          "Anomalous outbound data volume to an external host (T1041)": 36,
+          "Anomalous 4769 TGS requests with RC4 encryption (T1558.003)": 31,
+          "Ticket reuse / anomalous TGS presentation, consistent with pass-the-ticket (T1550.003)": 29
+        },
+        "seed": 3
+      },
+      {
+        "success_rate": 36.25,
+        "detection_rate": 3.0,
+        "avg_reward": 137.10775000000007,
+        "illegal_pct": 89.27148334711676,
+        "top_rules": {
+          "WAF signature match on a union/boolean injection pattern (T1190)": 94,
+          "Ticket reuse / anomalous TGS presentation, consistent with pass-the-ticket (T1550.003)": 76,
+          "Event ID 1102 audit-log-cleared is itself the alarm (T1070)": 46,
+          "Anomalous 4769 TGS requests with RC4 encryption (T1558.003)": 27,
+          "Anomalous outbound data volume to an external host (T1041)": 25
+        },
+        "seed": 4
+      },
+      {
+        "success_rate": 39.0,
+        "detection_rate": 3.0,
+        "avg_reward": 181.38750000000007,
+        "illegal_pct": 87.6670516416433,
+        "top_rules": {
+          "WAF signature match on a union/boolean injection pattern (T1190)": 99,
+          "Ticket reuse / anomalous TGS presentation, consistent with pass-the-ticket (T1550.003)": 92,
+          "Event ID 1102 audit-log-cleared is itself the alarm (T1070)": 39,
+          "Anomalous outbound data volume to an external host (T1041)": 39,
+          "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)": 26
+        },
+        "seed": 5
+      },
+      {
+        "success_rate": 37.0,
+        "detection_rate": 3.0,
+        "avg_reward": 137.86350000000007,
+        "illegal_pct": 89.1656662665066,
+        "top_rules": {
+          "WAF signature match on a union/boolean injection pattern (T1190)": 93,
+          "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)": 63,
+          "Ticket reuse / anomalous TGS presentation, consistent with pass-the-ticket (T1550.003)": 50,
+          "Event ID 1102 audit-log-cleared is itself the alarm (T1070)": 41,
+          "Anomalous 4769 TGS requests with RC4 encryption (T1558.003)": 23
+        },
+        "seed": 6
+      },
+      {
+        "success_rate": 49.75,
+        "detection_rate": 4.25,
+        "avg_reward": 167.3052500000001,
+        "illegal_pct": 88.14878892733564,
+        "top_rules": {
+          "WAF signature match on a union/boolean injection pattern (T1190)": 92,
+          "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)": 74,
+          "Ticket reuse / anomalous TGS presentation, consistent with pass-the-ticket (T1550.003)": 39,
+          "Event ID 1102 audit-log-cleared is itself the alarm (T1070)": 39,
+          "Anomalous outbound data volume to an external host (T1041)": 32
+        },
+        "seed": 7
+      },
+      {
+        "success_rate": 40.5,
+        "detection_rate": 1.5,
+        "avg_reward": 159.02125000000007,
+        "illegal_pct": 89.1406190000768,
+        "top_rules": {
+          "Ticket reuse / anomalous TGS presentation, consistent with pass-the-ticket (T1550.003)": 88,
+          "WAF signature match on a union/boolean injection pattern (T1190)": 84,
+          "Anomalous outbound data volume to an external host (T1041)": 28,
+          "Event ID 1102 audit-log-cleared is itself the alarm (T1070)": 28,
+          "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)": 24
+        },
+        "seed": 8
+      },
+      {
+        "success_rate": 38.25,
+        "detection_rate": 0.75,
+        "avg_reward": 133.7965000000001,
+        "illegal_pct": 89.9469361052555,
+        "top_rules": {
+          "WAF signature match on a union/boolean injection pattern (T1190)": 74,
+          "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)": 67,
+          "Ticket reuse / anomalous TGS presentation, consistent with pass-the-ticket (T1550.003)": 36,
+          "Anomalous 4769 TGS requests with RC4 encryption (T1558.003)": 27,
+          "Event ID 1102 audit-log-cleared is itself the alarm (T1070)": 22
+        },
+        "seed": 9
+      }
+    ]
+  },
+  "dqn": {
+    "n": 10,
+    "success_mean": 44.8,
+    "success_sd": 14.496896219536097,
+    "detection_mean": 12.15,
+    "detection_sd": 7.354590403278759,
+    "reward_mean": 185.9712,
+    "illegal_mean": 83.5981506008916,
+    "illegal_sd": 6.201796601080212,
+    "per_seed": [
+      {
+        "success_rate": 43.5,
+        "detection_rate": 5.75,
+        "avg_reward": 209.94150000000002,
+        "illegal_pct": 85.30619695172037,
+        "top_rules": {
+          "WAF signature match on a union/boolean injection pattern (T1190)": 74,
+          "Ticket reuse / anomalous TGS presentation, consistent with pass-the-ticket (T1550.003)": 41,
+          "Anomalous outbound data volume to an external host (T1041)": 40,
+          "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)": 32,
+          "New service / persistence mechanism installed (T1543)": 30
+        },
+        "seed": 0
+      },
+      {
+        "success_rate": 51.0,
+        "detection_rate": 7.75,
+        "avg_reward": 225.57550000000003,
+        "illegal_pct": 83.82644862463371,
+        "top_rules": {
+          "WAF signature match on a union/boolean injection pattern (T1190)": 97,
+          "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)": 56,
+          "Forged TGT (Golden Ticket): anomalous ticket lifetime and encryption (T1558.001)": 49,
+          "Ticket reuse / anomalous TGS presentation, consistent with pass-the-ticket (T1550.003)": 44,
+          "Anomalous outbound data volume to an external host (T1041)": 44
+        },
+        "seed": 1
+      },
+      {
+        "success_rate": 60.5,
+        "detection_rate": 9.25,
+        "avg_reward": 310.1705,
+        "illegal_pct": 78.16876122082586,
+        "top_rules": {
+          "WAF signature match on a union/boolean injection pattern (T1190)": 104,
+          "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)": 81,
+          "Anomalous outbound data volume to an external host (T1041)": 52,
+          "Replication request from a non-DC host, consistent with DCSync (T1003.006)": 44,
+          "Ticket reuse / anomalous TGS presentation, consistent with pass-the-ticket (T1550.003)": 40
+        },
+        "seed": 2
+      },
+      {
+        "success_rate": 34.75,
+        "detection_rate": 17.75,
+        "avg_reward": 107.71175000000002,
+        "illegal_pct": 85.35000812083807,
+        "top_rules": {
+          "WAF signature match on a union/boolean injection pattern (T1190)": 94,
+          "Event ID 1102 audit-log-cleared is itself the alarm (T1070)": 71,
+          "Suspicious PowerShell script block / remote execution (T1059.001)": 59,
+          "Ticket reuse / anomalous TGS presentation, consistent with pass-the-ticket (T1550.003)": 40,
+          "Replication request from a non-DC host, consistent with DCSync (T1003.006)": 37
+        },
+        "seed": 3
+      },
+      {
+        "success_rate": 52.5,
+        "detection_rate": 16.25,
+        "avg_reward": 232.37300000000002,
+        "illegal_pct": 80.51303705267603,
+        "top_rules": {
+          "WAF signature match on a union/boolean injection pattern (T1190)": 92,
+          "Ticket reuse / anomalous TGS presentation, consistent with pass-the-ticket (T1550.003)": 65,
+          "Forged TGT (Golden Ticket): anomalous ticket lifetime and encryption (T1558.001)": 49,
+          "Group Policy Object modified to gain SYSTEM or disable controls (T1484.001)": 38,
+          "Anomalous outbound data volume to an external host (T1041)": 37
+        },
+        "seed": 4
+      },
+      {
+        "success_rate": 56.0,
+        "detection_rate": 14.0,
+        "avg_reward": 288.35975,
+        "illegal_pct": 75.92614233960501,
+        "top_rules": {
+          "WAF signature match on a union/boolean injection pattern (T1190)": 99,
+          "Ticket reuse / anomalous TGS presentation, consistent with pass-the-ticket (T1550.003)": 91,
+          "Group Policy Object modified to gain SYSTEM or disable controls (T1484.001)": 69,
+          "Anomalous outbound data volume to an external host (T1041)": 56,
+          "Multiple 4625 failed logons then a 4624 success within a window (T1110)": 33
+        },
+        "seed": 5
+      },
+      {
+        "success_rate": 10.0,
+        "detection_rate": 4.0,
+        "avg_reward": 12.10449999999999,
+        "illegal_pct": 96.2998361551065,
+        "top_rules": {
+          "Multiple 4625 failed logons then a 4624 success within a window (T1110)": 29,
+          "Anomalous outbound data volume to an external host (T1041)": 14,
+          "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)": 13,
+          "Many 4625 failures across distinct accounts from one source (T1110.003)": 12,
+          "Ticket reuse / anomalous TGS presentation, consistent with pass-the-ticket (T1550.003)": 10
+        },
+        "seed": 6
+      },
+      {
+        "success_rate": 53.25,
+        "detection_rate": 28.25,
+        "avg_reward": 137.10900000000004,
+        "illegal_pct": 79.11990810285411,
+        "top_rules": {
+          "Event ID 1102 audit-log-cleared is itself the alarm (T1070)": 97,
+          "WAF signature match on a union/boolean injection pattern (T1190)": 91,
+          "Multiple 4625 failed logons then a 4624 success within a window (T1110)": 73,
+          "Suspicious PowerShell script block / remote execution (T1059.001)": 72,
+          "Ticket reuse / anomalous TGS presentation, consistent with pass-the-ticket (T1550.003)": 71
+        },
+        "seed": 7
+      },
+      {
+        "success_rate": 54.25,
+        "detection_rate": 15.5,
+        "avg_reward": 247.70875000000004,
+        "illegal_pct": 79.01979464380227,
+        "top_rules": {
+          "Ticket reuse / anomalous TGS presentation, consistent with pass-the-ticket (T1550.003)": 90,
+          "WAF signature match on a union/boolean injection pattern (T1190)": 76,
+          "Forged TGT (Golden Ticket): anomalous ticket lifetime and encryption (T1558.001)": 71,
+          "Anomalous outbound data volume to an external host (T1041)": 39,
+          "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)": 38
+        },
+        "seed": 8
+      },
+      {
+        "success_rate": 32.25,
+        "detection_rate": 3.0,
+        "avg_reward": 88.65775000000005,
+        "illegal_pct": 92.45137279685416,
+        "top_rules": {
+          "Ticket reuse / anomalous TGS presentation, consistent with pass-the-ticket (T1550.003)": 61,
+          "WAF signature match on a union/boolean injection pattern (T1190)": 57,
+          "Multiple 4625 failed logons then a 4624 success within a window (T1110)": 38,
+          "Replication request from a non-DC host, consistent with DCSync (T1003.006)": 29,
+          "NTLM network logon anomaly consistent with pass-the-hash (T1550.002)": 24
+        },
+        "seed": 9
+      }
+    ]
+  }
+}

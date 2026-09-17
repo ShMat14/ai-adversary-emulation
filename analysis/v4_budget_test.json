@@ -1,0 +1,10 @@
+{
+  "description": "Is the unmasked agent's failure a step-budget artifact -- does it just need full episodes to learn the +400 win? Retrained unmasked PPO with max_steps=150 (room to finish) at 2M and 4M timesteps, evaluated at 150 and 40.",
+  "seeds": 3, "eval_episodes": 300,
+  "masked_eval40":              {"success_mean": 96.1, "illegal_mean": 0.0},
+  "nomask_train40_2M_eval40":   {"success_mean": 47.9, "illegal_mean": 87.5},
+  "nomask_train150_2M_eval150": {"success_mean": 34.6, "illegal_mean": 97.3},
+  "nomask_train150_4M_eval150": {"success_mean": 50.8, "success_sd": 0.3, "illegal_mean": 95.3},
+  "nomask_train150_4M_eval40":  {"success_mean": 50.8, "success_sd": 0.3, "illegal_mean": 83.7},
+  "conclusion": "NOT a step-budget artifact. The 2M/150 run scored a low 34.6% partly from under-training (fewer episodes per timestep at a longer budget); with 4M timesteps it recovers to 50.8% -- essentially the same as the 40-step baseline (47.9%), NOT better. A larger budget (training or eval) neither rescues the unmasked agent nor fundamentally hurts it: it plateaus around 48-51% with 84-95% illegal actions regardless. Correction to an earlier overstatement: bigger budget does not make it 'worse' once properly trained; budget is roughly NEUTRAL. The real bottleneck is legibility of the episode-varying legal set, which no budget fixes and masking supplies structurally (96.1%)."
+}

@@ -1,0 +1,20 @@
+# Trained checkpoints. 544 MB, and every one is reproducible from
+# analysis/v5_train.py with the seed recorded in the results JSON.
+results/models/
+
+# The released telemetry corpus. 731 MB across ~86k files, regenerable by
+# analysis/v5_corpus.py. It is a released artefact and belongs in a data
+# repository (Zenodo/figshare) at submission, not in the source tree.
+results/telemetry/
+
+# The MITRE ATT&CK bundle, 51 MB, downloaded rather than authored.
+data/enterprise-attack.json
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
+# Scratch
+*.tmp
+nohup.out

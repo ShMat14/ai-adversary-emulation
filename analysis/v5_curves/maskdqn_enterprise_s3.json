@@ -1,0 +1,122 @@
+{
+ "tag": "maskdqn_enterprise_s3",
+ "algo": "maskdqn",
+ "topology": "enterprise",
+ "seed": 3,
+ "illegal_penalty": 0.0,
+ "max_steps": 60,
+ "points": [
+  {
+   "timesteps": 25000,
+   "success": 0.0,
+   "illegal": 0.0,
+   "detection": 100.0,
+   "ep_len": 13.64
+  },
+  {
+   "timesteps": 50000,
+   "success": 61.0,
+   "illegal": 0.0,
+   "detection": 87.0,
+   "ep_len": 16.14
+  },
+  {
+   "timesteps": 75000,
+   "success": 44.0,
+   "illegal": 0.0,
+   "detection": 86.0,
+   "ep_len": 19.79
+  },
+  {
+   "timesteps": 100000,
+   "success": 34.0,
+   "illegal": 0.0,
+   "detection": 62.0,
+   "ep_len": 27.07
+  },
+  {
+   "timesteps": 125000,
+   "success": 17.0,
+   "illegal": 0.0,
+   "detection": 77.0,
+   "ep_len": 26.46
+  },
+  {
+   "timesteps": 150000,
+   "success": 0.0,
+   "illegal": 0.0,
+   "detection": 77.0,
+   "ep_len": 27.96
+  },
+  {
+   "timesteps": 175000,
+   "success": 5.0,
+   "illegal": 0.0,
+   "detection": 86.0,
+   "ep_len": 22.93
+  },
+  {
+   "timesteps": 200000,
+   "success": 1.0,
+   "illegal": 0.0,
+   "detection": 82.0,
+   "ep_len": 32.15
+  },
+  {
+   "timesteps": 225000,
+   "success": 1.0,
+   "illegal": 0.0,
+   "detection": 93.0,
+   "ep_len": 24.65
+  },
+  {
+   "timesteps": 250000,
+   "success": 0.0,
+   "illegal": 0.0,
+   "detection": 80.0,
+   "ep_len": 28.95
+  },
+  {
+   "timesteps": 275000,
+   "success": 2.0,
+   "illegal": 0.0,
+   "detection": 88.0,
+   "ep_len": 22.59
+  },
+  {
+   "timesteps": 300000,
+   "success": 1.0,
+   "illegal": 0.0,
+   "detection": 99.0,
+   "ep_len": 17.14
+  },
+  {
+   "timesteps": 325000,
+   "success": 17.0,
+   "illegal": 0.0,
+   "detection": 84.0,
+   "ep_len": 26.54
+  },
+  {
+   "timesteps": 350000,
+   "success": 17.0,
+   "illegal": 0.0,
+   "detection": 75.0,
+   "ep_len": 31.06
+  },
+  {
+   "timesteps": 375000,
+   "success": 11.0,
+   "illegal": 0.0,
+   "detection": 94.0,
+   "ep_len": 19.43
+  },
+  {
+   "timesteps": 400000,
+   "success": 0.0,
+   "illegal": 0.0,
+   "detection": 85.0,
+   "ep_len": 26.39
+  }
+ ]
+}

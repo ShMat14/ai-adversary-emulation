@@ -1,0 +1,12 @@
+{
+ "pct": {
+  "PHISHING_EMAIL": 11.7,
+  "VALID_ACCOUNTS_LOGIN": 23.1,
+  "DOMAIN_ACCT_DISCOVERY": 11.8,
+  "PASS_THE_HASH": 27.6,
+  "KERBEROASTING": 14.6,
+  "EXFILTRATE_DATA": 11.1
+ },
+ "avg_steps": 9.03,
+ "avg_unique": 6
+}

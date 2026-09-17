@@ -1,0 +1,77 @@
+{
+  "maskable": {
+    "illegal_pct_mean": 0.0,
+    "illegal_pct_sd": 0.0,
+    "episodes_affected_mean": 0.0,
+    "per_seed": [
+      {
+        "illegal_actions": 0,
+        "total_actions": 2991,
+        "illegal_pct": 0.0,
+        "episodes_with_illegal_pct": 0.0
+      },
+      {
+        "illegal_actions": 0,
+        "total_actions": 2904,
+        "illegal_pct": 0.0,
+        "episodes_with_illegal_pct": 0.0
+      },
+      {
+        "illegal_actions": 0,
+        "total_actions": 2928,
+        "illegal_pct": 0.0,
+        "episodes_with_illegal_pct": 0.0
+      }
+    ]
+  },
+  "ppo": {
+    "illegal_pct_mean": 5.108823495688354,
+    "illegal_pct_sd": 1.3221952279517246,
+    "episodes_affected_mean": 77.33333333333333,
+    "per_seed": [
+      {
+        "illegal_actions": 131,
+        "total_actions": 3099,
+        "illegal_pct": 4.227170054856406,
+        "episodes_with_illegal_pct": 65.5
+      },
+      {
+        "illegal_actions": 135,
+        "total_actions": 3020,
+        "illegal_pct": 4.470198675496689,
+        "episodes_with_illegal_pct": 67.0
+      },
+      {
+        "illegal_actions": 200,
+        "total_actions": 3017,
+        "illegal_pct": 6.629101756711965,
+        "episodes_with_illegal_pct": 99.5
+      }
+    ]
+  },
+  "dqn": {
+    "illegal_pct_mean": 59.16501937984496,
+    "illegal_pct_sd": 10.241275754069617,
+    "episodes_affected_mean": 99.5,
+    "per_seed": [
+      {
+        "illegal_actions": 4981,
+        "total_actions": 8000,
+        "illegal_pct": 62.2625,
+        "episodes_with_illegal_pct": 100.0
+      },
+      {
+        "illegal_actions": 5400,
+        "total_actions": 8000,
+        "illegal_pct": 67.5,
+        "episodes_with_illegal_pct": 100.0
+      },
+      {
+        "illegal_actions": 1642,
+        "total_actions": 3440,
+        "illegal_pct": 47.73255813953488,
+        "episodes_with_illegal_pct": 98.5
+      }
+    ]
+  }
+}

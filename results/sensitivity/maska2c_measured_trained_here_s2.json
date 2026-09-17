@@ -1,0 +1,12 @@
+{
+ "config": "maska2c",
+ "mode": "measured",
+ "label": "15 measured rates substituted",
+ "arm": "trained_here",
+ "seed": 2,
+ "episodes": 200,
+ "success": 45.5,
+ "illegal": 0.0,
+ "detected": 66.5,
+ "steps": 23.505
+}

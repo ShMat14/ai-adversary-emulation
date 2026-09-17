@@ -1,0 +1,91 @@
+{
+ "topology": "enterprise",
+ "models": 10,
+ "episodes_per_model": 400,
+ "attempts": 4000,
+ "wins": 2691,
+ "mean_winning_length": 41.99739873652917,
+ "median_winning_length": 42,
+ "steps_costed": 113015,
+ "kinds": {
+  "productive": {
+   "count": 95336,
+   "share": 0.843569437685263
+  },
+  "failed": {
+   "count": 17679,
+   "share": 0.15643056231473698
+  }
+ },
+ "failure_causes": {
+  "undef_err": {
+   "count": 17679,
+   "share": 0.15643056231473698
+  }
+ },
+ "tactics": {
+  "Defense Evasion": {
+   "count": 20545,
+   "share": 0.1817900278724063
+  },
+  "Lateral Movement": {
+   "count": 20454,
+   "share": 0.180984825023227
+  },
+  "Credential Access": {
+   "count": 15931,
+   "share": 0.14096358890412777
+  },
+  "Discovery": {
+   "count": 12037,
+   "share": 0.10650798566561961
+  },
+  "Collection": {
+   "count": 11652,
+   "share": 0.10310135822678405
+  },
+  "Privilege Escalation": {
+   "count": 11008,
+   "share": 0.09740299960182276
+  },
+  "Initial Access": {
+   "count": 5762,
+   "share": 0.05098438260407911
+  },
+  "Persistence": {
+   "count": 5709,
+   "share": 0.05051541830730434
+  },
+  "Command and Control": {
+   "count": 3094,
+   "share": 0.027376896872096625
+  },
+  "Impact": {
+   "count": 2950,
+   "share": 0.026102729726142547
+  },
+  "Exfiltration": {
+   "count": 2600,
+   "share": 0.0230057956908375
+  },
+  "Execution": {
+   "count": 1273,
+   "share": 0.01126399150555236
+  }
+ },
+ "mean_evasion_share": 0.18207993056149227,
+ "random_legal_floor": {
+  "trials": 60,
+  "solved": 7,
+  "median": 106,
+  "min": 62,
+  "max": 130
+ },
+ "random_legal_floor_no_defender": {
+  "trials": 60,
+  "solved": 60,
+  "median": 101.0,
+  "min": 52,
+  "max": 180
+ }
+}

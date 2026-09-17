@@ -1,0 +1,12 @@
+{
+ "config": "maskdqn",
+ "mode": "measured",
+ "label": "15 measured rates substituted",
+ "arm": "trained_here",
+ "seed": 2,
+ "episodes": 200,
+ "success": 0.0,
+ "illegal": 0.0,
+ "detected": 83.5,
+ "steps": 25.495
+}

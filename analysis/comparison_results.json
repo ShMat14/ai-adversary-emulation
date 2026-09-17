@@ -1,0 +1,240 @@
+{
+  "episodes": 200,
+  "per_seed": {
+    "maskable": [
+      {
+        "success_rate": 99.5,
+        "detection_rate": 1.5,
+        "avg_steps": 14.93969849246231,
+        "avg_reward": 807.0755000000001,
+        "avg_unique": 9.005,
+        "action_freq": {
+          "POWERSHELL_EXEC": 506,
+          "CLEAR_LOGS": 422,
+          "LATERAL_MOVE_SMB": 400,
+          "VALID_ACCOUNTS_LOGIN": 324,
+          "WEB_SHELL_UPLOAD": 300,
+          "RANSOMWARE_ENCRYPT": 273,
+          "NETWORK_SCAN": 227,
+          "PRIV_ESC_SUDO": 156,
+          "KERBEROASTING": 155,
+          "SQL_INJECTION": 121
+        },
+        "seed": 0
+      },
+      {
+        "success_rate": 99.5,
+        "detection_rate": 0.5,
+        "avg_steps": 14.517587939698492,
+        "avg_reward": 812.2180000000001,
+        "avg_unique": 7.995,
+        "action_freq": {
+          "POWERSHELL_EXEC": 805,
+          "CLEAR_LOGS": 414,
+          "LATERAL_MOVE_SMB": 400,
+          "VALID_ACCOUNTS_LOGIN": 322,
+          "WEB_SHELL_UPLOAD": 269,
+          "EXFILTRATE_DATA": 248,
+          "NETWORK_SCAN": 216,
+          "SQL_INJECTION": 129,
+          "PHISHING_EMAIL": 101
+        },
+        "seed": 1
+      },
+      {
+        "success_rate": 100.0,
+        "detection_rate": 2.0,
+        "avg_steps": 14.64,
+        "avg_reward": 800.2175,
+        "avg_unique": 8.995,
+        "action_freq": {
+          "POWERSHELL_EXEC": 547,
+          "LATERAL_MOVE_SMB": 400,
+          "CLEAR_LOGS": 339,
+          "VALID_ACCOUNTS_LOGIN": 330,
+          "WEB_SHELL_UPLOAD": 277,
+          "EXFILTRATE_DATA": 260,
+          "NETWORK_SCAN": 219,
+          "PRIV_ESC_SUDO": 184,
+          "KERBEROASTING": 141,
+          "SQL_INJECTION": 119
+        },
+        "seed": 2
+      }
+    ],
+    "ppo": [
+      {
+        "success_rate": 100.0,
+        "detection_rate": 0.0,
+        "avg_steps": 15.495,
+        "avg_reward": 811.0005,
+        "avg_unique": 10.0,
+        "action_freq": {
+          "POWERSHELL_EXEC": 515,
+          "VALID_ACCOUNTS_LOGIN": 448,
+          "CLEAR_LOGS": 381,
+          "KERBEROASTING": 322,
+          "WEB_SHELL_UPLOAD": 293,
+          "PASS_THE_HASH": 272,
+          "NETWORK_SCAN": 235,
+          "PHISHING_EMAIL": 218,
+          "EXFILTRATE_DATA": 215,
+          "LATERAL_MOVE_SMB": 200
+        },
+        "seed": 0
+      },
+      {
+        "success_rate": 100.0,
+        "detection_rate": 0.5,
+        "avg_steps": 15.1,
+        "avg_reward": 808.395,
+        "avg_unique": 9.01,
+        "action_freq": {
+          "POWERSHELL_EXEC": 812,
+          "CLEAR_LOGS": 392,
+          "VALID_ACCOUNTS_LOGIN": 344,
+          "PASS_THE_HASH": 293,
+          "WEB_SHELL_UPLOAD": 289,
+          "NETWORK_SCAN": 246,
+          "LATERAL_MOVE_SMB": 200,
+          "RANSOMWARE_ENCRYPT": 149,
+          "SQL_INJECTION": 117,
+          "PHISHING_EMAIL": 106
+        },
+        "seed": 1
+      },
+      {
+        "success_rate": 99.5,
+        "detection_rate": 0.0,
+        "avg_steps": 14.959798994974875,
+        "avg_reward": 815.5115,
+        "avg_unique": 7.995,
+        "action_freq": {
+          "POWERSHELL_EXEC": 828,
+          "VALID_ACCOUNTS_LOGIN": 441,
+          "CLEAR_LOGS": 434,
+          "LATERAL_MOVE_SMB": 400,
+          "WEB_SHELL_UPLOAD": 260,
+          "PHISHING_EMAIL": 220,
+          "NETWORK_SCAN": 217,
+          "EXFILTRATE_DATA": 217
+        },
+        "seed": 2
+      }
+    ],
+    "dqn": [
+      {
+        "success_rate": 0.0,
+        "detection_rate": 0.0,
+        "avg_steps": NaN,
+        "avg_reward": 144.19000000000008,
+        "avg_unique": 3.99,
+        "action_freq": {
+          "RANSOMWARE_ENCRYPT": 4910,
+          "CLEAR_LOGS": 2612,
+          "POWERSHELL_EXEC": 251,
+          "PHISHING_EMAIL": 227
+        },
+        "seed": 0
+      },
+      {
+        "success_rate": 0.0,
+        "detection_rate": 0.0,
+        "avg_steps": NaN,
+        "avg_reward": 126.00000000000007,
+        "avg_unique": 2.0,
+        "action_freq": {
+          "RANSOMWARE_ENCRYPT": 5400,
+          "CLEAR_LOGS": 2600
+        },
+        "seed": 1
+      },
+      {
+        "success_rate": 0.0,
+        "detection_rate": 100.0,
+        "avg_steps": NaN,
+        "avg_reward": 85.35500000000008,
+        "avg_unique": 7.47,
+        "action_freq": {
+          "RANSOMWARE_ENCRYPT": 1642,
+          "POWERSHELL_EXEC": 548,
+          "WEB_SHELL_UPLOAD": 261,
+          "NETWORK_SCAN": 237,
+          "VALID_ACCOUNTS_LOGIN": 235,
+          "PHISHING_EMAIL": 219,
+          "LATERAL_MOVE_SMB": 200,
+          "CLEAR_LOGS": 98
+        },
+        "seed": 2
+      }
+    ]
+  },
+  "summary": {
+    "maskable": {
+      "success_rate": [
+        99.66666666666667,
+        0.28867513459481287
+      ],
+      "detection_rate": [
+        1.3333333333333333,
+        0.7637626158259734
+      ],
+      "avg_steps": [
+        14.699095477386935,
+        0.21717167465932652
+      ],
+      "avg_reward": [
+        806.5036666666667,
+        6.020651549735628
+      ],
+      "avg_unique": [
+        8.665,
+        0.5802585630561603
+      ]
+    },
+    "ppo": {
+      "success_rate": [
+        99.83333333333333,
+        0.28867513459481287
+      ],
+      "detection_rate": [
+        0.16666666666666666,
+        0.28867513459481287
+      ],
+      "avg_steps": [
+        15.184932998324959,
+        0.2775252053387697
+      ],
+      "avg_reward": [
+        811.6356666666667,
+        3.600516710603247
+      ],
+      "avg_unique": [
+        9.001666666666667,
+        1.0025259763883094
+      ]
+    },
+    "dqn": {
+      "success_rate": [
+        0.0,
+        0.0
+      ],
+      "detection_rate": [
+        33.333333333333336,
+        57.735026918962575
+      ],
+      "avg_steps": [
+        NaN,
+        NaN
+      ],
+      "avg_reward": [
+        118.51500000000007,
+        30.123217374643104
+      ],
+      "avg_unique": [
+        4.486666666666666,
+        2.768615779289956
+      ]
+    }
+  }
+}

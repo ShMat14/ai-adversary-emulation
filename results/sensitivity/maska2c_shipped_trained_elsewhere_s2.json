@@ -1,0 +1,12 @@
+{
+ "config": "maska2c",
+ "mode": "shipped",
+ "label": "as shipped",
+ "arm": "trained_elsewhere",
+ "seed": 2,
+ "episodes": 200,
+ "success": 61.0,
+ "illegal": 0.0,
+ "detected": 47.5,
+ "steps": 39.845
+}

@@ -1,0 +1,52 @@
+{
+ "arm": "concealment",
+ "label": "4 concealment-only techniques withdrawn",
+ "ablated_tactics": [],
+ "ablated_techniques": [
+  "CLEAR_LOGS",
+  "DISABLE_SECURITY_TOOLS",
+  "MODIFY_REGISTRY",
+  "OBFUSCATED_FILES"
+ ],
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "episodes": 400,
+ "rows": [
+  {
+   "seed": 0,
+   "success": 5.75,
+   "illegal": 0.0,
+   "detected": 100.0,
+   "steps": 17.02
+  },
+  {
+   "seed": 1,
+   "success": 7.75,
+   "illegal": 0.0,
+   "detected": 100.0,
+   "steps": 17.3275
+  },
+  {
+   "seed": 2,
+   "success": 2.25,
+   "illegal": 0.0,
+   "detected": 100.0,
+   "steps": 16.955
+  }
+ ],
+ "mean": {
+  "success": 5.25,
+  "illegal": 0.0,
+  "detected": 100.0,
+  "steps": 17.100833333333334
+ },
+ "sd": {
+  "success": 2.7838821814150108,
+  "illegal": 0.0,
+  "detected": 0.0,
+  "steps": 0.19897131284015226
+ }
+}

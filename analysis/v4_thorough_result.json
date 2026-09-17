@@ -1,0 +1,198 @@
+{
+  "scenarios": {
+    "SQLi available (web entry)": {
+      "episodes": 400,
+      "success": 96.75,
+      "detection": 5.5,
+      "avg_steps": 11.235,
+      "dc_routes": {
+        "KERBEROASTING": 236,
+        "GPO_MODIFICATION": 92,
+        "DCSYNC": 46,
+        "GOLDEN_TICKET": 13
+      },
+      "entries": {
+        "SQL_INJECTION": 400
+      },
+      "phase_counts": {
+        "Entry": {
+          "SQL_INJECTION": 474
+        },
+        "Discovery": {
+          "NETWORK_SCAN": 6,
+          "DOMAIN_ACCT_DISCOVERY": 111,
+          "DOMAIN_TRUST_DISCOVERY": 268
+        },
+        "Credential access": {
+          "VALID_ACCOUNTS_LOGIN": 124,
+          "AS_REP_ROASTING": 58
+        },
+        "Lateral movement": {
+          "LATERAL_MOVE_SMB": 117,
+          "PASS_THE_HASH": 297,
+          "PASS_THE_TICKET": 570
+        },
+        "DC dominance": {
+          "KERBEROASTING": 298,
+          "DCSYNC": 55,
+          "GPO_MODIFICATION": 114,
+          "GOLDEN_TICKET": 14
+        },
+        "Persistence": {
+          "INSTALL_BACKDOOR": 96,
+          "WEB_SHELL_UPLOAD": 336
+        },
+        "Host priv-esc": {
+          "PRIV_ESC_SUDO": 92,
+          "POWERSHELL_EXEC": 123
+        },
+        "Evasion": {
+          "CLEAR_LOGS": 956
+        },
+        "Impact": {
+          "EXFILTRATE_DATA": 268,
+          "RANSOMWARE_ENCRYPT": 117
+        }
+      },
+      "tech": {
+        "SQL_INJECTION": 474,
+        "DOMAIN_TRUST_DISCOVERY": 268,
+        "WEB_SHELL_UPLOAD": 336,
+        "CLEAR_LOGS": 956,
+        "PASS_THE_TICKET": 570,
+        "VALID_ACCOUNTS_LOGIN": 124,
+        "KERBEROASTING": 298,
+        "PRIV_ESC_SUDO": 92,
+        "RANSOMWARE_ENCRYPT": 117,
+        "INSTALL_BACKDOOR": 96,
+        "LATERAL_MOVE_SMB": 117,
+        "EXFILTRATE_DATA": 268,
+        "PASS_THE_HASH": 297,
+        "DOMAIN_ACCT_DISCOVERY": 111,
+        "GPO_MODIFICATION": 114,
+        "POWERSHELL_EXEC": 123,
+        "DCSYNC": 55,
+        "GOLDEN_TICKET": 14,
+        "AS_REP_ROASTING": 58,
+        "NETWORK_SCAN": 6
+      }
+    },
+    "no SQLi (phish/spray entry)": {
+      "episodes": 400,
+      "success": 94.0,
+      "detection": 8.75,
+      "avg_steps": 14.0475,
+      "dc_routes": {
+        "DCSYNC": 63,
+        "KERBEROASTING": 211,
+        "GOLDEN_TICKET": 18,
+        "GPO_MODIFICATION": 84
+      },
+      "entries": {
+        "PHISHING_EMAIL": 241,
+        "PASSWORD_SPRAYING": 109,
+        "BRUTE_FORCE_SSH": 50
+      },
+      "phase_counts": {
+        "Entry": {
+          "PHISHING_EMAIL": 273,
+          "PASSWORD_SPRAYING": 209,
+          "BRUTE_FORCE_SSH": 76
+        },
+        "Discovery": {
+          "NETWORK_SCAN": 21,
+          "DOMAIN_ACCT_DISCOVERY": 136,
+          "DOMAIN_TRUST_DISCOVERY": 242
+        },
+        "Credential access": {
+          "VALID_ACCOUNTS_LOGIN": 544,
+          "AS_REP_ROASTING": 218,
+          "CRED_DUMP_LSASS": 45
+        },
+        "Lateral movement": {
+          "LATERAL_MOVE_SMB": 111,
+          "PASS_THE_HASH": 325,
+          "PASS_THE_TICKET": 520
+        },
+        "DC dominance": {
+          "KERBEROASTING": 278,
+          "DCSYNC": 69,
+          "GPO_MODIFICATION": 113,
+          "GOLDEN_TICKET": 21
+        },
+        "Persistence": {
+          "INSTALL_BACKDOOR": 120,
+          "WEB_SHELL_UPLOAD": 334
+        },
+        "Host priv-esc": {
+          "PRIV_ESC_SUDO": 194,
+          "POWERSHELL_EXEC": 235,
+          "ACCOUNT_MANIPULATION": 31
+        },
+        "Evasion": {
+          "CLEAR_LOGS": 1122
+        },
+        "Impact": {
+          "EXFILTRATE_DATA": 254,
+          "RANSOMWARE_ENCRYPT": 128
+        }
+      },
+      "tech": {
+        "PHISHING_EMAIL": 273,
+        "DOMAIN_TRUST_DISCOVERY": 242,
+        "WEB_SHELL_UPLOAD": 334,
+        "POWERSHELL_EXEC": 235,
+        "AS_REP_ROASTING": 218,
+        "PASS_THE_HASH": 325,
+        "DCSYNC": 69,
+        "EXFILTRATE_DATA": 254,
+        "DOMAIN_ACCT_DISCOVERY": 136,
+        "PRIV_ESC_SUDO": 194,
+        "VALID_ACCOUNTS_LOGIN": 544,
+        "PASS_THE_TICKET": 520,
+        "KERBEROASTING": 278,
+        "CLEAR_LOGS": 1122,
+        "PASSWORD_SPRAYING": 209,
+        "CRED_DUMP_LSASS": 45,
+        "RANSOMWARE_ENCRYPT": 128,
+        "INSTALL_BACKDOOR": 120,
+        "BRUTE_FORCE_SSH": 76,
+        "GOLDEN_TICKET": 21,
+        "LATERAL_MOVE_SMB": 111,
+        "NETWORK_SCAN": 21,
+        "GPO_MODIFICATION": 113,
+        "ACCOUNT_MANIPULATION": 31
+      }
+    }
+  },
+  "combined": {
+    "SQL_INJECTION": 474,
+    "DOMAIN_TRUST_DISCOVERY": 510,
+    "WEB_SHELL_UPLOAD": 670,
+    "CLEAR_LOGS": 2078,
+    "PASS_THE_TICKET": 1090,
+    "VALID_ACCOUNTS_LOGIN": 668,
+    "KERBEROASTING": 576,
+    "PRIV_ESC_SUDO": 286,
+    "RANSOMWARE_ENCRYPT": 245,
+    "INSTALL_BACKDOOR": 216,
+    "LATERAL_MOVE_SMB": 228,
+    "EXFILTRATE_DATA": 522,
+    "PASS_THE_HASH": 622,
+    "DOMAIN_ACCT_DISCOVERY": 247,
+    "GPO_MODIFICATION": 227,
+    "POWERSHELL_EXEC": 358,
+    "DCSYNC": 124,
+    "GOLDEN_TICKET": 35,
+    "AS_REP_ROASTING": 276,
+    "NETWORK_SCAN": 27,
+    "PHISHING_EMAIL": 273,
+    "PASSWORD_SPRAYING": 209,
+    "CRED_DUMP_LSASS": 45,
+    "BRUTE_FORCE_SSH": 76,
+    "ACCOUNT_MANIPULATION": 31
+  },
+  "worst_success": 94.0,
+  "bar": 99.0,
+  "great": false
+}

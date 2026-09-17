@@ -1,0 +1,6 @@
+Trained MaskablePPO (masked_s0) vs the live server, 20 episodes
+
+metric            sim   live-server
+success        100.0%        100.0%
+detection        0.0%          0.0%
+reward          643.3         643.1

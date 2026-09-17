@@ -1,0 +1,97 @@
+{
+  "PPO_penalty_40": {
+    "n": 3,
+    "eval_episodes": 400,
+    "eval_max_steps": 40,
+    "success_mean": 54.666666666666664,
+    "success_sd": 5.531475591758696,
+    "illegal_mean": 82.15536112449362,
+    "illegal_sd": 0.8599327596803985,
+    "per_seed_success": [
+      61.75,
+      54.0,
+      48.25
+    ],
+    "per_seed_illegal": [
+      80.99892483628189,
+      82.40766845221314,
+      83.05949008498584
+    ]
+  },
+  "PPO_150train_150": {
+    "n": 3,
+    "eval_episodes": 400,
+    "eval_max_steps": 150,
+    "success_mean": 50.833333333333336,
+    "success_sd": 1.4766704288891124,
+    "illegal_mean": 95.29396219602383,
+    "illegal_sd": 0.31337204150867815,
+    "per_seed_success": [
+      52.0,
+      51.75,
+      48.75
+    ],
+    "per_seed_illegal": [
+      95.7328341373269,
+      95.1278799408159,
+      95.02117250992872
+    ]
+  },
+  "PPO_150train_40": {
+    "n": 3,
+    "eval_episodes": 400,
+    "eval_max_steps": 40,
+    "success_mean": 50.833333333333336,
+    "success_sd": 1.4766704288891124,
+    "illegal_mean": 83.55778757434362,
+    "illegal_sd": 0.934759552548116,
+    "per_seed_success": [
+      52.0,
+      51.75,
+      48.75
+    ],
+    "per_seed_illegal": [
+      84.86422065208139,
+      83.07946412185723,
+      82.72967794909223
+    ]
+  },
+  "DQN_150train_150": {
+    "n": 3,
+    "eval_episodes": 400,
+    "eval_max_steps": 150,
+    "success_mean": 49.583333333333336,
+    "success_sd": 4.365266951236265,
+    "illegal_mean": 95.11516558321517,
+    "illegal_sd": 0.9977253638003121,
+    "per_seed_success": [
+      46.25,
+      46.75,
+      55.75
+    ],
+    "per_seed_illegal": [
+      96.52615438755247,
+      94.40557265914109,
+      94.41376970295197
+    ]
+  },
+  "DQN_150train_40": {
+    "n": 3,
+    "eval_episodes": 400,
+    "eval_max_steps": 40,
+    "success_mean": 49.583333333333336,
+    "success_sd": 4.365266951236265,
+    "illegal_mean": 83.27809600707768,
+    "illegal_sd": 3.1708799573015205,
+    "per_seed_success": [
+      46.25,
+      46.75,
+      55.75
+    ],
+    "per_seed_illegal": [
+      87.76233064730364,
+      81.05717595030009,
+      81.01478142362932
+    ]
+  }
+}

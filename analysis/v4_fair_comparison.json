@@ -1,0 +1,9 @@
+{
+  "description": "Controlled check of WHY masked vs unmasked differs so much more in v4 than v3. In v3 the unmasked baseline was reward-shaped to avoid illegal actions (graded -2..-20 penalties); v4's default reward is not. We retrained the v4 unmasked agent WITH a v3-style illegal-action penalty (-10) to test whether the v4 masking gap is just an unfair baseline or a real environment effect.",
+  "setup": {"steps": 2000000, "seeds": 3, "eval_episodes": 400, "illegal_penalty": -10.0},
+  "masked":                 {"success_mean": 96.1, "success_sd": 0.5, "illegal_mean": 0.0,  "detection_mean": 7.0},
+  "nomask_default":         {"success_mean": 47.9, "success_sd": 3.6, "illegal_mean": 87.5, "detection_mean": 2.6},
+  "nomask_v3style_penalty": {"success_mean": 54.7, "success_sd": 5.5, "illegal_mean": 82.2, "detection_mean": 6.2,
+                             "per_seed": [{"seed":0,"success":61.8,"illegal":81.0},{"seed":1,"success":54.0,"illegal":82.4},{"seed":2,"success":48.2,"illegal":83.1}]},
+  "conclusion": "Teaching the unmasked agent to avoid illegal actions (the v3 approach) barely helped: illegal-rate fell only 87.5->82.2% and success rose only 47.9->54.7%, still far below masked (96.1%). The v3->v4 masking difference is therefore NOT mainly the reward-shaping methodology. It is the ENVIRONMENT: in v3 legality is a stable function of state (learnable, ~5% illegal, ~100% success); in v4 legality is episode-dependent (per-episode scenario randomization), which the unmasked agent cannot reliably infer even when explicitly penalised. Masking supplies the episode-specific legal set structurally, which is why it becomes performance-critical at v4 scale. This is a capability limit, not a motivation limit."
+}

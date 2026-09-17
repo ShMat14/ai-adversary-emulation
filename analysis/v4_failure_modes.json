@@ -1,0 +1,11 @@
+{
+ "episodes": 1200,
+ "outcomes": {
+  "success": 1122,
+  "caught": 78
+ },
+ "final_rule": {
+  "CLEAR_LOGS": 77,
+  "KERBEROASTING": 1
+ }
+}
