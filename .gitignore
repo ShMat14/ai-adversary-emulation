@@ -1,0 +1,103 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+*.spec
+
+# Virtual environments
+.venv/
+venv/
+env/Scripts/
+*.venv
+
+# IDE / Editor
+.idea/
+.vscode/
+*.iml
+
+# Large zip archives (thesis docs and venv - keep model zips in results/)
+SWE402-SeniorDesignProject-TR.zip
+SWE402-SeniorDesignProject.zip
+
+# Thesis and submission directories — not for public repo
+SWE402-SeniorDesignProject/
+SWE402-SeniorDesignProject-TR/
+
+# Submission paper files (journal manuscripts — private)
+submission_*.md
+submission_*.docx
+
+# Thesis documents and plots
+gujsa_*
+thesis_*.md
+thesis_*.png
+thesis_results_narrative.md
+title_page_source.md
+updates.txt
+
+# LaTeX artifacts
+*.aux
+*.bbl
+*.blg
+*.out
+*.synctex.gz
+*.tex
+*.pdf
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Byte-compiled
+*.pyc
+
+# Massive telemetry episode logs (554k+ files) - too large for GitHub
+results/telemetry/rl/
+results/telemetry/ppo_eval/
+results/telemetry/ppo_eval_sim/
+results/telemetry/ppo_eval_real/
+results/telemetry/reports/
+
+# TensorBoard event files
+results/**/*.tfevents.*
+
+# MITRE ATT&CK STIX bundle (53 MB, re-downloadable from mitre-attack/attack-stix-data)
+data/
+
+# Scratch telemetry from smoke tests, not results
+results/telemetry/_chk/
+results/telemetry/_smoketest/
+
+# Manuscript and thesis artefacts — the repo is public, these are not
+*.docx
+results/point5_algorithm_comparison.*
+images_resized/
+custom-reference.docx
+highlights_*.docx
+
+# Journal-submission tooling. These are not merely build scripts: they carry the
+# manuscript itself as embedded strings (check_abstract.py holds the abstract,
+# build_common.py the shared body content), so publishing them would publish an
+# unsubmitted paper.
+build_common.py
+build_docx.py
+build_docx_scn.py
+build_ieee.py
+build_jisa.py
+build_scn.py
+check_abstract.py
+post_process_docx.py
+revert_math.py
+resize_images.py
+fix_tables.lua

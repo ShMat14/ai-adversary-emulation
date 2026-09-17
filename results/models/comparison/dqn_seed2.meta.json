@@ -1,0 +1,7 @@
+{
+  "algo": "dqn",
+  "seed": 2,
+  "requested_timesteps": 800000,
+  "actual_timesteps": 800000,
+  "train_seconds": 820.3
+}

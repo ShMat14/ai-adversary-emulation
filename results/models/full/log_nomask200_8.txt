@@ -1,0 +1,1 @@
+nomask_200_s8: 802,816 steps in 73.4 min

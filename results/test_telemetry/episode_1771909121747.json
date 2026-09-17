@@ -1,0 +1,157 @@
+[
+  {
+    "episode_id": 1771909121747,
+    "timestamp": 1771909124.8088443,
+    "step": 1,
+    "action": "PHISHING_EMAIL",
+    "reward": -0.1,
+    "state": {
+      "user01": {
+        "name": "user01",
+        "compromised": false,
+        "has_credentials": false,
+        "privileged": false,
+        "detected": false
+      },
+      "srv01": {
+        "name": "srv01",
+        "compromised": false,
+        "has_credentials": false,
+        "privileged": false,
+        "detected": false
+      },
+      "dc01": {
+        "name": "dc01",
+        "compromised": false,
+        "has_credentials": false,
+        "privileged": false,
+        "detected": false
+      }
+    },
+    "detection_triggered": false
+  },
+  {
+    "episode_id": 1771909121747,
+    "timestamp": 1771909126.8348658,
+    "step": 2,
+    "action": "BRUTE_FORCE_SSH",
+    "reward": -5.1,
+    "state": {
+      "user01": {
+        "name": "user01",
+        "compromised": false,
+        "has_credentials": false,
+        "privileged": false,
+        "detected": false
+      },
+      "srv01": {
+        "name": "srv01",
+        "compromised": false,
+        "has_credentials": false,
+        "privileged": false,
+        "detected": false
+      },
+      "dc01": {
+        "name": "dc01",
+        "compromised": false,
+        "has_credentials": false,
+        "privileged": false,
+        "detected": false
+      }
+    },
+    "detection_triggered": false
+  },
+  {
+    "episode_id": 1771909121747,
+    "timestamp": 1771909128.861527,
+    "step": 3,
+    "action": "NETWORK_SCAN",
+    "reward": -10.1,
+    "state": {
+      "user01": {
+        "name": "user01",
+        "compromised": false,
+        "has_credentials": false,
+        "privileged": false,
+        "detected": false
+      },
+      "srv01": {
+        "name": "srv01",
+        "compromised": false,
+        "has_credentials": false,
+        "privileged": false,
+        "detected": false
+      },
+      "dc01": {
+        "name": "dc01",
+        "compromised": false,
+        "has_credentials": false,
+        "privileged": false,
+        "detected": false
+      }
+    },
+    "detection_triggered": false
+  },
+  {
+    "episode_id": 1771909121747,
+    "timestamp": 1771909130.865601,
+    "step": 4,
+    "action": "VALID_ACCOUNTS_LOGIN",
+    "reward": -2.1,
+    "state": {
+      "user01": {
+        "name": "user01",
+        "compromised": false,
+        "has_credentials": false,
+        "privileged": false,
+        "detected": false
+      },
+      "srv01": {
+        "name": "srv01",
+        "compromised": false,
+        "has_credentials": false,
+        "privileged": false,
+        "detected": false
+      },
+      "dc01": {
+        "name": "dc01",
+        "compromised": false,
+        "has_credentials": false,
+        "privileged": false,
+        "detected": false
+      }
+    },
+    "detection_triggered": false
+  },
+  {
+    "episode_id": 1771909121747,
+    "timestamp": 1771909132.8702075,
+    "step": 5,
+    "action": "INSTALL_BACKDOOR",
+    "reward": -10.1,
+    "state": {
+      "user01": {
+        "name": "user01",
+        "compromised": false,
+        "has_credentials": false,
+        "privileged": false,
+        "detected": false
+      },
+      "srv01": {
+        "name": "srv01",
+        "compromised": false,
+        "has_credentials": false,
+        "privileged": false,
+        "detected": false
+      },
+      "dc01": {
+        "name": "dc01",
+        "compromised": false,
+        "has_credentials": false,
+        "privileged": false,
+        "detected": false
+      }
+    },
+    "detection_triggered": false
+  }
+]

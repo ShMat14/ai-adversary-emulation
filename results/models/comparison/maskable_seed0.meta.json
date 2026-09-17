@@ -1,0 +1,7 @@
+{
+  "algo": "maskable",
+  "seed": 0,
+  "requested_timesteps": 800000,
+  "actual_timesteps": 802816,
+  "train_seconds": 1104.6
+}

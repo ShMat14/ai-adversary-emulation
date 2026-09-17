@@ -1,0 +1,7 @@
+{
+  "algo": "ppo",
+  "seed": 1,
+  "requested_timesteps": 800000,
+  "actual_timesteps": 802816,
+  "train_seconds": 964.7
+}

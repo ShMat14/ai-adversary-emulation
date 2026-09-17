@@ -1,0 +1,24 @@
+﻿>>> Model loaded. Evaluating over 200 episodes...
+
+========================================
+PPO EVALUATION RESULTS
+========================================
+  Episodes evaluated  : 200
+  Success Rate        : 93.50%
+  Detection Rate      : 22.00%
+  Avg Steps to Goal   : 7.91
+  Avg Reward/Episode  : 568.27
+========================================
+
+ACTION FREQUENCY (all episodes)
+  Action                     Count  % of steps
+  ---------------------------------------------
+  PRIV_ESC_SUDO                408    25.4%  ████████████
+  EXFILTRATE_DATA              286    17.8%  ████████
+  PHISHING_EMAIL               230    14.3%  ███████
+  NETWORK_SCAN                 230    14.3%  ███████
+  VALID_ACCOUNTS_LOGIN         219    13.7%  ██████
+  LATERAL_MOVE_SMB             200    12.5%  ██████
+  CLEAR_LOGS                    31     1.9%  
+  TOTAL                       1604
+

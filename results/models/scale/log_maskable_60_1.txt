@@ -1,0 +1,1 @@
+maskable_a60_s1: 802,816 steps in 25.4 min

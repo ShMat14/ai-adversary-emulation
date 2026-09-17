@@ -1,0 +1,19 @@
+[
+  {
+    "episode_id": 1771909132878,
+    "timestamp": 1771909132.8782637,
+    "step": 1,
+    "action": "PHISHING_EMAIL",
+    "reward": 5.0,
+    "state": {
+      "a": {
+        "name": "a",
+        "compromised": false,
+        "has_credentials": false,
+        "privileged": false,
+        "detected": false
+      }
+    },
+    "detection_triggered": false
+  }
+]
