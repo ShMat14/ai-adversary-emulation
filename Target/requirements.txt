@@ -1,0 +1,6 @@
+# Runtime dependencies for the v4 emulation target.
+# The target imports env/ (the shared model) and telemetry/, which need only the
+# standard library plus these. The RL agent's heavier deps (torch, sb3) are not
+# required to run the target itself.
+Flask>=3.0
+waitress>=3.0

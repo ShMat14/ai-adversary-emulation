@@ -1,0 +1,82 @@
+{
+ "episodes": 400,
+ "seeds": [
+  0,
+  1,
+  2
+ ],
+ "catalogues": {
+  "15": {
+   "masked": {
+    "success": 95.58,
+    "success_sd": 0.92,
+    "detection": 7.33,
+    "detection_sd": 1.16,
+    "illegal": 0.0,
+    "illegal_sd": 0.0,
+    "reward": 601.49,
+    "reward_sd": 10.55,
+    "techniques_used": 15.0,
+    "techniques_used_sd": 0.0,
+    "per_seed_success": [
+     96.8,
+     94.5,
+     95.5
+    ]
+   },
+   "nomask": {
+    "success": 69.58,
+    "success_sd": 0.42,
+    "detection": 5.92,
+    "detection_sd": 1.43,
+    "illegal": 72.84,
+    "illegal_sd": 3.84,
+    "reward": 338.52,
+    "reward_sd": 34.34,
+    "techniques_used": 14.67,
+    "techniques_used_sd": 0.47,
+    "per_seed_success": [
+     69.8,
+     69.0,
+     70.0
+    ]
+   }
+  },
+  "25": {
+   "masked": {
+    "success": 96.08,
+    "success_sd": 0.51,
+    "detection": 7.0,
+    "detection_sd": 1.43,
+    "illegal": 0.0,
+    "illegal_sd": 0.0,
+    "reward": 601.92,
+    "reward_sd": 10.89,
+    "techniques_used": 25.0,
+    "techniques_used_sd": 0.0,
+    "per_seed_success": [
+     95.5,
+     96.0,
+     96.8
+    ]
+   },
+   "nomask": {
+    "success": 47.92,
+    "success_sd": 3.63,
+    "detection": 2.58,
+    "detection_sd": 0.72,
+    "illegal": 87.47,
+    "illegal_sd": 1.01,
+    "reward": 178.99,
+    "reward_sd": 23.67,
+    "techniques_used": 17.0,
+    "techniques_used_sd": 1.41,
+    "per_seed_success": [
+     47.0,
+     44.0,
+     52.8
+    ]
+   }
+  }
+ }
+}
