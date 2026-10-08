@@ -113,8 +113,8 @@ def figure_comparison(out):
 # ══════════════════════════════════════════════════════════════════════
 def figure_scaling(out):
     per = load("scale_per_seed.json")
-    # legal_share.json is written by analysis/point5_report.py and measures the
-    # share over states the trained agent actually reaches. scale_results.json
+    # legal_share.json measures the share over states the trained agent
+    # actually reaches. scale_results.json
     # holds an earlier figure taken from a lowest-index-legal walk, which never
     # leaves the opening of the kill chain and overstates the share; it is used
     # only as a fallback so this figure still draws on a bare checkout.

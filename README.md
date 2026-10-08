@@ -193,37 +193,14 @@ PPO EVALUATION RESULTS  [Real Mode]
   Avg Unique Techniques   : 8.4 / 15
 ```
 
-### 3. Run All Baselines + Generate Thesis Plots
-
-```bash
-python analysis/thesis_final.py
-```
-
-Generates 4 publication-quality plots saved to the project root:
-- `thesis_plot_5_metric_comparison.png` — all agents, 4 metrics
-- `thesis_plot_5_action_freq.png` — technique usage Sim vs Real
-- `thesis_plot_5_radar.png` — spider/radar multi-dimension profile
-- `thesis_plot_5_sim_real_gap.png` — transfer gap analysis
-
-### 4. Generate Training Curves
-
-```bash
-# From TensorBoard event files (MaskablePPO_1 run)
-python -c "
-from tensorboard.backend.event_processing.event_accumulator import EventAccumulator
-# ... or simply run the standalone curve script:
-"
-# Training curves saved as thesis_plot_6_training_curves.png
-```
-
-### 5. View TensorBoard Live
+### 3. View TensorBoard Live
 
 ```bash
 tensorboard --logdir=./results/runs/
 # Navigate to http://localhost:6006
 ```
 
-### 6. Compare with Scripted Baselines
+### 4. Compare with Scripted Baselines
 
 ```bash
 python baselines/scripted_attacks.py
@@ -248,10 +225,7 @@ ai-adversary-emulation_4/
 ├── baselines/
 │   └── scripted_attacks.py       # 4 scripted kill-chains + PPO comparison table
 ├── analysis/
-│   ├── thesis_final.py           # Full pipeline: baselines + random agent + 4 plots
-│   ├── thesis_results.json       # Cached baseline results
-│   ├── compute_metrics.py        # Metric utilities
-│   └── generate_thesis_plots.py  # Legacy plot script
+│   └── compute_metrics.py        # Metric utilities
 ├── telemetry/
 │   └── telemetry_logger.py       # JSON episode event logger
 ├── results/
@@ -262,12 +236,6 @@ ai-adversary-emulation_4/
 │   ├── runs/
 │   │   └── MaskablePPO_1/        # TensorBoard logs (~800K steps)
 │   └── telemetry/                # Per-episode JSON logs
-├── thesis_results_narrative.md   # Chapter 4 results write-up (§4.1–4.6)
-├── thesis_plot_5_metric_comparison.png
-├── thesis_plot_5_action_freq.png
-├── thesis_plot_5_radar.png
-├── thesis_plot_5_sim_real_gap.png
-├── thesis_plot_6_training_curves.png
 └── README.md
 ```
 
@@ -281,7 +249,7 @@ Standard PPO cannot enforce action prerequisites (e.g., lateral movement require
 
 ### Why 5 Techniques Are Never Used
 
-The PPO agent converged to never using: `BRUTE_FORCE_SSH`, `INSTALL_BACKDOOR`, `PRIV_ESC_SUDO`, `RANSOMWARE_ENCRYPT`, `PASS_THE_HASH`. Each is strictly dominated by an alternative in reward, success probability, or noise. See `thesis_results_narrative.md` §4.5 for the full per-technique analysis.
+The PPO agent converged to never using: `BRUTE_FORCE_SSH`, `INSTALL_BACKDOOR`, `PRIV_ESC_SUDO`, `RANSOMWARE_ENCRYPT`, `PASS_THE_HASH`. Each is strictly dominated by an alternative in reward, success probability, or noise.
 
 ### Target Randomisation (50/50 SQLi)
 
