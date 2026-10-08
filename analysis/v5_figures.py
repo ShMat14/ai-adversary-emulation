@@ -32,6 +32,9 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
+# Embed TrueType rather than Type 3 fonts in the PDFs, as production expects.
+plt.rcParams["pdf.fonttype"] = 42
+
 # Elsevier: 300 dpi halftone, 500 combination, 1000 line art.
 # These are combination art, so 500 binds; 600 leaves margin.
 FIG_DPI = 600
@@ -112,59 +115,105 @@ def _band(ax, x, arr, color, label):
     ax.plot(x, mean, color=color, linewidth=2.0, label=label)
 
 
+def printed_size_check(fig, name, width_in=5.8, min_pt=7.0):
+    """Refuse a chart whose smallest label would print below min_pt.
+
+    Word places every figure at the text width, 5.8 in. A chart drawn wider
+    is shrunk, and its labels with it; that is how Figs. 8 and 9 came to print
+    at half size.
+    """
+    from matplotlib.text import Text
+    # Lay everything out first; before a draw, legend entries still sit at
+    # their default position and every one of them appears to overlap.
+    fig.canvas.draw()
+    r = fig.canvas.get_renderer()
+    w = fig.get_tightbbox(r).width
+    scale = min(1.0, width_in / w)
+    sizes = [t.get_fontsize() for t in fig.findobj(Text)
+             if t.get_visible() and t.get_text().strip()]
+    small = min(sizes) * scale
+    # Labels that run into one another (Fig. 6, panel c, before this check).
+    # Slanted tick labels are skipped: their axis-aligned boxes overlap even
+    # when the text does not, so the test would only report false positives.
+    # Tick labels for ticks outside the view limits exist but are never drawn.
+    hidden = set()
+    for ax in fig.axes:
+        for axis, lim in ((ax.xaxis, ax.get_xlim()), (ax.yaxis, ax.get_ylim())):
+            lo, hi = min(lim), max(lim)
+            for tick in axis.get_major_ticks() + axis.get_minor_ticks():
+                if not lo - 1e-9 <= tick.get_loc() <= hi + 1e-9:
+                    hidden.update({id(tick.label1), id(tick.label2)})
+    texts = [t for t in fig.findobj(Text) if t.get_visible() and t.get_text().strip()
+             and t.get_rotation() % 90 == 0 and id(t) not in hidden]
+    boxes = [(t, t.get_window_extent(r)) for t in texts]
+    for i, (ta, a) in enumerate(boxes):
+        for tb, b in boxes[i + 1:]:
+            ox = min(a.x1, b.x1) - max(a.x0, b.x0)
+            oy = min(a.y1, b.y1) - max(a.y0, b.y0)
+            if ox > 1.5 and oy > 1.5:
+                raise SystemExit(f"{name}: labels overlap: {ta.get_text()!r} / {tb.get_text()!r}")
+    if small < min_pt - 0.05:
+        raise SystemExit(f"{name}: {w:.2f} in wide, smallest label prints at "
+                         f"{small:.1f} pt (< {min_pt})")
+    return w, small
+
+
+
+# Drawn at the 5.8 in the manuscript prints them at. They were 11.5 in wide and
+# printed at half size, labels included.
+SMALL = {"font.size": 8, "axes.titlesize": 8.5, "axes.labelsize": 8,
+         "xtick.labelsize": 7.5, "ytick.labelsize": 7.5, "legend.fontsize": 7.5}
+
+
+def _two_panels(curves, fields, ylabels, titles, ylims, path, with_n):
+    with plt.rc_context(SMALL):
+        fig, axes = plt.subplots(1, 2, figsize=(5.8, 2.5))
+        handles = []
+        for cfg in ORDER:
+            if cfg not in curves:
+                continue
+            c = curves[cfg]
+            x = np.array(c["timesteps"]) / 1000.0
+            lbl = f"{LABELS[cfg]} (n={c['seeds']})" if with_n else LABELS[cfg]
+            for ax, f in zip(axes, fields):
+                _band(ax, x, c[f], COLORS[cfg], lbl)
+            handles.append(lbl)
+        for ax, yl, t, lim in zip(axes, ylabels, titles, ylims):
+            ax.set_ylabel(yl)
+            ax.set_title(t, loc="left")
+            if lim:
+                ax.set_ylim(*lim)
+            ax.set_xlabel("training timesteps (thousands)")
+            ax.grid(alpha=0.25, linewidth=0.5)
+            ax.spines[["top", "right"]].set_visible(False)
+            for line in ax.get_lines():
+                line.set_linewidth(1.4)
+        # One legend for both panels, under them, so neither panel is covered.
+        h, l = axes[0].get_legend_handles_labels()
+        fig.legend(h, l, loc="upper center", bbox_to_anchor=(0.5, 0.02), ncol=2,
+                   frameon=False)
+        fig.tight_layout()
+        w, small = printed_size_check(fig, os.path.basename(path))
+        _save_both(fig, path, bbox_inches="tight")
+        plt.close(fig)
+        print(f"  {os.path.basename(path)}: {w:.2f} in, smallest label {small:.1f} pt")
+    return path
+
+
 def figure_learning(curves, path):
     """Success and refused-action rate, all configurations on shared axes."""
-    fig, axes = plt.subplots(1, 2, figsize=(11.5, 4.2))
-    for cfg in ORDER:
-        if cfg not in curves:
-            continue
-        c = curves[cfg]
-        x = np.array(c["timesteps"]) / 1000.0
-        lbl = f"{LABELS[cfg]} (n={c['seeds']})"
-        _band(axes[0], x, c["success"], COLORS[cfg], lbl)
-        _band(axes[1], x, c["illegal"], COLORS[cfg], lbl)
-
-    axes[0].set_ylabel("Episodes reaching the objective (%)")
-    axes[0].set_ylim(0, 100)
-    axes[0].set_title("(a) Mission success", loc="left", fontsize=11)
-    axes[1].set_ylabel("Proposed actions refused by the environment (%)")
-    axes[1].set_ylim(0, 100)
-    axes[1].set_title("(b) Infeasible action selection", loc="left", fontsize=11)
-    for ax in axes:
-        ax.set_xlabel("Training timesteps (thousands)")
-        ax.grid(alpha=0.25, linewidth=0.6)
-        ax.spines[["top", "right"]].set_visible(False)
-    axes[0].legend(frameon=False, fontsize=8.5, loc="upper left")
-    fig.tight_layout()
-    _save_both(fig, path, bbox_inches="tight")
-    plt.close(fig)
-    return path
+    return _two_panels(curves, ("success", "illegal"),
+                       ("episodes reaching the objective (%)", "actions refused (%)"),
+                       ("(a) Mission success", "(b) Infeasible action selection"),
+                       ((0, 100), (0, 100)), path, with_n=True)
 
 
 def figure_cost_of_success(curves, path):
     """What the campaign cost: detection and episode length."""
-    fig, axes = plt.subplots(1, 2, figsize=(11.5, 4.2))
-    for cfg in ORDER:
-        if cfg not in curves:
-            continue
-        c = curves[cfg]
-        x = np.array(c["timesteps"]) / 1000.0
-        _band(axes[0], x, c["detection"], COLORS[cfg], LABELS[cfg])
-        _band(axes[1], x, c["ep_len"], COLORS[cfg], LABELS[cfg])
-    axes[0].set_ylabel("Episodes ending in incident response (%)")
-    axes[0].set_ylim(0, 100)
-    axes[0].set_title("(a) Exposure", loc="left", fontsize=11)
-    axes[1].set_ylabel("Mean episode length (steps)")
-    axes[1].set_title("(b) Campaign length", loc="left", fontsize=11)
-    for ax in axes:
-        ax.set_xlabel("Training timesteps (thousands)")
-        ax.grid(alpha=0.25, linewidth=0.6)
-        ax.spines[["top", "right"]].set_visible(False)
-    axes[0].legend(frameon=False, fontsize=8.5)
-    fig.tight_layout()
-    _save_both(fig, path, bbox_inches="tight")
-    plt.close(fig)
-    return path
+    return _two_panels(curves, ("detection", "ep_len"),
+                       ("episodes ending in an incident (%)", "mean episode length (steps)"),
+                       ("(a) Exposure", "(b) Campaign length"),
+                       ((0, 100), None), path, with_n=False)
 
 
 def figure_topology(path, topology="enterprise"):
@@ -254,8 +303,17 @@ def main(topo="enterprise"):
     """
     os.makedirs(FIGDIR, exist_ok=True)
     sfx = "" if topo == "enterprise" else f"_{topo}"
-    made = [figure_topology(os.path.join(FIGDIR, f"topology{sfx}.png"), topo)]
-    from analysis.v5_train import DEFAULT_MAX_STEPS
+    # The enterprise topology is drawn by v7_diagrams.py as a corporate network
+    # (Internet, DMZ, internal subnets, switches and firewalls); drawing it here
+    # as well would overwrite that figure with the old left-to-right chain.
+    made = ([] if topo == "enterprise" else
+            [figure_topology(os.path.join(FIGDIR, f"topology{sfx}.png"), topo)])
+    # Read the constant rather than import the training module: importing it
+    # pulls in Stable-Baselines3 and pandas, which a plot has no need of.
+    import re as _re
+    _src = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "v5_train.py"),
+                encoding="utf-8").read()
+    DEFAULT_MAX_STEPS = int(_re.search(r"^DEFAULT_MAX_STEPS\s*=\s*(\d+)", _src, _re.M).group(1))
     curves = load_curves(topo, max_steps=DEFAULT_MAX_STEPS)
     if curves:
         made.append(figure_learning(curves, os.path.join(FIGDIR, f"learning{sfx}.png")))

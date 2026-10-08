@@ -73,6 +73,10 @@ def arrow(ax, p, q, color=SHARED_E, style="-|>", dashed=False, lw=1.5):
 
 
 def main():
+    # Superseded by analysis/v7_diagrams.py, which draws Fig. 1 at the width it
+    # prints and checks every label against its box. This version said seven
+    # techniques were executed for real; the measurement covers fifteen.
+    raise SystemExit("v5_architecture.py is superseded: run analysis/v7_diagrams.py")
     os.makedirs(OUT, exist_ok=True)
     fig, ax = plt.subplots(figsize=(12.4, 6.6))
 

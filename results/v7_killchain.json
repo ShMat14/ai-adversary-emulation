@@ -1,0 +1,113 @@
+{
+ "campaigns": 347,
+ "mapping": {
+  "Initial Access": "Delivery",
+  "Execution": "Exploitation",
+  "Persistence": "Installation",
+  "Privilege Escalation": "Installation",
+  "Defense Evasion": "Installation",
+  "Command and Control": "Command and Control",
+  "Discovery": "Actions on Objectives",
+  "Credential Access": "Actions on Objectives",
+  "Lateral Movement": "Actions on Objectives",
+  "Collection": "Actions on Objectives",
+  "Exfiltration": "Actions on Objectives",
+  "Impact": "Actions on Objectives"
+ },
+ "phases": [
+  {
+   "phase": "Reconnaissance",
+   "tactics": {},
+   "techniques": 0,
+   "not_modelled": "network scanning needs a compromised host, so no reconnaissance from outside the estate is modelled"
+  },
+  {
+   "phase": "Weaponization",
+   "tactics": {},
+   "techniques": 0,
+   "not_modelled": "precedes the engagement; nothing to observe on the estate"
+  },
+  {
+   "phase": "Delivery",
+   "tactics": {
+    "Initial Access": 3
+   },
+   "techniques": 3,
+   "rules": 3,
+   "median_step": 1,
+   "mean_step": 1.302250803858521,
+   "pct_campaign_elapsed": 2.9589775596108994,
+   "median_zone_reached": 1,
+   "never_covered": 10.37463976945245
+  },
+  {
+   "phase": "Exploitation",
+   "tactics": {
+    "Execution": 2
+   },
+   "techniques": 2,
+   "rules": 2,
+   "median_step": 28,
+   "mean_step": 29.568862275449103,
+   "pct_campaign_elapsed": 63.03764676630127,
+   "median_zone_reached": 2,
+   "never_covered": 51.873198847262245
+  },
+  {
+   "phase": "Installation",
+   "tactics": {
+    "Persistence": 4,
+    "Privilege Escalation": 5,
+    "Defense Evasion": 5
+   },
+   "techniques": 14,
+   "rules": 14,
+   "median_step": 2,
+   "mean_step": 2.4639769452449567,
+   "pct_campaign_elapsed": 5.581405073995548,
+   "median_zone_reached": 1,
+   "never_covered": 0.0
+  },
+  {
+   "phase": "Command and Control",
+   "tactics": {
+    "Command and Control": 1
+   },
+   "techniques": 1,
+   "rules": 1,
+   "median_step": 15,
+   "mean_step": 15.792507204610951,
+   "pct_campaign_elapsed": 35.75800543256676,
+   "median_zone_reached": 1,
+   "never_covered": 0.0
+  },
+  {
+   "phase": "Actions on Objectives",
+   "tactics": {
+    "Discovery": 6,
+    "Credential Access": 9,
+    "Lateral Movement": 4,
+    "Collection": 2,
+    "Exfiltration": 1,
+    "Impact": 3
+   },
+   "techniques": 25,
+   "rules": 25,
+   "median_step": 4,
+   "mean_step": 4.325648414985591,
+   "pct_campaign_elapsed": 9.879226530619032,
+   "median_zone_reached": 1,
+   "never_covered": 0.0
+  }
+ ],
+ "inversions": [
+  [
+   "Exploitation",
+   "Installation"
+  ],
+  [
+   "Command and Control",
+   "Actions on Objectives"
+  ]
+ ]
+}

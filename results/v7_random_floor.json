@@ -1,0 +1,62 @@
+{
+ "previous": {
+  "episodes": 2000,
+  "objective_reached": 1054,
+  "rate_pct": 52.7,
+  "wilson_95": [
+   50.5088070933313,
+   54.88084085118694
+  ],
+  "mean_legal_fraction_pct": 19.776672088795333,
+  "actions": 25,
+  "step_budget": 40,
+  "published": {
+   "rate_pct": 51.1,
+   "wilson_95": [
+    48.9,
+    53.3
+   ]
+  },
+  "inside_published_interval": true
+ },
+ "v4compat": {
+  "episodes": 2000,
+  "objective_reached": 387,
+  "rate_pct": 19.35,
+  "wilson_95": [
+   17.678106367000623,
+   21.13940863319051
+  ],
+  "mean_legal_fraction_pct": 10.967851990970535,
+  "actions": 135,
+  "step_budget": 60,
+  "published": {
+   "rate_pct": 20.0,
+   "wilson_95": [
+    18.31,
+    21.81
+   ]
+  },
+  "inside_published_interval": true
+ },
+ "enterprise": {
+  "episodes": 2000,
+  "objective_reached": 23,
+  "rate_pct": 1.15,
+  "wilson_95": [
+   0.7675227262023816,
+   1.719772796125092
+  ],
+  "mean_legal_fraction_pct": 5.6974936551776665,
+  "actions": 540,
+  "step_budget": 60,
+  "published": {
+   "rate_pct": 1.35,
+   "wilson_95": [
+    0.93,
+    1.96
+   ]
+  },
+  "inside_published_interval": true
+ }
+}
