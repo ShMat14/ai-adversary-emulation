@@ -35,8 +35,8 @@ import matplotlib.pyplot as plt
 # Embed TrueType rather than Type 3 fonts in the PDFs, as production expects.
 plt.rcParams["pdf.fonttype"] = 42
 
-# Elsevier: 300 dpi halftone, 500 combination, 1000 line art.
-# These are combination art, so 500 binds; 600 leaves margin.
+# Springer: 300 dpi halftone, 600 combination, 1200 line art.
+# These are combination art, so 600 binds; the PDFs are vector.
 FIG_DPI = 600
 
 
@@ -115,12 +115,15 @@ def _band(ax, x, arr, color, label):
     ax.plot(x, mean, color=color, linewidth=2.0, label=label)
 
 
-def printed_size_check(fig, name, width_in=5.8, min_pt=7.0):
+PAD = 0.02       # white margin savefig leaves around a tight bounding box, in
+
+
+def printed_size_check(fig, name, width_in=4.69, min_pt=8.0):
     """Refuse a chart whose smallest label would print below min_pt.
 
-    Word places every figure at the text width, 5.8 in. A chart drawn wider
-    is shrunk, and its labels with it; that is how Figs. 8 and 9 came to print
-    at half size.
+    Springer prints a small-format figure 119 mm (4.69 in) wide, with
+    lettering of 8 to 12 pt. A chart drawn wider is shrunk, and its labels
+    with it; that is how Figs. 8 and 9 once came to print at half size.
     """
     from matplotlib.text import Text
     # Lay everything out first; before a draw, legend entries still sit at
@@ -155,19 +158,22 @@ def printed_size_check(fig, name, width_in=5.8, min_pt=7.0):
     if small < min_pt - 0.05:
         raise SystemExit(f"{name}: {w:.2f} in wide, smallest label prints at "
                          f"{small:.1f} pt (< {min_pt})")
-    return w, small
+    # Saved with bbox_inches="tight" and pad_inches=PAD on each side.
+    if w + 2 * PAD > width_in + 0.005:
+        raise SystemExit(f"{name}: saves {w + 2 * PAD:.2f} in wide, over {width_in} in")
+    return w + 2 * PAD, small
 
 
 
-# Drawn at the 5.8 in the manuscript prints them at. They were 11.5 in wide and
+# Drawn at the width they print at, 119 mm. They were once 11.5 in wide and
 # printed at half size, labels included.
 SMALL = {"font.size": 8, "axes.titlesize": 8.5, "axes.labelsize": 8,
-         "xtick.labelsize": 7.5, "ytick.labelsize": 7.5, "legend.fontsize": 7.5}
+         "xtick.labelsize": 8, "ytick.labelsize": 8, "legend.fontsize": 8}
 
 
 def _two_panels(curves, fields, ylabels, titles, ylims, path, with_n):
     with plt.rc_context(SMALL):
-        fig, axes = plt.subplots(1, 2, figsize=(5.8, 2.5))
+        fig, axes = plt.subplots(1, 2, figsize=(4.69, 2.8))
         handles = []
         for cfg in ORDER:
             if cfg not in curves:
@@ -194,7 +200,7 @@ def _two_panels(curves, fields, ylabels, titles, ylims, path, with_n):
                    frameon=False)
         fig.tight_layout()
         w, small = printed_size_check(fig, os.path.basename(path))
-        _save_both(fig, path, bbox_inches="tight")
+        _save_both(fig, path, bbox_inches="tight", pad_inches=PAD)
         plt.close(fig)
         print(f"  {os.path.basename(path)}: {w:.2f} in, smallest label {small:.1f} pt")
     return path

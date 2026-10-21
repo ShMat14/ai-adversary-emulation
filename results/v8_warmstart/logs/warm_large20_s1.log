@@ -1,0 +1,19 @@
+--- warm_large20_s1: 400,000 steps, budget 120 ---
+         0  success   0.0%  illegal  0.0%  detected  65.0%  len  69.2
+    25,000  success   3.0%  illegal  0.0%  detected  66.0%  len  70.3
+    50,000  success  42.0%  illegal  0.0%  detected  57.0%  len  58.6
+    75,000  success  65.0%  illegal  0.0%  detected  35.0%  len  59.8
+   100,000  success  47.0%  illegal  0.0%  detected  53.0%  len  45.7
+   125,000  success  52.0%  illegal  0.0%  detected  48.0%  len  41.2
+   150,000  success  62.0%  illegal  0.0%  detected  38.0%  len  41.2
+   175,000  success  65.0%  illegal  0.0%  detected  35.0%  len  50.1
+   200,000  success  66.0%  illegal  0.0%  detected  35.0%  len  40.6
+   225,000  success  74.0%  illegal  0.0%  detected  26.0%  len  37.8
+   250,000  success  71.0%  illegal  0.0%  detected  29.0%  len  49.8
+   275,000  success  62.0%  illegal  0.0%  detected  38.0%  len  44.7
+   300,000  success  71.0%  illegal  0.0%  detected  29.0%  len  45.9
+   325,000  success  66.0%  illegal  0.0%  detected  34.0%  len  43.5
+   350,000  success  69.0%  illegal  0.0%  detected  31.0%  len  44.7
+   375,000  success  64.0%  illegal  0.0%  detected  37.0%  len  43.0
+   400,000  success  65.0%  illegal  0.0%  detected  35.0%  len  49.9
+warm_large20_s1: final 68.0% on large20, 70.0% back on enterprise  (35.6 min)

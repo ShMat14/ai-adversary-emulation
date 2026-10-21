@@ -1,0 +1,19 @@
+--- warm_mid16_s2: 400,000 steps, budget 120 ---
+         0  success   0.0%  illegal  0.0%  detected  59.0%  len  73.8
+    25,000  success  40.0%  illegal  0.0%  detected  60.0%  len  65.2
+    50,000  success  60.0%  illegal  0.0%  detected  40.0%  len  56.6
+    75,000  success  63.0%  illegal  0.0%  detected  37.0%  len  46.4
+   100,000  success  58.0%  illegal  0.0%  detected  42.0%  len  50.9
+   125,000  success  63.0%  illegal  0.0%  detected  37.0%  len  50.4
+   150,000  success  63.0%  illegal  0.0%  detected  37.0%  len  41.9
+   175,000  success  73.0%  illegal  0.0%  detected  27.0%  len  41.1
+   200,000  success  63.0%  illegal  0.0%  detected  37.0%  len  39.2
+   225,000  success  69.0%  illegal  0.0%  detected  31.0%  len  41.7
+   250,000  success  70.0%  illegal  0.0%  detected  30.0%  len  42.3
+   275,000  success  64.0%  illegal  0.0%  detected  36.0%  len  42.2
+   300,000  success  72.0%  illegal  0.0%  detected  28.0%  len  39.9
+   325,000  success  70.0%  illegal  0.0%  detected  30.0%  len  42.1
+   350,000  success  73.0%  illegal  0.0%  detected  27.0%  len  37.9
+   375,000  success  67.0%  illegal  0.0%  detected  33.0%  len  40.6
+   400,000  success  66.0%  illegal  0.0%  detected  34.0%  len  41.6
+warm_mid16_s2: final 63.0% on mid16, 67.0% back on enterprise  (28.0 min)

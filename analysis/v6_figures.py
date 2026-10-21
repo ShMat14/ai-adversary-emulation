@@ -1,8 +1,9 @@
 """Figures added for the v6 (article-format) manuscript.
 
 Three charts that let dense tables come out of the main text, drawn from the
-same JSON the tables were built from. Elsevier wants combination art at 500 dpi
-or better, so every figure is written twice: 600 dpi PNG and vector PDF.
+same JSON the tables were built from. Springer wants combination art at 600 dpi
+or better, so every figure is written twice: 600 dpi PNG and vector PDF, drawn
+at the printed width (119 mm) with no label under 8 pt.
 
     python analysis/v6_figures.py
 
@@ -41,9 +42,9 @@ plt.rcParams.update(
         "font.size": 8,
         "axes.titlesize": 8.5,
         "axes.labelsize": 8,
-        "legend.fontsize": 7.5,
-        "xtick.labelsize": 7.5,
-        "ytick.labelsize": 7.5,
+        "legend.fontsize": 8,
+        "xtick.labelsize": 8,
+        "ytick.labelsize": 8,
         "axes.spines.top": False,
         "axes.spines.right": False,
         "axes.grid": True,
@@ -54,12 +55,15 @@ plt.rcParams.update(
 )
 
 
-def printed_size_check(fig, name, width_in=5.8, min_pt=7.0):
+PAD = 0.02       # white margin savefig leaves around a tight bounding box, in
+
+
+def printed_size_check(fig, name, width_in=4.69, min_pt=8.0):
     """Refuse a chart whose smallest label would print below min_pt.
 
-    Word places every figure at the text width, 5.8 in. A chart drawn wider
-    is shrunk, and its labels with it; that is how Figs. 8 and 9 came to print
-    at half size.
+    Springer prints a small-format figure 119 mm (4.69 in) wide, with
+    lettering of 8 to 12 pt. A chart drawn wider is shrunk, and its labels
+    with it; that is how Figs. 8 and 9 once came to print at half size.
     """
     from matplotlib.text import Text
     # Lay everything out first; before a draw, legend entries still sit at
@@ -94,13 +98,16 @@ def printed_size_check(fig, name, width_in=5.8, min_pt=7.0):
     if small < min_pt - 0.05:
         raise SystemExit(f"{name}: {w:.2f} in wide, smallest label prints at "
                          f"{small:.1f} pt (< {min_pt})")
-    return w, small
+    # Saved with bbox_inches="tight" and pad_inches=PAD on each side.
+    if w + 2 * PAD > width_in + 0.005:
+        raise SystemExit(f"{name}: saves {w + 2 * PAD:.2f} in wide, over {width_in} in")
+    return w + 2 * PAD, small
 
 
 def save(fig, name: str) -> None:
     w, small = printed_size_check(fig, name)
     for ext in ("png", "pdf"):
-        fig.savefig(OUT / f"{name}.{ext}", dpi=600, bbox_inches="tight")
+        fig.savefig(OUT / f"{name}.{ext}", dpi=600, bbox_inches="tight", pad_inches=PAD)
     plt.close(fig)
     print(f"wrote {name}.png / .pdf  ({w:.2f} in, smallest label {small:.1f} pt)")
 
@@ -159,27 +166,39 @@ def figure_comparison() -> None:
 
     # Shared y axis: all three panels are percentages of engagements, so one
     # scale and one label keep the titles from colliding at column width.
-    fig, axes = plt.subplots(1, 3, figsize=(5.8, 2.7), sharey=True)
-    x = np.arange(len(labels))
-    colours = [BLUE if m else RED for m in masked]
+    # Each algorithm is a pair, masked beside unmasked: at 119 mm six slanted
+    # names per panel do not fit at 8 pt, and the pair is the comparison.
+    fig, axes = plt.subplots(1, 3, figsize=(4.69, 2.3), sharey=True)
+    families = ["PPO", "A2C", "DQN"]
+    assert labels == ["MaskablePPO", "PPO", "MaskableA2C", "A2C", "MaskableDQN", "DQN"]
+    assert masked == [True, False] * 3
+    x = np.arange(len(families))
+    w = 0.4
 
     for ax, vals, err, title in (
         (axes[0], success, sd, "(a) Mission success"),
         (axes[1], illegal, None, "(b) Infeasible actions"),
         (axes[2], detected, None, "(c) Exposure"),
     ):
-        ax.bar(x, vals, color=colours, yerr=err, capsize=2.5, error_kw={"lw": 0.8})
-        ax.set_title(title, loc="left", pad=6)
+        for off, sl, colour in ((-w / 2, slice(0, None, 2), BLUE), (w / 2, slice(1, None, 2), RED)):
+            ax.bar(x + off, vals[sl], w, color=colour,
+                   yerr=None if err is None else err[sl], capsize=2, error_kw={"lw": 0.8})
+        ax.set_title(title, loc="left", pad=4, fontsize=8)
         ax.set_xticks(x)
-        ax.set_xticklabels(labels, rotation=55, ha="right")
+        ax.set_xticklabels(families)
         ax.set_ylim(0, 105)
     axes[0].set_ylabel("% of engagements")
 
     # The zero bars are the result in (b); label them so they are not read as
     # missing data.
-    for i, v in enumerate(illegal):
+    for i, v in enumerate(illegal[0::2]):
         if v < 1.0:
-            axes[1].text(i, 2.0, "0.0", ha="center", fontsize=7, color=BLUE)
+            axes[1].text(i - w / 2, 2.0, "0", ha="center", fontsize=8, color=BLUE)
+    # Likewise the unmasked agents' success in (a).
+    for i, v in enumerate(success[1::2]):
+        if v < 1.0:
+            axes[0].text(i + w / 2, 2.0, "0", ha="center", fontsize=8, color=RED)
+    fig.subplots_adjust(left=0.12, right=0.995, wspace=0.14)
 
     handles = [
         plt.Rectangle((0, 0), 1, 1, color=BLUE),
@@ -189,7 +208,7 @@ def figure_comparison() -> None:
         handles,
         ["prerequisite mask", "no mask"],
         loc="upper center",
-        bbox_to_anchor=(0.5, 1.10),
+        bbox_to_anchor=(0.5, 1.08),
         ncol=2,
         frameon=False,
     )
@@ -216,20 +235,16 @@ def figure_latency() -> None:
     PHASE_COLOUR = {"Delivery": "#c0392b", "Exploitation": "#d68910",
                     "Installation": "#6b46c1", "Command and Control": "#2f855a",
                     "Actions on Objectives": "#2b6cb0"}
-    fig, ax = plt.subplots(figsize=(5.8, 2.9))
+    fig, ax = plt.subplots(figsize=(4.69, 2.9))
     y = np.arange(len(names))
     ax.barh(y, steps, color=[PHASE_COLOUR[phase_of[n]] for n in names])
     ax.set_yticks(y)
     ax.set_yticklabels(names)
     ax.invert_yaxis()
     ax.set_xlabel("median step at which the tactic is first detected")
-    ax.set_title(
-        f"First detection by tactic, {cov['campaigns']} campaigns, "
-        f"{cov['rules']} rules",
-        loc="left",
-    )
+    # Springer: no titles or captions inside an illustration; the caption carries it.
     for i, s_ in enumerate(steps):
-        ax.text(s_ + 0.6, i, f"{s_:g}", va="center", fontsize=7.5, color=GREY)
+        ax.text(s_ + 0.6, i, f"{s_:g}", va="center", fontsize=8, color=GREY)
     ax.set_xlim(0, max(steps) * 1.12)
     used = [p for p in PHASE_COLOUR if p in {phase_of[n] for n in names}]
     # Under the plot, not over it: inside the axes it covered the three
@@ -237,8 +252,8 @@ def figure_latency() -> None:
     fig.tight_layout()
     fig.legend([plt.Rectangle((0, 0), 1, 1, color=PHASE_COLOUR[p]) for p in used],
                used, title="Cyber Kill Chain phase", loc="upper center",
-               bbox_to_anchor=(0.55, 0.0), ncol=3, frameon=False, fontsize=7,
-               title_fontsize=7.5)
+               bbox_to_anchor=(0.5, 0.0), ncol=2, frameon=False, fontsize=8,
+               title_fontsize=8)
     save(fig, "latency")
 
 
@@ -255,7 +270,7 @@ def figure_transfer() -> None:
     sim = load("v5_sim_to_real.json")
     order = [("masked", "MaskablePPO"), ("maska2c", "MaskableA2C"), ("maskdqn", "MaskableDQN")]
 
-    fig, axes = plt.subplots(1, 2, figsize=(5.8, 2.6))
+    fig, axes = plt.subplots(1, 2, figsize=(4.69, 2.6))
     width = 0.36
     x = np.arange(len(order))
 
@@ -284,7 +299,7 @@ def figure_transfer() -> None:
     axes[0].set_title("(a) Simulated and real", loc="left")
     axes[0].set_ylim(0, 105)
     # Under the panels: inside (a) it sat on top of the MaskableA2C bar.
-    fig.tight_layout()
+    fig.tight_layout(w_pad=2.5)
     h, l = axes[0].get_legend_handles_labels()
     fig.legend(h, l, loc="upper center", bbox_to_anchor=(0.5, 0.0), ncol=2, frameon=False)
 
@@ -293,11 +308,11 @@ def figure_transfer() -> None:
     axes[1].set_xticks(x)
     axes[1].set_xticklabels(labels, rotation=20, ha="right")
     axes[1].set_ylabel("capability retained (%)")
-    axes[1].set_title("(b) Retention under real execution", loc="left")
+    axes[1].set_title("(b) Retention, real execution", loc="left")
     axes[1].set_ylim(0, 105)
     for i, (v, e) in enumerate(zip(retentions, errs)):
         # Clear the error-bar cap, not just the bar top.
-        axes[1].text(i, v + e + 3, f"{v:.0f}%", ha="center", fontsize=7.5, color=GREY)
+        axes[1].text(i, v + e + 3, f"{v:.0f}%", ha="center", fontsize=8, color=GREY)
 
     save(fig, "transfer")
 

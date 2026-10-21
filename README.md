@@ -62,6 +62,11 @@ seed 0. A `_b500` or `_b2000` suffix marks a policy trained with that per-episod
 budget instead of the default. The commands that train each one are in
 `analysis/run_v5_all.py`.
 
+`results/models/v8_warm/` holds the continued-training runs on the larger estates:
+`warm_mid16_s0.zip` is a twelve-host policy trained further on the sixteen-host estate,
+`scratch_large20_s0.zip` a policy trained from random weights on the twenty-host estate.
+Both are trained by `analysis/v8_warmstart.py`.
+
 ## Reproducing the analyses
 
 | Script | Produces |
@@ -70,6 +75,9 @@ budget instead of the default. The commands that train each one are in
 | `analysis/v7_random_floor.py` | `results/v7_random_floor.json`, random play restricted to legal actions |
 | `analysis/v7_diagrams.py` | the five box diagrams in `results/figures_v5/` |
 | `analysis/v5_figures.py`, `analysis/v6_figures.py`, `analysis/v6_method_figures.py` | the charts in `results/figures_v5/` |
+| `analysis/v8_warmstart_all.py`, `analysis/v8_warmstart_report.py` | `results/v8_warmstart/` and `results/v8_warmstart.json`, continued training against training from scratch, and `results/figures_v5/warmstart.png` |
+| `analysis/v8_technique_graph.py` | `results/technique_graph/`, the order and overlap of the techniques in the winning campaigns, as CSV and Cypher for Neo4j |
+| `analysis/v9_technique_figure.py` | `results/figures_v5/techflow.png`, the Neo4j Bloom drawing of that order, prepared for print |
 
 ## A note on what the success rate is for
 

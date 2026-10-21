@@ -1,0 +1,138 @@
+{
+ "tag": "scratch_mid16_s4",
+ "cond": "scratch",
+ "target": "mid16",
+ "seed": 4,
+ "steps": 400000,
+ "max_steps": 120,
+ "pad": 20,
+ "minutes": 32.99238412777583,
+ "curve": [
+  {
+   "timesteps": 0,
+   "success": 0.0,
+   "illegal": 0.0,
+   "detection": 98.0,
+   "ep_len": 25.64
+  },
+  {
+   "timesteps": 25000,
+   "success": 29.0,
+   "illegal": 0.0,
+   "detection": 61.0,
+   "ep_len": 34.61
+  },
+  {
+   "timesteps": 50000,
+   "success": 53.0,
+   "illegal": 0.0,
+   "detection": 47.0,
+   "ep_len": 27.07
+  },
+  {
+   "timesteps": 75000,
+   "success": 63.0,
+   "illegal": 0.0,
+   "detection": 37.0,
+   "ep_len": 29.4
+  },
+  {
+   "timesteps": 100000,
+   "success": 54.0,
+   "illegal": 0.0,
+   "detection": 46.0,
+   "ep_len": 25.05
+  },
+  {
+   "timesteps": 125000,
+   "success": 60.0,
+   "illegal": 0.0,
+   "detection": 40.0,
+   "ep_len": 28.14
+  },
+  {
+   "timesteps": 150000,
+   "success": 48.0,
+   "illegal": 0.0,
+   "detection": 50.0,
+   "ep_len": 27.14
+  },
+  {
+   "timesteps": 175000,
+   "success": 63.0,
+   "illegal": 0.0,
+   "detection": 37.0,
+   "ep_len": 44.37
+  },
+  {
+   "timesteps": 200000,
+   "success": 70.0,
+   "illegal": 0.0,
+   "detection": 30.0,
+   "ep_len": 46.3
+  },
+  {
+   "timesteps": 225000,
+   "success": 75.0,
+   "illegal": 0.0,
+   "detection": 25.0,
+   "ep_len": 46.04
+  },
+  {
+   "timesteps": 250000,
+   "success": 60.0,
+   "illegal": 0.0,
+   "detection": 56.0,
+   "ep_len": 36.98
+  },
+  {
+   "timesteps": 275000,
+   "success": 65.0,
+   "illegal": 0.0,
+   "detection": 54.0,
+   "ep_len": 40.49
+  },
+  {
+   "timesteps": 300000,
+   "success": 65.0,
+   "illegal": 0.0,
+   "detection": 35.0,
+   "ep_len": 51.09
+  },
+  {
+   "timesteps": 325000,
+   "success": 70.0,
+   "illegal": 0.0,
+   "detection": 31.0,
+   "ep_len": 42.58
+  },
+  {
+   "timesteps": 350000,
+   "success": 73.0,
+   "illegal": 0.0,
+   "detection": 27.0,
+   "ep_len": 56.61
+  },
+  {
+   "timesteps": 375000,
+   "success": 70.0,
+   "illegal": 0.0,
+   "detection": 30.0,
+   "ep_len": 57.36
+  },
+  {
+   "timesteps": 400000,
+   "success": 59.0,
+   "illegal": 0.0,
+   "detection": 41.0,
+   "ep_len": 37.76
+  }
+ ],
+ "final": {
+  "success": 68.0,
+  "illegal": 0.0,
+  "detection": 32.0,
+  "ep_len": 43.815
+ },
+ "enterprise_after": null
+}

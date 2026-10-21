@@ -1,0 +1,19 @@
+--- scratch_large20_s2: 400,000 steps, budget 120 ---
+         0  success   0.0%  illegal  0.0%  detected  98.0%  len  22.8
+    25,000  success   0.0%  illegal  0.0%  detected  64.0%  len  60.6
+    50,000  success   0.0%  illegal  0.0%  detected  81.0%  len  48.4
+    75,000  success  41.0%  illegal  0.0%  detected  59.0%  len  39.8
+   100,000  success  46.0%  illegal  0.0%  detected  54.0%  len  35.9
+   125,000  success  40.0%  illegal  0.0%  detected  60.0%  len  46.1
+   150,000  success  52.0%  illegal  0.0%  detected  48.0%  len  41.5
+   175,000  success  60.0%  illegal  0.0%  detected  40.0%  len  49.8
+   200,000  success  49.0%  illegal  0.0%  detected  51.0%  len  35.5
+   225,000  success  53.0%  illegal  0.0%  detected  47.0%  len  35.9
+   250,000  success  56.0%  illegal  0.0%  detected  44.0%  len  39.1
+   275,000  success  43.0%  illegal  0.0%  detected  57.0%  len  36.3
+   300,000  success  36.0%  illegal  0.0%  detected  66.0%  len  38.8
+   325,000  success  50.0%  illegal  0.0%  detected  51.0%  len  50.9
+   350,000  success  54.0%  illegal  0.0%  detected  46.0%  len  50.5
+   375,000  success  55.0%  illegal  0.0%  detected  48.0%  len  49.7
+   400,000  success  54.0%  illegal  0.0%  detected  47.0%  len  56.9
+scratch_large20_s2: final 60.0% on large20  (34.9 min)

@@ -3,6 +3,7 @@
 # analysis/v5_train.py with the seed recorded in the results JSON.
 results/models/*
 !results/models/v5/
+!results/models/v8_warm/
 
 # The released telemetry corpus, results/telemetry/v5/ (22 MB), regenerable by
 # analysis/v5_corpus.py from the ten masked policies in results/models/v5/.

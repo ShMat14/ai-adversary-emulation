@@ -38,14 +38,14 @@ LIGHT, PALE = "#dce6f2", "#f4f6f8"
 
 plt.rcParams.update({
     "font.family": "DejaVu Sans", "font.size": 8, "axes.titlesize": 8.5,
-    "axes.labelsize": 8, "legend.fontsize": 7.5, "xtick.labelsize": 7, "ytick.labelsize": 7,
+    "axes.labelsize": 8, "legend.fontsize": 8, "xtick.labelsize": 8, "ytick.labelsize": 8,
     "axes.spines.top": False, "axes.spines.right": False,
     "axes.grid": True, "grid.alpha": 0.25, "grid.linewidth": 0.5,
     "pdf.fonttype": 42,  # TrueType, not Type 3, in the PDFs
 })
 
-# Elsevier: 300 dpi halftone, 500 combination, 1000 line art. These are
-# combination art, so 500 binds and 600 leaves margin.
+# Springer: 300 dpi halftone, 600 combination, 1200 line art. These are
+# combination art, so 600 binds; the PDFs are vector.
 DPI = 600
 
 
@@ -53,7 +53,7 @@ def save(fig, name):
     w, small = printed_size_check(fig, name)
     print(f"  {name}: {w:.2f} in, smallest label {small:.1f} pt")
     for ext in ("png", "pdf"):
-        fig.savefig(OUT / f"{name}.{ext}", dpi=DPI, bbox_inches="tight")
+        fig.savefig(OUT / f"{name}.{ext}", dpi=DPI, bbox_inches="tight", pad_inches=PAD)
     plt.close(fig)
     print(f"  wrote {name}.png / .pdf")
 
@@ -71,12 +71,15 @@ def arrow(ax, p, q, color=GREY, style="-|>", lw=1.1, ls="-"):
                                  shrinkA=2, shrinkB=2))
 
 
-def printed_size_check(fig, name, width_in=5.8, min_pt=7.0):
+PAD = 0.02       # white margin savefig leaves around a tight bounding box, in
+
+
+def printed_size_check(fig, name, width_in=4.69, min_pt=8.0):
     """Refuse a chart whose smallest label would print below min_pt.
 
-    Word places every figure at the text width, 5.8 in. A chart drawn wider
-    is shrunk, and its labels with it; that is how Figs. 8 and 9 came to print
-    at half size.
+    Springer prints a small-format figure 119 mm (4.69 in) wide, with
+    lettering of 8 to 12 pt. A chart drawn wider is shrunk, and its labels
+    with it; that is how Figs. 8 and 9 once came to print at half size.
     """
     from matplotlib.text import Text
     # Lay everything out first; before a draw, legend entries still sit at
@@ -111,7 +114,10 @@ def printed_size_check(fig, name, width_in=5.8, min_pt=7.0):
     if small < min_pt - 0.05:
         raise SystemExit(f"{name}: {w:.2f} in wide, smallest label prints at "
                          f"{small:.1f} pt (< {min_pt})")
-    return w, small
+    # Saved with bbox_inches="tight" and pad_inches=PAD on each side.
+    if w + 2 * PAD > width_in + 0.005:
+        raise SystemExit(f"{name}: saves {w + 2 * PAD:.2f} in wide, over {width_in} in")
+    return w + 2 * PAD, small
 
 
 def blank(figsize):
@@ -202,14 +208,17 @@ def figure_corpus():
             channel[row["channel"]] += 1
             platform[row["platform"]] += 1
 
-    fig, axes = plt.subplots(1, 3, figsize=(5.8, 2.6),
-                             gridspec_kw={"width_ratios": [1.0, 1.0, 0.8]})
+    # (a) and (b) side by side, (c) under them: at 119 mm the three panels
+    # and their category names do not fit in one row at 8 pt.
+    fig = plt.figure(figsize=(4.6, 3.9))
+    gs = fig.add_gridspec(2, 2, height_ratios=[2.6, 1.0], width_ratios=[1.0, 1.0])
+    axes = [fig.add_subplot(gs[0, 0]), fig.add_subplot(gs[0, 1]), fig.add_subplot(gs[1, :])]
 
     items = tactic.most_common()
     y = np.arange(len(items))
     axes[0].barh(y, [c for _, c in items], color=BLUE)
     axes[0].set_yticks(y)
-    axes[0].set_yticklabels([t for t, _ in items], fontsize=7)
+    axes[0].set_yticklabels([t for t, _ in items])
     axes[0].invert_yaxis()
     axes[0].set_xlabel("records")
     axes[0].set_title("(a) By ATT&CK tactic", loc="left")
@@ -219,7 +228,7 @@ def figure_corpus():
     colours = [BLUE if c not in ("auditd", "syslog") else GREEN for c, _ in ch]
     axes[1].barh(y, [c for _, c in ch], color=colours)
     axes[1].set_yticks(y)
-    axes[1].set_yticklabels([c for c, _ in ch], fontsize=7)
+    axes[1].set_yticklabels([c for c, _ in ch])
     axes[1].invert_yaxis()
     axes[1].set_xlabel("records")
     axes[1].set_title("(b) By log channel", loc="left")
@@ -234,20 +243,16 @@ def figure_corpus():
     y = np.arange(len(outcome))
     axes[2].barh(y, [v for _, v, _ in outcome], color=[c for _, _, c in outcome])
     axes[2].set_yticks(y)
-    axes[2].set_yticklabels([n for n, _, _ in outcome], fontsize=7)
+    axes[2].set_yticklabels([n for n, _, _ in outcome])
     axes[2].invert_yaxis()
     axes[2].set_xlabel("episodes")
     axes[2].set_title("(c) By outcome", loc="left")
     axes[2].set_xlim(0, max(v for _, v, _ in outcome) * 1.35)
     for yi, (_, v, _) in zip(y, outcome):
-        axes[2].text(v + 8, yi, str(v), va="center", fontsize=7, color=GREY)
+        axes[2].text(v + 5, yi, str(v), va="center", fontsize=8, color=GREY)
 
-    fig.suptitle(
-        f"{man['events']:,} records over {man['episodes']} episodes, "
-        f"{man['distinct_techniques']}/45 techniques and "
-        f"{man['distinct_attack_ids']}/45 ATT&CK identifiers",
-        fontsize=8, y=0.99)
-    fig.tight_layout(rect=(0, 0, 1, 0.94))
+    # Springer: no titles or captions inside an illustration; the caption carries it.
+    fig.tight_layout(h_pad=1.2)
     save(fig, "corpus")
 
 
@@ -269,16 +274,16 @@ def figure_killchain():
     counts = [catalogue[t] for t in order]
     steps = [first.get(t, np.nan) for t in order]
 
-    fig, ax1 = plt.subplots(figsize=(5.8, 2.9))
+    fig, ax1 = plt.subplots(figsize=(4.69, 3.0))
     x = np.arange(len(order))
     ax1.bar(x, counts, color=LIGHT, edgecolor=BLUE, lw=1.0, width=0.66)
     ax1.set_xticks(x)
-    ax1.set_xticklabels(order, rotation=38, ha="right", fontsize=7.5)
+    ax1.set_xticklabels(order, rotation=45, ha="right", rotation_mode="anchor")
     ax1.set_ylabel("techniques in the catalogue", color=BLUE)
     ax1.tick_params(axis="y", labelcolor=BLUE)
     ax1.set_ylim(0, max(counts) * 1.35)
     for xi, c in zip(x, counts):
-        ax1.text(xi, c + 0.15, str(c), ha="center", fontsize=7.5, color=BLUE)
+        ax1.text(xi, c + 0.15, str(c), ha="center", fontsize=8, color=BLUE)
 
     ax2 = ax1.twinx()
     ax2.plot(x, steps, "o-", color=RED, lw=1.4, ms=4.5)
@@ -287,8 +292,7 @@ def figure_killchain():
     ax2.grid(False)
     ax2.set_ylim(0, max(s for s in steps if s == s) * 1.25)
 
-    ax1.set_title("Catalogue coverage against detection latency, by tactic",
-                  loc="left")
+    # Springer: no titles or captions inside an illustration; the caption carries it.
     save(fig, "killchain")
 
 

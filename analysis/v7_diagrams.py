@@ -5,7 +5,9 @@ Labels ran out of their boxes and arrows started in the wrong places. Two causes
 
   * Size. Figures 1 and 2 were drawn about 12 in wide and printed at 5.8 in,
     so every label was shrunk to half its size. Everything here is drawn at
-    the width it is printed at, with no label under 7 pt.
+    the width it is printed at, 119 mm (Springer's small format), with no
+    label under 8 pt; at that width the flows of Figures 3 to 5 run down a
+    column rather than across a row.
   * Placement. The old boxes were positioned by hand and never measured
     against their text, so labels ran past box edges and arrows started
     inside boxes. Here every box is sized from its measured text, every
@@ -47,8 +49,8 @@ from env.topology_v5 import Topology                               # noqa: E402
 plt.rcParams.update({"font.family": "DejaVu Sans", "mathtext.fontset": "dejavusans",
                      "pdf.fonttype": 42})
 
-W = 5.8          # printed width in the manuscript, inches
-MIN_PT = 7.0     # nothing smaller survives a page
+W = 4.69         # printed width: Springer small format, 119 mm
+MIN_PT = 8.0     # Springer: lettering 8 to 12 pt at the printed size
 LS = 1.30        # line spacing, in units of the font size
 
 INK = "#1f2937"
@@ -273,15 +275,15 @@ def seg_hits_box(p0, p1, b, tol=0.01):
     return t1 - t0 > 1e-6
 
 
-def L(s, size=7.5, weight="normal", colour=INK) -> Line:
+def L(s, size=8.0, weight="normal", colour=INK) -> Line:
     return (s, size, weight, colour)
 
 
-def title(s, size=8.0) -> Line:
+def title(s, size=8.5) -> Line:
     return (s, size, "bold", INK)
 
 
-def sub(s, size=7.0) -> Line:
+def sub(s, size=8.0) -> Line:
     return (s, size, "normal", SOFT)
 
 
@@ -318,9 +320,6 @@ def two_up(c: Canvas, y0, h, specs, notes, x_left=0.12, x_right=None, gap=0.3):
 
 # =========================================================================== 1
 def architecture():
-    c = Canvas(W, 3.05)
-    hb = 0.78
-    top_y, bot_y = 1.95, 0.62
     specs = {
         "agent": ([title("Agent"), L("MaskablePPO;"), L("sees only"),
                    L("masked logits")], "neutral"),
@@ -335,58 +334,58 @@ def architecture():
         "vuln": ([title("Vulnerable web app"), L("own code, data, logins;"),
                   L("15 techniques"), L("executed for real")], "red"),
     }
-    wid = {k: c.size_of(v[0])[0] for k, v in specs.items()}
-    # Top row: agent, environment, world model, telemetry.
-    xl, xr = 0.08, W - 0.08
-    order = ["agent", "env", "wm", "tel"]
-    gap = (xr - xl - sum(wid[k] for k in order)) / 3
-    assert gap >= 0.3, f"top row too wide, gap {gap:.2f}"
-    x, B = xl, {}
-    hw = max(c.size_of(specs["wm"][0])[1], c.size_of(specs["tel"][0])[1], hb)
-    for k in order:
-        lines, style = specs[k]
-        B[k] = c.box(k, x, top_y, wid[k], hw, lines, style,
-                     lw=1.6 if k == "wm" else 1.0)
-        x += wid[k] + gap
-    # Bottom row: HTTP target under the environment, the vulnerable app
-    # under the world model.
-    hh = max(c.size_of(specs["http"][0])[1], c.size_of(specs["vuln"][0])[1])
-    B["http"] = c.box("http", B["env"].cx - wid["http"] / 2, bot_y, wid["http"], hh,
-                      *specs["http"], lw=1.0)
-    B["vuln"] = c.box("vuln", xr - wid["vuln"], bot_y, wid["vuln"], hh, *specs["vuln"],
-                      lw=1.2)
-    assert B["vuln"].x0 > B["http"].x1 + 0.8
+    # Two columns of three, drawn at 119 mm: the agent's side on the left
+    # (agent, environment, HTTP target), the world model's on the right
+    # (telemetry above it, the independent target below it).
+    left, right = ["agent", "env", "http"], ["tel", "wm", "vuln"]
+    m = Canvas(W, 1.0)                       # measuring only
+    size = {k: m.size_of(v[0]) for k, v in specs.items()}
+    plt.close(m.fig)
+    wl = max(size[k][0] for k in left)
+    wr = max(size[k][0] for k in right)
+    rows = [max(size[a][1], size[b][1]) for a, b in zip(left, right)]
+    GAP, LEG = 0.46, 0.50
+    H = round(0.08 + sum(rows) + 2 * GAP + 0.16 + LEG, 2)
+    c = Canvas(W, H)
+    xl, xr = 0.1, W - 0.1 - wr
+    assert xr - (xl + wl) >= 1.2, f"columns too close: {xr - xl - wl:.2f} in"
+    B, y = {}, H - 0.08
+    for i, (a, b) in enumerate(zip(left, right)):
+        y -= rows[i]
+        B[a] = c.box(a, xl, y, wl, rows[i], *specs[a], lw=1.0)
+        B[b] = c.box(b, xr, y, wr, rows[i], *specs[b],
+                     lw=1.6 if b == "wm" else 1.2 if b == "vuln" else 1.0)
+        y -= GAP
 
-    mid = top_y + hw / 2
-    c.path([B["agent"].right(0.62), B["env"].left(0.62)], ("agent", "env"), arrow=True)
-    c.path([B["env"].left(0.38), B["agent"].right(0.38)], ("agent", "env"), arrow=True)
-    c.label((B["agent"].x1 + B["env"].x0) / 2, top_y + hw + 0.12,
-            [sub("action; observation, reward")])
-    c.path([B["env"].right(), B["wm"].left()], ("env", "wm"), arrow=True)
-    c.label((B["env"].x1 + B["wm"].x0) / 2, mid + 0.13, [sub("steps")])
-    c.path([B["wm"].right(), B["tel"].left()], ("wm", "tel"), arrow=True,
-           colour=PAL["green"][1])
-    c.label((B["wm"].x1 + B["tel"].x0) / 2, mid + 0.13, [sub("emits")])
+    ag, env, http, tel, wm, vuln = (B[k] for k in ("agent", "env", "http", "tel", "wm", "vuln"))
+    gy = (ag.y0 + env.y1) / 2
+    c.path([ag.bottom(0.3), env.top(0.3)], ("agent", "env"), arrow=True)
+    c.label(ag.x0 + 0.3 * wl - 0.06, gy, [sub("action")], ha="right")
+    c.path([env.top(0.7), ag.bottom(0.7)], ("agent", "env"), arrow=True)
+    c.label(ag.x0 + 0.7 * wl + 0.06, gy, [sub("observation, reward")], ha="left")
+    ys = env.y0 + 0.66 * (env.y1 - env.y0)
+    c.path([(env.x1, ys), (wm.x0, ys)], ("env", "wm"), arrow=True)
+    c.label((env.x1 + wm.x0) / 2, ys + 0.12, [sub("steps")])
+    c.path([wm.top(), tel.bottom()], ("wm", "tel"), arrow=True, colour=PAL["green"][1])
+    c.label(wm.cx + 0.06, (tel.y0 + wm.y1) / 2, [("emits", 8, "normal", PAL["green"][1])],
+            ha="left")
     # The environment can forward over HTTP; the server imports the model.
-    c.path([B["env"].bottom(), B["http"].top()], ("env", "http"), arrow=True)
-    c.label(B["env"].cx + 0.06, (top_y + bot_y + hh) / 2, [sub("or over HTTP")], ha="left")
-    fx = B["wm"].x0 + 0.18
-    c.path([B["http"].right(0.7), (fx, B["http"].y0 + 0.7 * hh), B["wm"].bottom(
-        (fx - B["wm"].x0) / (B["wm"].x1 - B["wm"].x0))], ("http", "wm"), arrow=True)
-    c.label(fx - 0.06, B["http"].y1 + 0.2, [sub("imports")], ha="right")
+    c.path([env.bottom(), http.top()], ("env", "http"), arrow=True)
+    c.label(env.cx + 0.06, (env.y0 + http.y1) / 2, [sub("or over HTTP")], ha="left")
+    yi = wm.y0 + 0.25 * (wm.y1 - wm.y0)
+    fx = (http.x1 + wm.x0) / 2 + 0.2
+    c.path([http.right(), (fx, http.cy), (fx, yi), (wm.x0, yi)], ("http", "wm"), arrow=True)
+    c.label(fx - 0.06, (http.cy + yi) / 2, [sub("imports")], ha="right")
     # The real arm decides a technique's outcome by executing it.
-    sx = B["wm"].x1 - 0.22
-    ymid = (B["wm"].y0 + B["vuln"].y1) / 2
-    c.path([B["wm"].bottom((sx - B["wm"].x0) / (B["wm"].x1 - B["wm"].x0)), (sx, ymid),
-            (B["vuln"].cx, ymid), B["vuln"].top()],
-           ("wm", "vuln"), arrow=True, colour=PAL["red"][1], ls=(0, (3, 2)))
-    c.label((sx + B["vuln"].cx) / 2, ymid + 0.11,
-            [("real arm", 7, "normal", PAL["red"][1])])
+    c.path([wm.bottom(), vuln.top()], ("wm", "vuln"), arrow=True, colour=PAL["red"][1],
+           ls=(0, (3, 2)))
+    c.label(wm.cx + 0.06, (vuln.y1 + wm.y0) / 2, [("real arm", 8, "normal", PAL["red"][1])],
+            ha="left")
     # Legend.
     for i, (style, text) in enumerate(
             [("blue", "the world model and what imports it: cannot disagree with it"),
              ("red", "shares no code with it: can disagree, and does")]):
-        y = 0.34 - i * 0.18
+        y = LEG - 0.16 - i * 0.2
         fc, ec = PAL[style]
         c.ax.add_patch(Rectangle((0.1, y - 0.06), 0.16, 0.12, fc=fc, ec=ec, lw=0.9))
         c.label(0.32, y, [sub(text)], ha="left")
@@ -405,7 +404,10 @@ def topology():
     NAME = {1: "DMZ", 2: "Workstations", 3: "Servers", 4: "Admin tier", 5: "Domain core"}
 
     hw, hh = 0.74, 0.28            # host box
-    HDR, SWH, SWGAP, VGAP, BOT = 0.18, 0.13, 0.12, 0.05, 0.06
+    # Two-line subnet headers: at 119 mm "Subnet 5 · Domain core" is wider
+    # than its subnet, and a one-line "Subnet 2 · Workstations" reaches the
+    # link that enters that subnet from the DMZ.
+    HDR, SWH, SWGAP, VGAP, BOT = 0.33, 0.13, 0.12, 0.05, 0.06
     row_h = HDR + SWH + SWGAP + hh + BOT                       # side-by-side subnet
     stack_h = lambda n: HDR + SWH + 0.08 + n * hh + (n - 1) * VGAP + BOT
     INET, FWGAP, ROWGAP = 0.42, 0.20, 0.40
@@ -416,31 +418,31 @@ def topology():
     hstyle = {"windows": "blue", "linux": "tan"}
 
     def host(name, x0, y0):
-        lines = [L(name + (" ★" if name == topo.goal else ""), 7.5, "bold"),
+        lines = [L(name + (" ★" if name == topo.goal else ""), 8, "bold"),
                  sub(osline[topo.os_of(name)])]
         return c.box(name, x0, y0, hw, hh, lines, hstyle[topo.os_of(name)],
                      lw=1.5 if name == topo.goal else 0.8)
 
     def header(sid, x0, y_top):
         c.label(x0 + 0.08, y_top - HDR / 2 - 0.01,
-                [(f"Subnet {sid} · {NAME[sid]}", 7.0, "bold", INK)],
+                [(f"Subnet {sid}", 8, "bold", INK), (NAME[sid], 8, "bold", INK)],
                 container=f"s{sid}", ha="left")
 
     def side_by_side(sid, cx, y_top, extra=()):
         hosts = list(extra) + S[sid]
-        w = 3.5
+        w = 3.0
         inner = w - 0.24
         step_x = (inner - hw) / (len(hosts) - 1)
         x0 = cx - w / 2
         reg = c.box(f"s{sid}", x0, y_top - row_h, w, row_h, style="region", kind="region")
         header(sid, x0, y_top)
         sw = c.box(f"sw{sid}", x0 + 0.12, y_top - HDR - SWH, inner, SWH,
-                   [("switch", 7, "normal", SOFT)], "device", rounding=0.02, lw=0.7)
+                   [("switch", 8, "normal", SOFT)], "device", rounding=0.02, lw=0.7)
         for i, hname in enumerate(hosts):
             hx = x0 + 0.12 + i * step_x
             if hname == "WAF":
                 b = c.box("waf", hx, sw.y0 - SWGAP - hh, hw, hh,
-                          [L("WAF", 7.5, "bold"), sub("log source")], "device", lw=0.8)
+                          [L("WAF", 8, "bold"), sub("log source")], "device", lw=0.8)
             else:
                 b = host(hname, hx, sw.y0 - SWGAP - hh)
             c.path([(b.cx, sw.y0), b.top()], ends=(sw.name, b.name), lw=0.7)
@@ -452,7 +454,7 @@ def topology():
                     kind="region")
         header(sid, x0, y_top)
         sw = c.box(f"sw{sid}", x0 + 0.1, y_top - HDR - SWH, w - 0.2, SWH,
-                   [("switch", 7, "normal", SOFT)], "device", rounding=0.02, lw=0.7)
+                   [("switch", 8, "normal", SOFT)], "device", rounding=0.02, lw=0.7)
         bus_x = x0 + 0.22
         y = sw.y0 - 0.08
         last = None
@@ -481,9 +483,9 @@ def topology():
     c.path([(W / 2, dmz.y0), (W / 2, sw2.y1)], ends=("sw2", "fw2"))
     c.label(W / 2 + 0.2, fw2_y, [sub("internal firewall")], ha="left")
 
-    bw = 1.62
-    gap = (W - 0.2 - 3 * bw) / 2
-    assert gap >= 0.36, gap
+    gap = 0.38
+    bw = (W - 0.2 - 2 * gap) / 3
+    assert bw >= 1.2, bw
     xs = [0.1, 0.1 + bw + gap, 0.1 + 2 * (bw + gap)]
     row_top = ws.y0 - ROWGAP
     srv, _ = stacked(3, xs[0], bw, row_top)
@@ -508,7 +510,7 @@ def topology():
                                   boxstyle="round,pad=0,rounding_size=0.06", fc="none",
                                   ec="#9ca3af", lw=0.9, ls=(0, (4, 2)), zorder=0))
     c.boxes["internal"] = Box("internal", 0.04, in_y0, W - 0.04, internal_top, "region")
-    c.label(0.12, internal_top - 0.11, [L("Internal network", 7.5, "bold", SOFT)],
+    c.label(0.12, internal_top - 0.11, [L("Internal network", 8, "bold", SOFT)],
             container="internal", ha="left")
 
     # Legend, top left, clear of the DMZ.
@@ -522,99 +524,119 @@ def topology():
     c.firewall("fw_legend", lx + 0.08, ly - 3 * 0.16, w=0.16, h=0.10)
     c.label(lx + 0.22, ly - 3 * 0.16, [sub("firewall")], ha="left")
     c.label(lx + 0.02, ly - 4 * 0.16, [sub("★  objective")], ha="left")
-    assert lx + 1.0 < dmz.x0, "legend runs into the DMZ"
+    assert ly - 4 * 0.16 - 0.08 > dmz.y1, "legend runs into the DMZ"
     c.save("topology")
+
+
+def flow_beside(name, flow, right_title, right_boxes, notes, gap=0.2):
+    """A flow running down a left column, and a panel of boxes on the right.
+
+    At 119 mm a row of four or five boxes does not fit at 8 pt, so each
+    flow runs downward; each flow box is as tall as its own text.
+    """
+    m = Canvas(W, 1.0)                       # measuring only
+    fsz = [m.size_of(lines) for lines, _ in flow]
+    title_h = m.block(right_title)[1]
+    rsz = [m.size_of(lines) for lines, _ in right_boxes]
+    plt.close(m.fig)
+    wl = max(w for w, _ in fsz)
+    hs = [max(h, 0.34) for _, h in fsz]
+    xl = 0.08
+    xr = xl + wl + 0.36
+    wr = W - 0.08 - xr
+    assert max(w for w, _ in rsz) <= wr, f"{name}: right panel needs {max(w for w, _ in rsz):.2f} in"
+    note_h = 0.22
+    left_h = sum(hs) + (len(flow) - 1) * gap
+    n_lines = sum(len(n) if isinstance(n, list) else 1 for n in notes if n)
+    right_h = (title_h + 0.12 + sum(h for _, h in rsz) + n_lines * note_h
+               + (len(rsz) - 1) * 0.16)
+    H = round(0.16 + max(left_h, right_h), 2)
+    c = Canvas(W, H)
+    y = H - 0.08 - (max(left_h, right_h) - left_h) / 2
+    boxes = []
+    for i, ((lines, style), hb) in enumerate(zip(flow, hs)):
+        boxes.append(c.box(f"f{i}", xl, y - hb, wl, hb, lines, style))
+        y -= hb + gap
+    for a, b in zip(boxes, boxes[1:]):
+        c.path([a.bottom(), b.top()], ends=(a.name, b.name), arrow=True)
+    xd = xl + wl + 0.18
+    c.ax.plot([xd, xd], [0.12, H - 0.12], color="#d1d5db", lw=0.8)
+    y = H - 0.08 - (max(left_h, right_h) - right_h) / 2
+    c.label(xr, y - title_h / 2, right_title, ha="left")
+    y -= title_h + 0.12
+    for i, ((lines, style), (_, h), note) in enumerate(zip(right_boxes, rsz, notes)):
+        b = c.box(f"o{i}", xr, y - h, wr, h, lines, style, lw=1.1)
+        y -= h
+        if note:
+            note = note if isinstance(note, list) else [note]
+            h_n = note_h * len(note) - 0.06 * (len(note) - 1)
+            c.label(b.cx, y - h_n / 2, note)
+            y -= h_n
+        y -= 0.16
+    c.save(name)
 
 
 # =========================================================================== 3
 def mask():
-    c = Canvas(W, 2.36)
-    h = 0.62
-    y0 = c.h - 0.12 - h
-    specs = [
+    flow = [
         ([L(r"state $s$ and"), L(r"scenario $\omega$")], "neutral"),
-        ([L("check preconditions"), L("of all 540 actions:"),
-          sub("45 techniques × 12 hosts")], "blue"),
-        ([L(r"mask $\mu(s,\omega)$:"), L("one bit per action")], "blue"),
+        # The environment, not the agent, does these two at every step.
+        ([L("at every step, the"), L("environment checks"), L("the preconditions"),
+          L("of all 540 actions"), sub("45 techniques × 12 hosts")], "blue"),
+        ([L(r"mask $\mu(s,\omega)$:"), L("one bit per action,"), L("never learned")], "blue"),
         ([L("masked logits"), L(r"set to $-\infty$")], "blue"),
         ([L("legal action"), L("sampled")], "green"),
     ]
-    row = row_layout(c, specs, y0, h, 0.06, W - 0.06, min_gap=0.2)
-    # "computed every step" spans the first three boxes.
-    by = y0 - 0.08
-    c.path([(row[1].x0, by), (row[2].x1, by)], lw=0.7)
-    c.label((row[1].x0 + row[2].x1) / 2, by - 0.12,
-            [("computed by the environment at every step; never learned", 7, "normal", SOFT)])
-    c.ax.plot([0.12, W - 0.12], [by - 0.32] * 2, color="#d1d5db", lw=0.8)
-    c.label(0.12, by - 0.47, [title("An action whose preconditions do not hold")], ha="left")
-    oh = 0.55
-    two_up(c, 0.36, oh,
-           [([L("under the prerequisite mask"), L("receives no probability mass"),
-              L("and cannot be proposed at all")], "green"),
-            ([L("under reward shaping"), L("is proposed, executed, refused,"),
-              L("and penalised afterwards")], "red")],
-           [("0.0% of actions infeasible", 7.5, "bold", PAL["green"][1]),
-            ("10.3% infeasible after training, from 99%", 7.5, "bold", PAL["red"][1])])
-    c.save("mask")
+    flow_beside(
+        "mask", flow,
+        [title("An action whose"), title("preconditions do not hold")],
+        [([L("under the prerequisite mask"), L("receives no probability mass"),
+           L("and cannot be proposed at all")], "green"),
+         ([L("under reward shaping"), L("is proposed, executed, refused,"),
+           L("and penalised afterwards")], "red")],
+        [("0.0% of actions infeasible", 8, "bold", PAL["green"][1]),
+         [("10.3% infeasible after training,", 8, "bold", PAL["red"][1]),
+          ("from 99%", 8, "bold", PAL["red"][1])]], gap=0.16)
 
 
 # =========================================================================== 4
 def detection():
-    c = Canvas(W, 2.10)
-    h = 0.62
-    y0 = c.h - 0.12 - h
-    specs = [
+    flow = [
         ([L("technique"), L("executes"), L("on a host")], "neutral"),
         ([L("emits the"), L("records it would"), L("really leave")], "blue"),
         ([L("a named rule"), L("matches the"), L("event identifier")], "blue"),
         ([L("suspicion"), L("accumulates")], "blue"),
         ([L("incident"), L("declared; the"), L("engagement ends")], "red"),
     ]
-    row_layout(c, specs, y0, h, 0.06, W - 0.06, min_gap=0.2)
-    c.ax.plot([0.12, W - 0.12], [y0 - 0.2] * 2, color="#d1d5db", lw=0.8)
-    c.label(0.12, y0 - 0.36,
-            [title("Nine log channels; each platform emits only its own records")], ha="left")
-    bh = 0.72
-    specs2 = [
-        ([L("Windows hosts", 7.5, "bold"), L("Security, System, Sysmon,"),
-          L("PowerShell, TerminalServices,"), L("WMI-Activity")], "blue"),
-        ([L("Linux hosts", 7.5, "bold"), L("auditd, syslog"),
-          L("no Windows event identifiers")], "tan"),
-        ([L("Web front end", 7.5, "bold"), L("WAF")], "device"),
-    ]
-    widths = [c.size_of(s[0])[0] for s in specs2]
-    gap = (W - 0.24 - sum(widths)) / 2
-    assert gap > 0.15
-    x = 0.12
-    for i, ((lines, style), w) in enumerate(zip(specs2, widths)):
-        c.box(f"p{i}", x, 0.12, w, bh, lines, style, lw=1.0)
-        x += w + gap
-    c.save("detection")
+    flow_beside(
+        "detection", flow,
+        [title("Nine log channels; each"), title("platform emits only its own records")],
+        [([L("Windows hosts", 8, "bold"), L("Security, System, Sysmon,"),
+           L("PowerShell, TerminalServices,"), L("WMI-Activity")], "blue"),
+         ([L("Linux hosts", 8, "bold"), L("auditd, syslog"),
+           L("no Windows event identifiers")], "tan"),
+         ([L("Web front end", 8, "bold"), L("WAF")], "device")],
+        [None, None, None], gap=0.16)
 
 
 # =========================================================================== 5
 def scenario():
-    c = Canvas(W, 2.12)
-    h = 0.62
-    y0 = c.h - 0.12 - h
-    specs = [
+    flow = [
         ([L("engagement drawn"), L("at episode start")], "neutral"),
-        ([L("one technique withdrawn"), L("from each substitution"),
-          L("group; requirements set")], "blue"),
+        ([L("one technique"), L("withdrawn from each"), L("substitution group;"),
+          L("requirements set")], "blue"),
         ([L(r"scenario $\omega$ fixed"), L("for the episode")], "blue"),
         ([L("mask becomes"), L(r"$\mu(s,\omega)$, not $\mu(s)$")], "green"),
     ]
-    row_layout(c, specs, y0, h, 0.08, W - 0.08, min_gap=0.25)
-    c.ax.plot([0.12, W - 0.12], [y0 - 0.2] * 2, color="#d1d5db", lw=0.8)
-    c.label(0.12, y0 - 0.36, [title("Why this decides whether masking matters")], ha="left")
-    two_up(c, 0.36, 0.50,
-           [([L(r"legality a fixed function of state, $\mu(s)$"),
-              L("an agent can learn it from experience")], "red"),
-            ([L(r"legality depends on the engagement, $\mu(s,\omega)$"),
-              L("there is nothing stable to learn")], "green")],
-           [("masked 99.7%, unmasked 99.8%", 7.5, "bold", PAL["red"][1]),
-            ("masked 69.7%, unmasked 0.0%", 7.5, "bold", PAL["green"][1])])
-    c.save("scenario")
+    flow_beside(
+        "scenario", flow,
+        [title("Why this decides whether"), title("masking matters")],
+        [([L(r"legality a fixed function of"), L(r"state, $\mu(s)$: an agent can"),
+           L("learn it from experience")], "red"),
+         ([L("legality depends on the"), L(r"engagement, $\mu(s,\omega)$: there"),
+           L("is nothing stable to learn")], "green")],
+        [("masked 99.7%, unmasked 99.8%", 8, "bold", PAL["red"][1]),
+         ("masked 69.7%, unmasked 0.0%", 8, "bold", PAL["green"][1])])
 
 
 if __name__ == "__main__":

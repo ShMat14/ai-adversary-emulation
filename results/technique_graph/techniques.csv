@@ -1,0 +1,46 @@
+id,name,caption,attack_id,tactic,campaigns,share,uses,repeats,band
+1,C2_CHANNEL_ESTABLISH,C2 channel,T1071.001,Command and Control,347,100.0,381,19,Core
+2,DATA_FROM_LOCAL_SYSTEM,Data from local system,T1005,Collection,347,100.0,933,91,Core
+3,DISABLE_SECURITY_TOOLS,Disable security tools,T1562.001,Defense Evasion,347,100.0,448,51,Core
+4,LATERAL_MOVE_SMB,Lateral movement (SMB),T1021,Lateral Movement,347,100.0,1717,480,Core
+5,NETWORK_SCAN,Network scan,T1046,Discovery,347,100.0,488,27,Core
+6,PRIV_ESC_SUDO,Privilege escalation (sudo),T1068,Privilege Escalation,347,100.0,836,150,Core
+7,SYSTEM_INFO_DISCOVERY,System info discovery,T1082,Discovery,347,100.0,937,26,Core
+8,ACCOUNT_MANIPULATION,Account manipulation,T1098,Privilege Escalation,345,99.4,593,104,Core
+9,CREDS_IN_FILES,Credentials in files,T1552.001,Credential Access,343,98.8,1539,312,Core
+10,ARCHIVE_COLLECTED_DATA,Archive collected data,T1560.001,Collection,334,96.3,627,59,Core
+11,SERVICE_STOP,Service stop,T1489,Impact,327,94.2,363,24,Core
+12,RDP_HIJACK,RDP hijack,T1021.001,Lateral Movement,322,92.8,646,172,Core
+13,CLEAR_LOGS,Clear logs,T1070,Defense Evasion,313,90.2,1829,432,Core
+14,EXFILTRATE_DATA,Exfiltrate data,T1041,Exfiltration,297,85.6,297,0,Core
+15,OBFUSCATED_FILES,Obfuscated files,T1027,Defense Evasion,268,77.2,291,19,Core
+16,WEB_SHELL_UPLOAD,Web shell upload,T1505.003,Persistence,229,66.0,501,75,Core
+17,PHISHING_EMAIL,Phishing email,T1566,Initial Access,210,60.5,232,20,Core
+18,EXTERNAL_REMOTE_SERVICES,External remote services,T1133,Initial Access,172,49.6,228,47,Common
+19,PASS_THE_TICKET,Pass the ticket,T1550.003,Lateral Movement,169,48.7,326,89,Common
+20,AS_REP_ROASTING,AS-REP roasting,T1558.004,Credential Access,162,46.7,330,54,Common
+21,SQL_INJECTION,SQL injection,T1190,Initial Access,161,46.4,238,27,Common
+22,KERBEROASTING,Kerberoasting,T1558.003,Credential Access,128,36.9,272,41,Common
+23,DOMAIN_GROUP_DISCOVERY,Domain group discovery,T1069.002,Discovery,126,36.3,130,3,Common
+24,NTLM_RELAY,NTLM relay,T1557.001,Credential Access,123,35.4,232,23,Common
+25,WMI_EXECUTION,WMI execution,T1047,Execution,122,35.2,173,17,Common
+26,DOMAIN_TRUST_DISCOVERY,Domain trust discovery,T1482,Discovery,116,33.4,121,4,Common
+27,DOMAIN_ACCT_DISCOVERY,Domain account discovery,T1087.002,Discovery,107,30.8,115,7,Common
+28,INSTALL_BACKDOOR,Install backdoor,T1543,Persistence,94,27.1,184,31,Common
+29,PASS_THE_HASH,Pass the hash,T1550.002,Lateral Movement,70,20.2,111,12,Common
+30,POWERSHELL_EXEC,PowerShell execution,T1059.001,Execution,59,17.0,81,16,Occasional
+31,REMOTE_SYSTEM_DISCOVERY,Remote system discovery,T1018,Discovery,57,16.4,105,6,Occasional
+32,VALID_ACCOUNTS_LOGIN,Valid accounts login,T1078,Defense Evasion,57,16.4,92,1,Occasional
+33,REGISTRY_RUN_KEYS,Registry run keys,T1547.001,Persistence,52,15.0,115,9,Occasional
+34,PASSWORD_SPRAYING,Password spraying,T1110.003,Credential Access,40,11.5,69,20,Occasional
+35,BRUTE_FORCE_SSH,SSH brute force,T1110,Credential Access,30,8.6,36,6,Occasional
+36,DCSYNC,DCSync,T1003.006,Credential Access,22,6.3,23,0,Occasional
+37,CREDENTIALS_FROM_BROWSER,Credentials from browser,T1555.003,Credential Access,21,6.1,29,3,Occasional
+38,MODIFY_REGISTRY,Modify registry,T1112,Defense Evasion,13,3.7,15,2,Occasional
+39,CRED_DUMP_LSASS,LSASS credential dump,T1003.001,Credential Access,10,2.9,11,0,Occasional
+40,INHIBIT_SYSTEM_RECOVERY,Inhibit system recovery,T1490,Impact,8,2.3,8,0,Occasional
+41,PROCESS_INJECTION,Process injection,T1055,Privilege Escalation,8,2.3,9,0,Occasional
+42,RANSOMWARE_ENCRYPT,Ransomware encryption,T1486,Impact,8,2.3,8,0,Occasional
+43,GPO_MODIFICATION,GPO modification,T1484.001,Privilege Escalation,7,2.0,7,0,Occasional
+44,GOLDEN_TICKET,Golden ticket,T1558.001,Privilege Escalation,3,0.9,3,0,Occasional
+45,SCHEDULED_TASK,Scheduled task,T1053.005,Persistence,1,0.3,1,0,Occasional

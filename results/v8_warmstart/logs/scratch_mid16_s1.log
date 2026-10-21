@@ -1,0 +1,19 @@
+--- scratch_mid16_s1: 400,000 steps, budget 120 ---
+         0  success   1.0%  illegal  0.0%  detected  81.0%  len  37.9
+    25,000  success   6.0%  illegal  0.0%  detected  72.0%  len  55.5
+    50,000  success  61.0%  illegal  0.0%  detected  41.0%  len  34.7
+    75,000  success  62.0%  illegal  0.0%  detected  38.0%  len  32.4
+   100,000  success  62.0%  illegal  0.0%  detected  37.0%  len  33.5
+   125,000  success  56.0%  illegal  0.0%  detected  44.0%  len  30.9
+   150,000  success  58.0%  illegal  0.0%  detected  42.0%  len  33.6
+   175,000  success  62.0%  illegal  0.0%  detected  38.0%  len  34.4
+   200,000  success  68.0%  illegal  0.0%  detected  32.0%  len  38.7
+   225,000  success  63.0%  illegal  0.0%  detected  37.0%  len  40.5
+   250,000  success  65.0%  illegal  0.0%  detected  37.0%  len  50.8
+   275,000  success  63.0%  illegal  0.0%  detected  38.0%  len  42.7
+   300,000  success  63.0%  illegal  0.0%  detected  37.0%  len  43.2
+   325,000  success  61.0%  illegal  0.0%  detected  39.0%  len  35.0
+   350,000  success  63.0%  illegal  0.0%  detected  37.0%  len  33.9
+   375,000  success  65.0%  illegal  0.0%  detected  35.0%  len  33.5
+   400,000  success  64.0%  illegal  0.0%  detected  36.0%  len  38.0
+scratch_mid16_s1: final 61.0% on mid16  (26.1 min)
