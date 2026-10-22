@@ -1,0 +1,447 @@
+{
+ "summary": {
+  "techniques_with_windows_events": 36,
+  "techniques_with_exact_recording": 13,
+  "host_archives_read": 32,
+  "archives_set_aside_no_windows_events": [
+   "linux/discovery/host/sh_arp_cache.zip"
+  ],
+  "watched_events": 16,
+  "watched_events_with_condition": 10,
+  "watched_events_present": 11,
+  "watched_events_at_least_2x": 7,
+  "techniques_all_watched_present": 8
+ },
+ "techniques": [
+  {
+   "attack_id": "T1003.001",
+   "technique": "CRED_DUMP_LSASS",
+   "recordings": [
+    "SDWIN-190518202151",
+    "SDWIN-191027055035",
+    "SDWIN-200807103913",
+    "SDWIN-201018195009",
+    "SDWIN-201018225619"
+   ],
+   "titles": [
+    "Empire Mimikatz LogonPasswords",
+    "RDP TaskManager LSASS Dump",
+    "Empire Mimikatz Lsadump LSA Patch",
+    "Lsass Memory Dump via Comsvcs.dll",
+    "Lsass Memory Dump via Syscalls"
+   ],
+   "windows_events": 18208,
+   "checks": [
+    {
+     "channel": "Sysmon",
+     "event_id": 10,
+     "description": "ProcessAccess: handle to lsass.exe",
+     "condition_applied": true,
+     "watched": true,
+     "in_recordings": 44,
+     "in_other_recordings": 408,
+     "rate_ratio": 1.0,
+     "reading": "present"
+    }
+   ]
+  },
+  {
+   "attack_id": "T1003.006",
+   "technique": "DCSYNC",
+   "recordings": [
+    "SDWIN-190301174830",
+    "SDWIN-200805020926"
+   ],
+   "titles": [
+    "Empire DCSync",
+    "Covenant DCSync"
+   ],
+   "windows_events": 9267,
+   "checks": [
+    {
+     "channel": "Security",
+     "event_id": 4662,
+     "description": "Directory replication (DS-Replication-Get-Changes)",
+     "condition_applied": true,
+     "watched": true,
+     "in_recordings": 6,
+     "in_other_recordings": 1,
+     "rate_ratio": 76.0,
+     "reading": "present, 2x or more"
+    }
+   ]
+  },
+  {
+   "attack_id": "T1021",
+   "technique": "LATERAL_MOVE_SMB",
+   "recordings": [
+    "SDWIN-190518210652"
+   ],
+   "titles": [
+    "Empire Invoke PsExec"
+   ],
+   "windows_events": 3964,
+   "checks": [
+    {
+     "channel": "Security",
+     "event_id": 4624,
+     "description": "Network logon type 3",
+     "condition_applied": true,
+     "watched": true,
+     "in_recordings": 6,
+     "in_other_recordings": 360,
+     "rate_ratio": 0.8,
+     "reading": "present"
+    },
+    {
+     "channel": "Security",
+     "event_id": 5140,
+     "description": "Network share accessed (ADMIN$)",
+     "condition_applied": true,
+     "watched": true,
+     "in_recordings": 0,
+     "in_other_recordings": 0,
+     "rate_ratio": 0.0,
+     "reading": "absent"
+    }
+   ]
+  },
+  {
+   "attack_id": "T1047",
+   "technique": "WMI_EXECUTION",
+   "recordings": [
+    "SDWIN-190518213907",
+    "SDWIN-200724174200",
+    "SDWIN-200806035621",
+    "SDWIN-200914080546",
+    "SDWIN-200921001437",
+    "SDWIN-201009173318"
+   ],
+   "titles": [
+    "Empire Invoke Execute MSBuild",
+    "Covenant Remote WMI Eventing ActiveScriptEventConsumers",
+    "Covenant SharpWMI Exec",
+    "Empire Remote WMIC Add User",
+    "Empire Invoke WMI",
+    "Covenant Remote WMI Wbemcomn DLL Hijacking"
+   ],
+   "windows_events": 36893,
+   "checks": [
+    {
+     "channel": "Security",
+     "event_id": 4688,
+     "description": "Process Create: child of WmiPrvSE.exe",
+     "condition_applied": true,
+     "watched": true,
+     "in_recordings": 3,
+     "in_other_recordings": 0,
+     "rate_ratio": 24.2,
+     "reading": "present, 2x or more"
+    },
+    {
+     "channel": "WMI-Activity",
+     "event_id": 5861,
+     "description": "Permanent WMI event consumer registered",
+     "condition_applied": false,
+     "watched": true,
+     "in_recordings": 1,
+     "in_other_recordings": 2,
+     "rate_ratio": 1.6,
+     "reading": "present"
+    }
+   ]
+  },
+  {
+   "attack_id": "T1053.005",
+   "technique": "SCHEDULED_TASK",
+   "recordings": [
+    "SDWIN-190319024742",
+    "SDWIN-200921175806",
+    "SDWIN-201219070027",
+    "SDWIN-201219075059"
+   ],
+   "titles": [
+    "Empire Userland Scheduled Tasks",
+    "Empire Elevated Scheduled Tasks",
+    "Remote Scheduled Task Creation",
+    "Remote Scheduled Task Modification"
+   ],
+   "windows_events": 44878,
+   "checks": [
+    {
+     "channel": "Security",
+     "event_id": 4698,
+     "description": "A scheduled task was created",
+     "condition_applied": false,
+     "watched": true,
+     "in_recordings": 2,
+     "in_other_recordings": 0,
+     "rate_ratio": 12.5,
+     "reading": "present, 2x or more"
+    }
+   ]
+  },
+  {
+   "attack_id": "T1055",
+   "technique": "PROCESS_INJECTION",
+   "recordings": [
+    "SDWIN-201019232515",
+    "SDWIN-201026235835",
+    "SDWIN-201028191914"
+   ],
+   "titles": [
+    "Mavinject Process DLL Injection",
+    "Process Herpaderping Mimikatz",
+    "Windows Vault Web Credentials"
+   ],
+   "windows_events": 911,
+   "checks": [
+    {
+     "channel": "Sysmon",
+     "event_id": 8,
+     "description": "CreateRemoteThread",
+     "condition_applied": false,
+     "watched": true,
+     "in_recordings": 1,
+     "in_other_recordings": 169,
+     "rate_ratio": 1.2,
+     "reading": "present"
+    },
+    {
+     "channel": "Sysmon",
+     "event_id": 10,
+     "description": "ProcessAccess with PROCESS_VM_WRITE",
+     "condition_applied": true,
+     "watched": true,
+     "in_recordings": 16,
+     "in_other_recordings": 1406,
+     "rate_ratio": 2.3,
+     "reading": "present, 2x or more"
+    }
+   ]
+  },
+  {
+   "attack_id": "T1059.001",
+   "technique": "POWERSHELL_EXEC",
+   "recordings": [
+    "SDWIN-201102041306"
+   ],
+   "titles": [
+    "PowerShell HTTP Listener"
+   ],
+   "windows_events": 110,
+   "checks": [
+    {
+     "channel": "PowerShell",
+     "event_id": 4104,
+     "description": "Script block logging: remote execution",
+     "condition_applied": false,
+     "watched": true,
+     "in_recordings": 0,
+     "in_other_recordings": 237,
+     "rate_ratio": 0.0,
+     "reading": "channel not in the recording"
+    }
+   ]
+  },
+  {
+   "attack_id": "T1069.002",
+   "technique": "DOMAIN_GROUP_DISCOVERY",
+   "recordings": [
+    "SDWIN-190518201207",
+    "SDWIN-200806130039"
+   ],
+   "titles": [
+    "Empire Shell Net Domain Admins",
+    "Covenant GetDomainGroup Domain Admins"
+   ],
+   "windows_events": 2268,
+   "checks": [
+    {
+     "channel": "Security",
+     "event_id": 4661,
+     "description": "A handle to an object was requested",
+     "condition_applied": false,
+     "watched": false,
+     "in_recordings": 4,
+     "in_other_recordings": 21,
+     "rate_ratio": 15.0,
+     "reading": "present, 2x or more"
+    },
+    {
+     "channel": "Security",
+     "event_id": 4688,
+     "description": "Process Create: net group /domain",
+     "condition_applied": true,
+     "watched": true,
+     "in_recordings": 0,
+     "in_other_recordings": 0,
+     "rate_ratio": 0.0,
+     "reading": "absent"
+    }
+   ]
+  },
+  {
+   "attack_id": "T1087.002",
+   "technique": "DOMAIN_ACCT_DISCOVERY",
+   "recordings": [
+    "SDWIN-190319021158"
+   ],
+   "titles": [
+    "Empire Net Domain Users"
+   ],
+   "windows_events": 593,
+   "checks": [
+    {
+     "channel": "Security",
+     "event_id": 4661,
+     "description": "A handle to a directory object was requested",
+     "condition_applied": false,
+     "watched": true,
+     "in_recordings": 1,
+     "in_other_recordings": 24,
+     "rate_ratio": 12.7,
+     "reading": "present, 2x or more"
+    }
+   ]
+  },
+  {
+   "attack_id": "T1112",
+   "technique": "MODIFY_REGISTRY",
+   "recordings": [
+    "SDWIN-190518201922",
+    "SDWIN-190518203650",
+    "SDWIN-191225045202"
+   ],
+   "titles": [
+    "Empire WDigest Downgrade",
+    "Empire Enable RDP",
+    "Empire Invoke InternalMonologue"
+   ],
+   "windows_events": 6825,
+   "checks": [
+    {
+     "channel": "Security",
+     "event_id": 4657,
+     "description": "A registry value was modified",
+     "condition_applied": false,
+     "watched": true,
+     "in_recordings": 0,
+     "in_other_recordings": 0,
+     "rate_ratio": 0.0,
+     "reading": "identifier never logged in the collection"
+    },
+    {
+     "channel": "Sysmon",
+     "event_id": 13,
+     "description": "RegistryEvent: value set",
+     "condition_applied": false,
+     "watched": false,
+     "in_recordings": 316,
+     "in_other_recordings": 19308,
+     "rate_ratio": 0.4,
+     "reading": "present"
+    }
+   ]
+  },
+  {
+   "attack_id": "T1547.001",
+   "technique": "REGISTRY_RUN_KEYS",
+   "recordings": [
+    "SDWIN-190319023812",
+    "SDWIN-200722001847"
+   ],
+   "titles": [
+    "Empire Userland Registry Run Keys",
+    "Empire Elevated Registry Run Keys"
+   ],
+   "windows_events": 25361,
+   "checks": [
+    {
+     "channel": "Sysmon",
+     "event_id": 13,
+     "description": "RegistryEvent: value set under a Run key",
+     "condition_applied": true,
+     "watched": true,
+     "in_recordings": 3,
+     "in_other_recordings": 1,
+     "rate_ratio": 12.6,
+     "reading": "present, 2x or more"
+    }
+   ]
+  },
+  {
+   "attack_id": "T1550.002",
+   "technique": "PASS_THE_HASH",
+   "recordings": [
+    "SDWIN-190319131123"
+   ],
+   "titles": [
+    "Empire Over-Pass-The-Hash"
+   ],
+   "windows_events": 10130,
+   "checks": [
+    {
+     "channel": "Security",
+     "event_id": 4624,
+     "description": "Network logon type 3 with NTLM",
+     "condition_applied": true,
+     "watched": true,
+     "in_recordings": 0,
+     "in_other_recordings": 4,
+     "rate_ratio": 0.0,
+     "reading": "absent"
+    }
+   ]
+  },
+  {
+   "attack_id": "T1558.003",
+   "technique": "KERBEROASTING",
+   "recordings": [
+    "SDWIN-201022042947"
+   ],
+   "titles": [
+    "PurpleSharp Active Directory Playbook I"
+   ],
+   "windows_events": 25993,
+   "checks": [
+    {
+     "channel": "Security",
+     "event_id": 4769,
+     "description": "Kerberos service ticket (RC4) requested",
+     "condition_applied": true,
+     "watched": true,
+     "in_recordings": 5,
+     "in_other_recordings": 0,
+     "rate_ratio": 61.3,
+     "reading": "present, 2x or more"
+    }
+   ]
+  }
+ ],
+ "no_exact_recording": [
+  "T1005",
+  "T1018",
+  "T1021.001",
+  "T1041",
+  "T1046",
+  "T1070",
+  "T1071.001",
+  "T1078",
+  "T1082",
+  "T1098",
+  "T1482",
+  "T1484.001",
+  "T1486",
+  "T1489",
+  "T1490",
+  "T1543",
+  "T1550.003",
+  "T1552.001",
+  "T1555.003",
+  "T1557.001",
+  "T1558.001",
+  "T1558.004",
+  "T1560.001"
+ ]
+}

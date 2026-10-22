@@ -1,0 +1,128 @@
+{
+ "campaigns": 600,
+ "policies": 10,
+ "techniques": 45,
+ "folds": 5,
+ "targets": {
+  "next_different_technique": {
+   "predictions": 17372,
+   "models": {
+    "frequency": {
+     "top1_mean": 12.2,
+     "top1_sd": 2.8,
+     "top3_mean": 29.6,
+     "top3_sd": 3.2
+    },
+    "first-order": {
+     "top1_mean": 25.1,
+     "top1_sd": 1.9,
+     "top3_mean": 47.3,
+     "top3_sd": 4.2
+    },
+    "second-order": {
+     "top1_mean": 27.2,
+     "top1_sd": 3.2,
+     "top3_mean": 49.5,
+     "top3_sd": 5.5
+    }
+   }
+  },
+  "next_action": {
+   "predictions": 20617,
+   "models": {
+    "frequency": {
+     "top1_mean": 14.2,
+     "top1_sd": 3.5,
+     "top3_mean": 33.1,
+     "top3_sd": 3.5
+    },
+    "first-order": {
+     "top1_mean": 24.6,
+     "top1_sd": 1.2,
+     "top3_mean": 49.7,
+     "top3_sd": 2.5
+    },
+    "second-order": {
+     "top1_mean": 23.6,
+     "top1_sd": 2.9,
+     "top3_mean": 49.9,
+     "top3_sd": 4.0
+    }
+   }
+  }
+ },
+ "most_predictable": [
+  [
+   "DISABLE_SECURITY_TOOLS",
+   "CLEAR_LOGS",
+   55.1,
+   588,
+   17
+  ],
+  [
+   "NETWORK_SCAN",
+   "LATERAL_MOVE_SMB",
+   51.5,
+   604,
+   29
+  ],
+  [
+   "PHISHING_EMAIL",
+   "OBFUSCATED_FILES",
+   47.9,
+   355,
+   9
+  ],
+  [
+   "EXTERNAL_REMOTE_SERVICES",
+   "SYSTEM_INFO_DISCOVERY",
+   46.4,
+   276,
+   15
+  ],
+  [
+   "SYSTEM_INFO_DISCOVERY",
+   "PRIV_ESC_SUDO",
+   45.3,
+   1293,
+   39
+  ]
+ ],
+ "least_predictable": [
+  [
+   "CLEAR_LOGS",
+   "DATA_FROM_LOCAL_SYSTEM",
+   11.5,
+   1904,
+   38
+  ],
+  [
+   "NTLM_RELAY",
+   "CLEAR_LOGS",
+   14.1,
+   298,
+   27
+  ],
+  [
+   "ARCHIVE_COLLECTED_DATA",
+   "CLEAR_LOGS",
+   17.8,
+   712,
+   26
+  ],
+  [
+   "ACCOUNT_MANIPULATION",
+   "LATERAL_MOVE_SMB",
+   18.7,
+   571,
+   30
+  ],
+  [
+   "KERBEROASTING",
+   "PASS_THE_TICKET",
+   19.7,
+   319,
+   26
+  ]
+ ]
+}

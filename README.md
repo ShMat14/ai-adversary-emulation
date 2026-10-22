@@ -78,6 +78,8 @@ Both are trained by `analysis/v8_warmstart.py`.
 | `analysis/v8_warmstart_all.py`, `analysis/v8_warmstart_report.py` | `results/v8_warmstart/` and `results/v8_warmstart.json`, continued training against training from scratch, and `results/figures_v5/warmstart.png` |
 | `analysis/v8_technique_graph.py` | `results/technique_graph/`, the order and overlap of the techniques in the winning campaigns, as CSV and Cypher for Neo4j |
 | `analysis/v9_technique_figure.py` | `results/figures_v5/techflow.png`, the Neo4j Bloom drawing of that order, prepared for print |
+| `analysis/v9_next_technique.py` | `results/v9_next_technique.json`, how well the next technique of a campaign can be predicted, on policies held out |
+| `analysis/v9_otrf_check.py` | `results/v9_otrf_check.json`, the Windows event identifiers checked against the public OTRF Security-Datasets recordings, which it downloads to a folder you name |
 
 ## A note on what the success rate is for
 
